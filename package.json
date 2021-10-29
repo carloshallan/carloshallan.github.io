@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "deploy": "node run github-pages-deploy.js"
+    "deploy": "node scripts/github-pages-deploy.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
