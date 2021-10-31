@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div>
+    <div>
+      <main-logo id="main-logo" />
+      Coming soon...
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import MainLogo from "@/components/icons/logo.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld,
+    MainLogo,
   },
 });
 </script>
+
+<style lang="stylus" scoped>
+div
+  background-color #220C3A
+  position absolute
+  width 100vw
+  height 100vh
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  color white
+
+#main-logo
+  margin-bottom 20px
+</style>

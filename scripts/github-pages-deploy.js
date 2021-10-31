@@ -18,7 +18,7 @@ const fs = require("fs");
       "-m",
       "github-pages",
     ]);
-    console.log("Pushing to github-pages...");
+    console.log("Pushing to github-pages...", `${fs.readFile}`);
     await execa("git", ["push", "origin", "HEAD:github-pages", "--force"]);
     await execa("rm", ["-r", folderName]);
     await execa("git", ["checkout", "-f", "main"]);
