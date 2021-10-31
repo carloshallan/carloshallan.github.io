@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import MainLogo from "@/components/icons/logo.vue";
+import MainLogo from "@/components/icons/MainLogo.vue";
 
 export default defineComponent({
   name: "Home",

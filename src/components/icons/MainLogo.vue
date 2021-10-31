@@ -55,11 +55,10 @@
     <circle cx="7.5" cy="32.2812" r="3.5" fill="#35006C" />
   </svg>
 </template>
-
-<script>
-import { defineComponent } from "@vue/composition-api";
+<script lang="ts">
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "main-logo",
+  name: "MainLogo",
 });
 </script>
