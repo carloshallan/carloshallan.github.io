@@ -2,7 +2,7 @@
   <div>
     <div>
       <main-logo id="main-logo" />
-      Coming soon...
+      Comming soon...
     </div>
   </div>
 </template>
