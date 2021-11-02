@@ -1,14 +1,14 @@
 <template>
-    <nav>
-        <router-link to="#"> test </router-link>
-    </nav>
+  <nav>
+    <router-link to="#"> test </router-link>
+  </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    name: 'Navigator',
+  name: 'Navigator',
 })
 </script>
 
