@@ -1,36 +1,50 @@
 <template>
   <nav>
-    <ul>
-      <router-link
-        v-for="(option, index) in options"
-        :key="index"
-        :to="option.to"
-      >
-        {{ option.text }}
-      </router-link>
-    </ul>
+    <router-link
+      v-for="(option, index) in options"
+      tag="li"
+      :key="index"
+      :to="option.path"
+      active-class="active"
+      exact
+    >
+      {{ option.name }}
+    </router-link>
   </nav>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { CustomRouterLink } from '@/types/'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Navigator',
-  props: {
-    options: {
-      type: Array as PropType<Array<CustomRouterLink>>,
-      default: () => [
-        {
-          text: 'Home',
-          to: '#',
-        },
-      ],
+  computed: {
+    options() {
+      return this.$router.options.routes
     },
   },
 })
 </script>
 <style lang="stylus" scoped>
+@import '../styles/default'
+
 nav
-	background-color red
+  a
+    color white
+    text-decoration none
+    transition color 0.5s
+
+  :not(:last-child)::after
+    content '|'
+    padding 0 10px
+
+  a.active
+    color green
+
+  a.active::before
+    content "-->"
+    color green
+    padding-right 10px
+
+  a:hover
+    color light-pink
 </style>

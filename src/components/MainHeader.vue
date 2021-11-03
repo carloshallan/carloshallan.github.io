@@ -25,7 +25,7 @@ export default defineComponent({
   components: { MainLogo, Navigator },
   setup() {
     let currentLanguage = 'EN'
-    const languages: Array<string> = ['EN', 'PT-BR']
+    const languages: string[] = ['EN', 'PT-BR']
 
     return {
       languages,

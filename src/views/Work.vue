@@ -1,15 +1,10 @@
 <template>
-  <div>Comming soon...</div>
+  <div>New Page</div>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Home',
+  name: 'Work',
 })
 </script>
-
-<style lang="stylus" scoped>
-@import '../styles/default'
-</style>
