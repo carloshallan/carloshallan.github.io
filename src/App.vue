@@ -3,6 +3,7 @@
 </template>
 
 <style lang="stylus">
+import '@/styles/*'
 *
   padding 0
   margin 0

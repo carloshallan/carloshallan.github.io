@@ -22,7 +22,7 @@ export default defineComponent({
 
 <style lang="stylus" scoped>
 div
-  background-color #220C3A
+  background-color dark
   position absolute
   width 100vw
   height 100vh

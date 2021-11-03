@@ -8,15 +8,15 @@
     </div>
     <navigator />
     <nav class="languages">
-      <span v-for="(index, locale) in languages" :key="index">{{
-        locale
-      }}</span>
+      <span v-for="(locale, index) in languages" :key="index">
+        {{ locale }}
+      </span>
     </nav>
   </header>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
+import { defineComponent } from 'vue'
 import MainLogo from '@/components/icons/MainLogo.vue'
 import Navigator from '@/components/Navigator.vue'
 
@@ -28,8 +28,30 @@ export default defineComponent({
     const languages: Array<string> = ['EN', 'PT-BR']
 
     return {
+      languages,
       currentLanguage,
     }
   },
 })
 </script>
+
+<style lang="stylus" scoped>
+header
+  width 100vw
+  height auto
+  position fixed
+  top 0
+  left: 0
+  display flex
+  align-items center
+  justify-content space-between
+
+header
+  & .logo
+    display flex
+    align-items center
+    justify-content left
+
+  & .logo .c
+    color blue
+</style>
