@@ -31,7 +31,8 @@ nav
   a
     color white
     text-decoration none
-    transition color 0.5s
+    transition 0.5s
+    position relative
 
   :not(:last-child)::after
     content '|'
@@ -39,11 +40,20 @@ nav
 
   a.active
     color green
+    padding-left 20px
 
-  a.active::before
-    content "-->"
+  a::before
+    content ">"
     color green
     padding-right 10px
+    position absolute
+    left -5px
+    opacity 0
+    transition 0.5s
+
+  a.active::before
+    left 0
+    opacity 1
 
   a:hover
     color light-pink
