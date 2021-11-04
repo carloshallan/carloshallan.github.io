@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import MainLogo from '@/components/icons/MainLogo.vue'
 import Navigator from '@/components/Navigator.vue'
 
@@ -29,7 +29,7 @@ export default defineComponent({
   name: 'MainHeader',
   components: { MainLogo, Navigator },
   setup() {
-    let currentLanguage = 'EN'
+    let currentLanguage = ref('EN')
     const languages: string[] = ['EN', 'PT-BR']
 
     return {
@@ -58,6 +58,8 @@ header
   display flex
   align-items center
   justify-content space-between
+  padding: 15px
+  background-color dark
 
 header
   .logo
@@ -74,6 +76,8 @@ header
 
   .svg
     margin-right 10px
+    width 40px
+    height auto
 
   .languages
     color white
