@@ -1,14 +1,19 @@
 <template>
   <header>
     <div class="logo">
-      <main-logo />
+      <main-logo class="svg" />
       <span>
         ${<span class="c">C</span>.<span class="Hallan">Hallan</span>}
       </span>
     </div>
     <navigator />
     <nav class="languages">
-      <span v-for="(locale, index) in languages" :key="index">
+      <span
+        v-for="(locale, index) in languages"
+        :key="index"
+        :class="{ active: currentLanguage === locale }"
+        @click="changeLanguage(locale)"
+      >
         {{ locale }}
       </span>
     </nav>
@@ -32,10 +37,18 @@ export default defineComponent({
       currentLanguage,
     }
   },
+  methods: {
+    changeLanguage(locale: string) {
+      this.currentLanguage = locale
+      console.log(locale, this.currentLanguage)
+    },
+  },
 })
 </script>
 
 <style lang="stylus" scoped>
+@import "../styles/default"
+
 header
   width 100vw
   height auto
@@ -47,11 +60,28 @@ header
   justify-content space-between
 
 header
-  & .logo
+  .logo
     display flex
     align-items center
     justify-content left
+    color white
 
-  & .logo .c
+  .logo .c
     color blue
+
+  .logo .Hallan
+    color light-pink
+
+  .svg
+    margin-right 10px
+
+  .languages
+    color white
+
+    span:not(:last-child)::after
+     content "|"
+     padding 0 10px
+
+    span.active
+     color light-pink
 </style>
