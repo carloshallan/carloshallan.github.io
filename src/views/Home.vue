@@ -9,11 +9,3 @@ export default defineComponent({
   name: 'Home',
 })
 </script>
-
-<style lang="stylus" scoped>
-@import '../styles/default'
-
-div
-  height 9000px
-  position relative
-</style>
