@@ -51,15 +51,19 @@ export default defineComponent({
 header
   width 100vw
   height auto
-  position fixed
-  top 0
-  left: 0
+  position relative
   display flex
   align-items center
   justify-content space-between
   padding: 20px 30px
   background-color dark
   font-header()
+
+header.fixed
+  position fixed
+  left 0
+  top 0
+  cardShadow()
 
 header
   .logo
