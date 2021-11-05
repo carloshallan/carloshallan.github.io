@@ -31,29 +31,20 @@ nav
   a
     color white
     text-decoration none
-    transition 0.5s
+    transition color 0.5s
     position relative
+    font-header()
 
-  :not(:last-child)::after
+  :not(:first-child)::before
     content '|'
     padding 0 10px
 
   a.active
     color green
-    padding-left 20px
-
-  a::before
-    content ">"
-    color green
-    padding-right 10px
-    position absolute
-    left -5px
-    opacity 0
-    transition 0.5s
 
   a.active::before
-    left 0
-    opacity 1
+    content '->'
+    padding 0 10px
 
   a:hover
     color light-pink

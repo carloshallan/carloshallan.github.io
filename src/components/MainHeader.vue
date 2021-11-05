@@ -1,9 +1,9 @@
 <template>
   <header>
     <div class="logo">
-      <main-logo class="svg" />
-      <span>
-        ${<span class="c">C</span>.<span class="Hallan">Hallan</span>}
+      <router-link class="fullName" to="/" exact> Carlos Hallan </router-link>
+      <span class="templateString">
+        `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
     </div>
     <navigator />
@@ -22,12 +22,11 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import MainLogo from '@/components/icons/MainLogo.vue'
 import Navigator from '@/components/Navigator.vue'
 
 export default defineComponent({
   name: 'MainHeader',
-  components: { MainLogo, Navigator },
+  components: { Navigator },
   setup() {
     let currentLanguage = ref('EN')
     const languages: string[] = ['EN', 'PT-BR']
@@ -58,8 +57,9 @@ header
   display flex
   align-items center
   justify-content space-between
-  padding: 15px
+  padding: 20px 30px
   background-color dark
+  font-header()
 
 header
   .logo
@@ -67,25 +67,38 @@ header
     align-items center
     justify-content left
     color white
+    width: 200px
 
-  .logo .c
-    color blue
+    .fullName
+      display none
+      color light-pink
+    .f
+      color blue
 
-  .logo .Hallan
-    color light-pink
+    .s
+      color light-pink
 
-  .svg
-    margin-right 10px
-    width 40px
-    height auto
+  .logo:hover
+    .templateString
+      display none
+
+    .fullName
+      display block
 
   .languages
     color white
 
+    span
+      transition color 0.5s
+
     span:not(:last-child)::after
-     content "|"
+     content "/"
      padding 0 10px
 
+    span:hover
+      color light-pink
+      cursor pointer
+
     span.active
-     color light-pink
+     color green
 </style>

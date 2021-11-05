@@ -2,28 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 white = #FFFFFF
-dark = #35006C
+dark = #220C3A
 blue = #587FDF
 green = #1AEBC3
 purple = #8619F4
 pink = #EB1AA4
 dark-pink = #9D1870
 light-pink = #FF79D1
-dark-purple = #220C3A
+dark-purple = #35006C
 light-purple = #B57DED
 
 FiraCode()
-    font-family: 'Fira Code', monospace
+    font-family 'Fira Code', monospace
 
 FiraSans()
-    font-family: 'Fira Sans', sans-serif
+    font-family 'Fira Sans', sans-serif
 
 cardShadow() 
-    box-shadow: -7px 4px 11px rgba(0, 0, 0, 0.21)
-
+    box-shadow -7px 4px 11px rgba(0, 0, 0, 0.21)
 
 mainGradient()
-    background: linear-gradient(179.45deg, #8B0DF6 0.47%, #587FDF 51.04%, rgba(27, 251, 207, 0.941176) 99.53%)
+    background linear-gradient(179.45deg, #8B0DF6 0.47%, #587FDF 51.04%, rgba(27, 251, 207, 0.941176) 99.53%)
+
+font-header()
+    FiraCode()
+    color white
+    font-size 22px
+    font-weight 500
 
 *
   padding 0
@@ -31,6 +36,8 @@ mainGradient()
   box-sizing border-box
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
+  text-decoration: none;
+  color white
   FiraCode()
 
 body
