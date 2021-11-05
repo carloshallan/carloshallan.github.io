@@ -43,7 +43,6 @@ export default defineComponent({
     },
     toFixed() {
       const header = this.$refs.header as HTMLElement
-      const animateIn = 'animate__slideInDown'
 
       if (window.pageYOffset > header.offsetTop) {
         header.classList.add('fixed')
