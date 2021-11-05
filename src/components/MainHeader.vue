@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header ref="header">
     <div class="logo">
       <router-link class="fullName" to="/" exact> Carlos Hallan </router-link>
       <span class="templateString">
@@ -41,6 +41,21 @@ export default defineComponent({
       this.currentLanguage = locale
       console.log(locale, this.currentLanguage)
     },
+    toFixed() {
+      const header = this.$refs.header as HTMLElement
+      const animateIn = 'animate__slideInDown'
+
+      if (window.pageYOffset > header.offsetTop) {
+        header.classList.add('fixed')
+      } else {
+        header.classList.remove('fixed')
+      }
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('scroll', this.toFixed)
+    })
   },
 })
 </script>
@@ -49,7 +64,7 @@ export default defineComponent({
 @import "../styles/default"
 
 header
-  width 100vw
+  width 100%
   height auto
   position relative
   display flex
@@ -57,12 +72,11 @@ header
   justify-content space-between
   padding: 20px 30px
   background-color dark
+  animation-duration 0.5s
   font-header()
 
 header.fixed
   position fixed
-  left 0
-  top 0
   cardShadow()
 
 header
