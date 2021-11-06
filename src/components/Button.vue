@@ -1,5 +1,5 @@
 <template>
-  <button :class="variant" @click="click">
+  <button :class="{ outlined }" @click="click">
     <slot />
   </button>
 </template>
@@ -11,7 +11,7 @@ export default defineComponent({
   name: 'Button',
   props: {
     click: Function,
-    variant: String,
+    outlined: Boolean,
   },
 })
 </script>
@@ -21,9 +21,11 @@ export default defineComponent({
 
 button
   background dark-purple
+  border-radius 15px
   border 2px solid green
   text-transform uppercase
   color white
+  padding 8px 36px
   font-size 20px
   FiraCode()
 
