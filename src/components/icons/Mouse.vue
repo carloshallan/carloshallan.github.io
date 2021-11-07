@@ -1,7 +1,7 @@
 <template>
   <svg
     width="22"
-    height="58"
+    height="100"
     viewBox="0 0 22 58"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -38,3 +38,18 @@ export default defineComponent({
   name: 'Mouse',
 })
 </script>
+<style lang="stylus">
+@keyframes shakeScroll
+  0%
+    transform translate(0, 8%)
+  100%
+    transform translate(0, 0)
+
+.scroll, .arrow
+  animation-name shakeScroll
+  animation-timing-function easy-in-out
+  animation-duration 0.2s
+  animation-iteration-count infinite
+  animation-direction alternate
+  position relative
+</style>
