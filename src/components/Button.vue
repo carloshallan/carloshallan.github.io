@@ -28,6 +28,7 @@ button
   padding 8px 36px
   font-size 20px
   FiraCode()
+  transition 0.3s
 
   &.outlined
    color green
@@ -35,8 +36,10 @@ button
 
   &:hover
    background-color light-pink
-   border-color light-pink
+   border-color pink
+   cursor pointer
 
   &.outlined:hover
    color light-pink
+   background-color transparent
 </style>
