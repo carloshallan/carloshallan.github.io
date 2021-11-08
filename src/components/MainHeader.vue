@@ -76,6 +76,7 @@ header
 
 header.fixed
   position fixed
+  z-index 9
   cardShadow()
 
 header

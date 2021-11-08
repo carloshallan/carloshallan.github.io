@@ -1,19 +1,37 @@
 <template>
-  <div>Comming soon...</div>
+  <div>
+    <background-timeline-icon class="timelineIcon" />
+    <Presentation />
+    <AboutMe />
+    <MyWorks />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Presentation from './sections/Presentation.vue'
+import AboutMe from './sections/AboutMe.vue'
+import MyWorks from './sections/MyWorks.vue'
+import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
 
 export default defineComponent({
   name: 'Home',
+  components: {
+    Presentation,
+    AboutMe,
+    BackgroundTimelineIcon,
+    MyWorks,
+  },
 })
 </script>
 
 <style lang="stylus" scoped>
-@import '../styles/default'
 
-div
-  height 9000px
-  position relative
+.timelineIcon
+  width auto
+  height 3044px
+  position absolute
+  right 0
+  top 300px
+  z-index 7
 </style>
