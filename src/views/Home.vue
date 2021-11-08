@@ -1,8 +1,9 @@
 <template>
   <div>
+    <background-timeline-icon class="timelineIcon" />
     <Presentation />
     <AboutMe />
-    <background-timeline-icon class="timelineIcon" />
+    <MyWorks />
   </div>
 </template>
 
@@ -10,11 +11,17 @@
 import { defineComponent } from 'vue'
 import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
+import MyWorks from './sections/MyWorks.vue'
 import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
 
 export default defineComponent({
   name: 'Home',
-  components: { Presentation, AboutMe, BackgroundTimelineIcon },
+  components: {
+    Presentation,
+    AboutMe,
+    BackgroundTimelineIcon,
+    MyWorks,
+  },
 })
 </script>
 

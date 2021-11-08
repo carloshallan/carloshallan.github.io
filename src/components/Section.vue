@@ -20,7 +20,7 @@ export default defineComponent({
 
 section
   position relative
-  height auto
+  height 100vh
 
   &.background-transparent
     background-color transparent
@@ -37,7 +37,7 @@ section
   &.background-purple
     background-color purple
 
-@media (max-height 500px)
+@media (max-height 768px)
   section
     height auto
 </style>

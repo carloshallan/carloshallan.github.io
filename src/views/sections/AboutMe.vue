@@ -71,7 +71,7 @@ h1:before
 
 h1::after
   content ''
-  width 120%
+  width 105%
   height 13px
   border-radius 20px
   position absolute
