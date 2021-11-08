@@ -15,3 +15,14 @@ export default defineComponent({
   components: { Presentation, AboutMe },
 })
 </script>
+
+<style lang="stylus" scoped>
+
+.timelineIcon
+  width auto
+  height 3044px
+  position absolute
+  right 0
+  top 300px
+  z-index 8
+</style>
