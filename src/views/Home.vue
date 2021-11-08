@@ -2,6 +2,7 @@
   <div>
     <Presentation />
     <AboutMe />
+    <background-timeline-icon class="timelineIcon" />
   </div>
 </template>
 
@@ -9,10 +10,11 @@
 import { defineComponent } from 'vue'
 import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
+import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
 
 export default defineComponent({
   name: 'Home',
-  components: { Presentation, AboutMe },
+  components: { Presentation, AboutMe, BackgroundTimelineIcon },
 })
 </script>
 
@@ -24,5 +26,5 @@ export default defineComponent({
   position absolute
   right 0
   top 300px
-  z-index 8
+  z-index 7
 </style>

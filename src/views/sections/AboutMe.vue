@@ -5,7 +5,9 @@
         <img src="../../assets/PixelProfileImg.png" />
       </div>
       <div class="column">
-        <h1>About <span class="green">Me</span></h1>
+        <h1>
+          <span class="blue">==</span> About <span class="green">Me</span>
+        </h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           pellentesque commodo arcu, tincidunt amet, massa, molestie volutpat.
@@ -50,15 +52,39 @@ export default defineComponent({
 @import '../../styles/default'
 
 h1
+  position relative
   text-align right
-  padding-bottom 50px
+  padding-bottom 35px
+  margin-bottom 25px
+  z-index 8
+
+h1:before
+  content ''
+  width 100px
+  height 13px
+  background-color #5858BB
+  border-radius 20px
+  position absolute
+  top 50%
+  left 0
+  transform translate(0, -50%)
+
+h1::after
+  content ''
+  width 120%
+  height 13px
+  border-radius 20px
+  position absolute
+  background-color #5858BB
+  left 0
+  bottom 0
 
 img
   width 500px
   height auto
 
 .row
-  padding 165px 160px 165px 0
+  padding 165px 120px 165px 0
   display flex
   gap 60px
 </style>
