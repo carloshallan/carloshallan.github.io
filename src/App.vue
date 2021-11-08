@@ -1,17 +1,17 @@
 <template>
-  <router-view />
+  <div>
+    <main-header id="mainHeader" />
+    <router-view />
+  </div>
 </template>
+<script lang="ts">
+import { defineComponent } from 'vue'
+import MainHeader from '@/components/MainHeader.vue'
 
+export default defineComponent({
+  components: { MainHeader },
+})
+</script>
 <style lang="stylus">
-*
-  padding 0
-  margin 0
-  box-sizing border-box
-
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  margin 0
-  padding 0
+@import './styles/*'
 </style>
