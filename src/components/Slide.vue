@@ -1,12 +1,12 @@
 <template>
   <div id="slideWrapper">
     <div class="radioGroup">
-      <input type="radio" name="radio" />
-      <label for="radio" />
-      <input type="radio" name="radio" />
-      <label for="radio" />
-      <input type="radio" name="radio" />
-      <label for="radio" />
+      <input type="radio" name="radio" id="radio1" checked />
+      <label for="radio1" />
+      <input type="radio" name="radio" id="radio2" />
+      <label for="radio2" />
+      <input type="radio" name="radio" id="radio3" />
+      <label for="radio3" />
     </div>
   </div>
 </template>
@@ -21,17 +21,20 @@ export default defineComponent({
 @import '../styles/default'
 
 #slideWrapper
+  position relative
+
   [type='radio']
-    opacity 1
-    position relative
+    opacity 0
 
   [type='radio'] + label
-    width 10px
-    height 10px
-    position absolute
-    top 0
-    left 0
+    width 25px
+    height 25px
+    display inline-block
     border 5px solid dark
     border-radius 20px
     background-color blue
+    cursor pointer
+
+  [type='radio']:checked + label
+    background-color green
 </style>

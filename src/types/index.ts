@@ -3,3 +3,9 @@ export interface CustomRouterLink {
   to: string
   class?: string
 }
+export interface Slide {
+  id: number
+  title: string
+  description: string
+  image: string
+}
