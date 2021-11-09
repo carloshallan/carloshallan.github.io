@@ -1,7 +1,9 @@
 <template>
   <Section color="dark-pink">
     <div class="row">
-      <div class="column">slide</div>
+      <div class="column">
+        <slide />
+      </div>
       <div class="column">
         <h1>
           <span class="light-pink">!=</span>
@@ -15,15 +17,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Section from '@/components/Section.vue'
+import Slide from '@/components/Slide.vue'
 
 export default defineComponent({
   name: 'MyWorks',
-  components: { Section },
+  components: { Section, Slide },
 })
 </script>
 
 <style lang="stylus" scoped>
-@import "../../styles/default";
+@import "../../styles/default"
 
 h1
   position relative
