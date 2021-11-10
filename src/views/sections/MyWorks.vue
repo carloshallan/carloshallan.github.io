@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       <div class="column">
-        <slide />
+        <slider />
       </div>
     </div>
   </Section>
@@ -18,11 +18,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Section from '@/components/Section.vue'
-import Slide from '@/components/Slide.vue'
+import Slider from '@/components/Slider.vue'
 
 export default defineComponent({
   name: 'MyWorks',
-  components: { Section, Slide },
+  components: { Section, Slider },
 })
 </script>
 

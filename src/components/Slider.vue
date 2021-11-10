@@ -17,10 +17,16 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
+import { CustomSlide } from '@/types'
 
 export default defineComponent({
   name: 'Slider',
+  props: {
+    slides: {
+      type: Array as PropType<Array<CustomSlide>>,
+    },
+  },
 })
 </script>
 <style lang="stylus" scoped>
