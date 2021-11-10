@@ -8,13 +8,19 @@
       <input type="radio" name="radio" id="radio3" />
       <label for="radio3" />
     </div>
+    <div class="row">
+      <div class="column">
+        <h2>Lorem ipsum</h2>
+        <p>description</p>
+      </div>
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Slide',
+  name: 'Slider',
 })
 </script>
 <style lang="stylus" scoped>
@@ -27,12 +33,12 @@ export default defineComponent({
     opacity 0
 
   [type='radio'] + label
-    width 25px
-    height 25px
+    width 22px
+    height 22px
     display inline-block
     border 5px solid dark
     border-radius 20px
-    background-color blue
+    background-color light-pink
     cursor pointer
 
   [type='radio']:checked + label

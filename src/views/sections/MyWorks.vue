@@ -2,14 +2,15 @@
   <Section color="dark-pink">
     <div class="row">
       <div class="column">
-        <slide />
-      </div>
-      <div class="column">
         <h1>
           <span class="light-pink">!=</span>
           What <span class="green">I</span> can do?
         </h1>
-        <p>Lorem ipsum</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <slide />
       </div>
     </div>
   </Section>
@@ -43,12 +44,18 @@ h1:before
 
 h1::after
   titleBorderBottom()
-  width: 100%
+  width: 40%
   background-color pink
   right 0
   bottom 0
   z-index 6
 
 .row
-  justify-content space-between
+  flex-direction column
+  justify-content space-around
+  gap 0
+  padding-bottom 0
+
+.row:last-child
+  padding 20px 120px 0 0
 </style>
