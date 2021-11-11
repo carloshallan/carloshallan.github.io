@@ -41,14 +41,14 @@ export default defineComponent({
     },
   },
   setup() {
-    const colors: Array<string> = ['light-purple', 'pink', 'green']
+    const colors: Array<string> = ['light-pink', 'light-purple', 'green']
     return {
       colors,
     }
   },
   methods: {
     getPosition(index: number) {
-      return `${50 * index}px`
+      return `${30 * index}px`
     },
     nextSlide(slide: CustomSlide) {
       const refName = `slide-${slide.order}`
@@ -112,6 +112,9 @@ figure
 
   &.pink
     background-color pink
+
+  &.light-pink
+    background-color light-pink
 
   &.green
     background-color green
