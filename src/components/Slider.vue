@@ -7,20 +7,22 @@
           name="radio"
           :id="`radio${index}`"
           :checked="index === 0"
+          @change="nextSlide(slide)"
         />
         <label :for="`radio${index}`" />
       </div>
     </div>
     <div class="row">
-      <div class="column slides" :style="{ top: `${50 * slides.length}px` }">
+      <div class="column slides" :style="{ top: `${20 * slides.length}px` }">
         <figure
           v-for="(slide, index) in slides"
           :key="index"
           :class="colors[index]"
-          :ref="`slide-${order}`"
+          :ref="`slide-${slide.order}`"
           :style="{
-            left: `${getPosition(index)}`,
-            bottom: getPosition(index),
+            right: `${getPosition(index)}`,
+            top: getPosition(index),
+            'z-index': `${slide.order}`,
           }"
         />
       </div>
@@ -47,6 +49,10 @@ export default defineComponent({
   methods: {
     getPosition(index: number) {
       return `${50 * index}px`
+    },
+    nextSlide(slide: CustomSlide) {
+      const refName = `slide-${slide.order}`
+      console.log(slide.order, this.$refs[refName])
     },
   },
 })
@@ -98,6 +104,7 @@ figure
   height inherit
   border-radius 20px
   position absolute
+  transition 1s
   cardShadow()
 
   &.light-purple

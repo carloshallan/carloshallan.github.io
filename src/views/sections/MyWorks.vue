@@ -26,7 +26,7 @@ export default defineComponent({
     return {
       slides: [
         {
-          order: 1,
+          order: 3,
           title: 'Product manager',
           description: 'test',
           image: 'test',
@@ -38,7 +38,7 @@ export default defineComponent({
           description: 'description 2',
         },
         {
-          order: 3,
+          order: 1,
           title: 'Version Control',
           description: 'description 2',
         },
