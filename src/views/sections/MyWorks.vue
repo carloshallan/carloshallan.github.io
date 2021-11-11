@@ -2,15 +2,14 @@
   <Section color="dark-pink">
     <div class="row">
       <div class="column">
+        <slider :slides="slides" />
+      </div>
+      <div class="column">
         <h1>
           <span class="light-pink">!=</span>
           What <span class="green">I</span> can do?
         </h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column">
-        <slider />
+        <p>Lorem ipsum</p>
       </div>
     </div>
   </Section>
@@ -23,6 +22,29 @@ import Slider from '@/components/Slider.vue'
 export default defineComponent({
   name: 'MyWorks',
   components: { Section, Slider },
+  setup() {
+    return {
+      slides: [
+        {
+          order: 1,
+          title: 'Product manager',
+          description: 'test',
+          image: 'test',
+          path: '',
+        },
+        {
+          order: 2,
+          title: 'Task manager',
+          description: 'description 2',
+        },
+        {
+          order: 3,
+          title: 'Version Control',
+          description: 'description 2',
+        },
+      ],
+    }
+  },
 })
 </script>
 
@@ -51,11 +73,11 @@ h1::after
   z-index 6
 
 .row
-  flex-direction column
-  justify-content space-around
+  justify-content space-between
+  align-content center
+  padding 120px
   gap 0
-  padding-bottom 0
 
-.row:last-child
-  padding 20px 120px 0 0
+.column:first-child
+  width 60%
 </style>

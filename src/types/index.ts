@@ -3,10 +3,11 @@ export interface CustomRouterLink {
   to: string
   class?: string
 }
+
 export interface CustomSlide {
   order: number
   title: string
-  description: string
-  image: string
-  path: string
+  description?: string
+  image?: string
+  path?: string
 }

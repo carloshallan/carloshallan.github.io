@@ -1,17 +1,28 @@
 <template>
   <div id="slideWrapper">
     <div class="radioGroup">
-      <input type="radio" name="radio" id="radio1" checked />
-      <label for="radio1" />
-      <input type="radio" name="radio" id="radio2" />
-      <label for="radio2" />
-      <input type="radio" name="radio" id="radio3" />
-      <label for="radio3" />
+      <div v-for="(slide, index) in slides" :key="index">
+        <input
+          type="radio"
+          name="radio"
+          :id="`radio${index}`"
+          :checked="index === 0"
+        />
+        <label :for="`radio${index}`" />
+      </div>
     </div>
     <div class="row">
-      <div class="column">
-        <h2>Lorem ipsum</h2>
-        <p>description</p>
+      <div class="column slides" :style="{ top: `${50 * slides.length}px` }">
+        <figure
+          v-for="(slide, index) in slides"
+          :key="index"
+          :class="colors[index]"
+          :ref="`slide-${order}`"
+          :style="{
+            left: `${getPosition(index)}`,
+            bottom: getPosition(index),
+          }"
+        />
       </div>
     </div>
   </div>
@@ -27,6 +38,17 @@ export default defineComponent({
       type: Array as PropType<Array<CustomSlide>>,
     },
   },
+  setup() {
+    const colors: Array<string> = ['light-purple', 'pink', 'green']
+    return {
+      colors,
+    }
+  },
+  methods: {
+    getPosition(index: number) {
+      return `${50 * index}px`
+    },
+  },
 })
 </script>
 <style lang="stylus" scoped>
@@ -34,6 +56,16 @@ export default defineComponent({
 
 #slideWrapper
   position relative
+  display: flex
+  justify-content: center
+  align-items center
+  flex-direction column
+
+  .radioGroup
+    display: flex
+    justify-content: center
+    align-items: center
+    width 100%
 
   [type='radio']
     opacity 0
@@ -48,5 +80,32 @@ export default defineComponent({
     cursor pointer
 
   [type='radio']:checked + label
+    background-color green
+
+  .row
+    justify-content space-between
+    padding 0
+
+.slides
+  position absolute
+  width 90%
+  height 500px
+  left 0
+
+figure
+  display block
+  width inherit
+  height inherit
+  border-radius 20px
+  position absolute
+  cardShadow()
+
+  &.light-purple
+    background-color light-purple
+
+  &.pink
+    background-color pink
+
+  &.green
     background-color green
 </style>
