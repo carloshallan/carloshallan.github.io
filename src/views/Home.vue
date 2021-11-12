@@ -1,9 +1,9 @@
 <template>
   <div>
     <background-timeline-icon class="timelineIcon" />
-    <Presentation />
-    <AboutMe />
-    <MyWorks />
+    <presentation />
+    <about-me />
+    <my-works />
   </div>
 </template>
 
