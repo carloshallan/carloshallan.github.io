@@ -44,7 +44,7 @@ import Button from '@/components/Button.vue'
 
 export default defineComponent({
   name: 'AboutMe',
-  components: { Section, Button },
+  components: { Section, Button }
 })
 </script>
 
@@ -56,35 +56,24 @@ h1
   text-align right
   padding-bottom 35px
   margin-bottom 25px
-  z-index 8
 
 h1:before
-  content ''
+  titleBorderBottom()
   width 100px
-  height 13px
   background-color #5858BB
-  border-radius 20px
-  position absolute
   top 50%
   left 0
   transform translate(0, -50%)
 
 h1::after
-  content ''
+  titleBorderBottom()
   width 105%
-  height 13px
-  border-radius 20px
-  position absolute
   background-color #5858BB
   left 0
   bottom 0
+  z-index 6
 
 img
   width 500px
   height auto
-
-.row
-  padding 165px 120px 165px 0
-  display flex
-  gap 60px
 </style>
