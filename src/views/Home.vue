@@ -20,8 +20,8 @@ export default defineComponent({
     Presentation,
     AboutMe,
     BackgroundTimelineIcon,
-    MyWorks,
-  },
+    MyWorks
+  }
 })
 </script>
 

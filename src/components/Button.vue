@@ -11,8 +11,8 @@ export default defineComponent({
   name: 'Button',
   props: {
     click: Function,
-    outlined: Boolean,
-  },
+    outlined: Boolean
+  }
 })
 </script>
 

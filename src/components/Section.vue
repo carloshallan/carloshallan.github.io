@@ -10,8 +10,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Section',
   props: {
-    color: String,
-  },
+    color: String
+  }
 })
 </script>
 

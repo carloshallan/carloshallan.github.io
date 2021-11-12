@@ -35,7 +35,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Mouse',
+  name: 'Mouse'
 })
 </script>
 <style lang="stylus">

@@ -33,7 +33,7 @@ export default defineComponent({
 
     return {
       languages,
-      currentLanguage,
+      currentLanguage
     }
   },
   methods: {
@@ -49,13 +49,13 @@ export default defineComponent({
       } else {
         header.classList.remove('fixed')
       }
-    },
+    }
   },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('scroll', this.toFixed)
     })
-  },
+  }
 })
 </script>
 

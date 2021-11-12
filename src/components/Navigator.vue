@@ -20,8 +20,8 @@ export default defineComponent({
   computed: {
     options() {
       return this.$router.options.routes
-    },
-  },
+    }
+  }
 })
 </script>
 <style lang="stylus" scoped>

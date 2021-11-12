@@ -28,7 +28,7 @@ import MouseIcon from '@/components/icons/Mouse.vue'
 
 export default defineComponent({
   name: 'Presentation',
-  components: { Section, Profile, Button, MouseIcon },
+  components: { Section, Profile, Button, MouseIcon }
 })
 </script>
 <style lang="stylus">

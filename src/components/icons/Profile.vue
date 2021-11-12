@@ -64,6 +64,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Profile',
+  name: 'Profile'
 })
 </script>

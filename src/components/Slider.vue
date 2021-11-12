@@ -22,7 +22,7 @@
           :style="{
             right: `${getPosition(index)}`,
             top: getPosition(index),
-            'z-index': `${slide.order}`,
+            'z-index': `${slide.order}`
           }"
         />
       </div>
@@ -37,13 +37,13 @@ export default defineComponent({
   name: 'Slider',
   props: {
     slides: {
-      type: Array as PropType<Array<CustomSlide>>,
-    },
+      type: Array as PropType<Array<CustomSlide>>
+    }
   },
   setup() {
     const colors: Array<string> = ['light-pink', 'light-purple', 'green']
     return {
-      colors,
+      colors
     }
   },
   methods: {
@@ -53,8 +53,8 @@ export default defineComponent({
     nextSlide(slide: CustomSlide) {
       const refName = `slide-${slide.order}`
       console.log(slide.order, this.$refs[refName])
-    },
-  },
+    }
+  }
 })
 </script>
 <style lang="stylus" scoped>

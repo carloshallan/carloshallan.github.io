@@ -44,7 +44,7 @@ import Button from '@/components/Button.vue'
 
 export default defineComponent({
   name: 'AboutMe',
-  components: { Section, Button },
+  components: { Section, Button }
 })
 </script>
 

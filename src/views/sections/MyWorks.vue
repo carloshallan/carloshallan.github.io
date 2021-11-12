@@ -30,21 +30,21 @@ export default defineComponent({
           title: 'Product manager',
           description: 'test',
           image: 'test',
-          path: '',
+          path: ''
         },
         {
           order: 2,
           title: 'Task manager',
-          description: 'description 2',
+          description: 'description 2'
         },
         {
           order: 1,
           title: 'Version Control',
-          description: 'description 2',
-        },
-      ],
+          description: 'description 2'
+        }
+      ]
     }
-  },
+  }
 })
 </script>
 
