@@ -30,7 +30,7 @@ export default defineComponent({
           title: 'Product manager',
           description: 'test',
           image: 'test',
-          path: ''
+          path: require('@/assets/venue-select-scene.png')
         },
         {
           order: 2,

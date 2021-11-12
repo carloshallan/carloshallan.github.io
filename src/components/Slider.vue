@@ -17,20 +17,25 @@
         <figure
           v-for="(slide, index) in slides"
           :key="index"
-          :class="colors[index]"
+          :class="{
+            [colors[index]]: true,
+            currentSlide: currentSlide === slide.order
+          }"
           :ref="`slide-${slide.order}`"
           :style="{
             right: `${getPosition(index)}`,
             top: getPosition(index),
             'z-index': `${slide.order}`
           }"
-        />
+        >
+          <img v-if="slide.path" :src="slide.path" :alt="slide.title" />
+        </figure>
       </div>
     </div>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType, ref } from 'vue'
 import { CustomSlide } from '@/types'
 
 export default defineComponent({
@@ -42,17 +47,20 @@ export default defineComponent({
   },
   setup() {
     const colors: Array<string> = ['light-pink', 'light-purple', 'green']
+    const currentSlide = ref(3)
     return {
-      colors
+      colors,
+      currentSlide
     }
   },
   methods: {
     getPosition(index: number) {
-      return `${30 * index}px`
+      return `${20 * index}px`
     },
     nextSlide(slide: CustomSlide) {
       const refName = `slide-${slide.order}`
       console.log(slide.order, this.$refs[refName])
+      this.currentSlide = slide.order
     }
   }
 })
@@ -68,7 +76,7 @@ export default defineComponent({
   flex-direction column
 
   .radioGroup
-    display: flex
+    display: none
     justify-content: center
     align-items: center
     width 100%
@@ -95,8 +103,8 @@ export default defineComponent({
 .slides
   position absolute
   width 90%
-  height 500px
-  left 0
+  height 450px
+  left -50px
 
 figure
   display block
@@ -118,4 +126,11 @@ figure
 
   &.green
     background-color green
+
+  img
+    width 100%
+    height auto
+    position relative
+    top -30px
+    left 20px
 </style>
