@@ -10,6 +10,7 @@
           What <span class="green">I</span> can do?
         </h1>
         <p>Lorem ipsum</p>
+        <Button>Read More</Button>
       </div>
     </div>
   </Section>
@@ -18,10 +19,11 @@
 import { defineComponent } from 'vue'
 import Section from '@/components/Section.vue'
 import Slider from '@/components/Slider.vue'
+import Button from '@/components/Button.vue'
 
 export default defineComponent({
   name: 'MyWorks',
-  components: { Section, Slider },
+  components: { Section, Slider, Button },
   setup() {
     return {
       slides: [
