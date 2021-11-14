@@ -2,7 +2,10 @@
   <Section color="dark-purple" class="workTimelineSection">
     <div class="row">
       <div class="column">
-        <h1><span class="green">Where</span> have I been?</h1>
+        <h1>
+          <span class="light-pink">>=</span>
+          <span class="green">Where</span> have I been?
+        </h1>
       </div>
       <div class="column">
         <work-timeline :jobs="jobs" />
