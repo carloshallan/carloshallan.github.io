@@ -4,6 +4,7 @@
     <presentation />
     <about-me />
     <my-works />
+    <work-timeline />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
+import WorkTimeline from './sections/WorkTimelineSection.vue'
 
 export default defineComponent({
   name: 'Home',
@@ -20,7 +22,8 @@ export default defineComponent({
     Presentation,
     AboutMe,
     BackgroundTimelineIcon,
-    MyWorks
+    MyWorks,
+    WorkTimeline
   }
 })
 </script>

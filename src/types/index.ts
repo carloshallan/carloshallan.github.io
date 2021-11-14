@@ -11,3 +11,20 @@ export interface CustomSlide {
   image?: string
   path?: string
 }
+
+export interface Children {
+  description: string
+  children?: Array<Children>
+}
+
+export interface JobDescription {
+  description: string
+  title: string
+  listOfStack: Array<Children>
+}
+
+export interface Job {
+  title: string
+  subtitle: string
+  jobDescription: JobDescription
+}
