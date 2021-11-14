@@ -10,7 +10,9 @@
       <ul class="jobDescription">
         <li>{{ job.jobDescription.description }}</li>
         <li>
-          <strong>{{ job.jobDescription.title }}</strong>
+          <strong class="description-title">{{
+            job.jobDescription.title
+          }}</strong>
           <ul>
             <li v-for="(stack, j) in job.jobDescription.listOfStack" :key="j">
               {{ stack.description }}
@@ -45,11 +47,12 @@ export default defineComponent({
 .job
   display flex
   justify-content center
-  align-items center
+  align-items flex-start
   position relative
   gap 30px
 
   .header
+    width 30%
     display flex
     flex-direction column
     align-items flex-end
@@ -58,15 +61,20 @@ export default defineComponent({
   ul
     display flex
     flex-direction column
+    font-size 20px
+
     li
       list-style none
-      padding-bottom 10px
+      padding-bottom 20px
 
       ul
-        margin-top 10px
+        margin-top 20px
 
       li
         list-style none
+        padding-bottom 10px
+        font-size 16px
+        opacity 0.8
 
       li::before
         content '-> '
@@ -77,7 +85,7 @@ export default defineComponent({
   width 40%
   display flex
   position relative
-  padding 0 40px
+  padding 7px 40px
 
 .jobDescription::after
 .jobDescription::before
@@ -90,12 +98,12 @@ export default defineComponent({
   left 0px
 
 .jobDescription::before
-  top 0
+  top 12px
   height 12px !important
 
 .jobDescription::after
-  top 22px
-  height calc(100% - 30px)
+  top 45px
+  height calc(100% - 55px)
 
 .title
   FiraSans()
