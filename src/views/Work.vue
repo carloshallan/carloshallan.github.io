@@ -1,10 +1,14 @@
 <template>
-  <div>New Page</div>
+  <main>
+    <Gallery></Gallery>
+  </main>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Gallery from '@/components/Gallery.vue'
 
 export default defineComponent({
-  name: 'Work'
+  name: 'WorkPage',
+  components: { Gallery }
 })
 </script>
