@@ -26,5 +26,6 @@ export interface JobDescription {
 export interface Job {
   title: string
   subtitle: string
+  date: string
   jobDescription: JobDescription
 }

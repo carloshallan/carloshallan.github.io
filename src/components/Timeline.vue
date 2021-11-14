@@ -1,17 +1,25 @@
 <template>
   <div class="WorkTimeline">
-    <div class="job">
+    <div v-for="(job, index) in jobs" class="job" :key="index">
       <div class="header">
-        <h2 class="title">Title</h2>
-        <h3 class="subtitle">Subtitle</h3>
+        <h2 class="title">{{ job.title }}</h2>
+        <h3 class="subtitle">
+          <span class="light-pink">{{ job.subtitle }}</span> {{ job.date }}
+        </h3>
       </div>
       <ul class="jobDescription">
-        <li>Description of job</li>
+        <li>{{ job.jobDescription.description }}</li>
         <li>
-          <strong>Slack and tools:</strong>
+          <strong>{{ job.jobDescription.title }}</strong>
           <ul>
-            <li>Sub description</li>
-            <li>Sub description 2</li>
+            <li v-for="(stack, j) in job.jobDescription.listOfStack" :key="j">
+              {{ stack.description }}
+              <ul v-if="stack.children">
+                <li v-for="(child, k) in stack.children" :key="k">
+                  {{ child.description }}
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -19,10 +27,16 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
+import { Job } from '@/types'
 
 export default defineComponent({
-  name: 'workTimeline'
+  name: 'workTimeline',
+  props: {
+    jobs: {
+      type: Array as PropType<Array<Job>>
+    }
+  }
 })
 </script>
 <style lang="stylus" scoped>
@@ -30,23 +44,38 @@ export default defineComponent({
 
 .job
   display flex
-  justify-content space-between
+  justify-content center
+  align-items center
   position relative
   gap 30px
 
+  .header
+    display flex
+    flex-direction column
+    align-items flex-end
+    justify-content flex-end
+
   ul
+    display flex
+    flex-direction column
     li
       list-style none
       padding-bottom 10px
 
       ul
-        margin-top 20px
+        margin-top 10px
 
       li
-        list-style circle
-        margin-left 40px
+        list-style none
+
+      li::before
+        content '-> '
+        FiraCode()
+        color light-pink
 
 .jobDescription
+  width 40%
+  display flex
   position relative
   padding 0 40px
 
@@ -54,7 +83,7 @@ export default defineComponent({
 .jobDescription::before
   content ''
   width 12px
-  background-color pink
+  background-color light-pink
   display block
   position absolute
   border-radius 30px
@@ -68,9 +97,9 @@ export default defineComponent({
   top 22px
   height calc(100% - 30px)
 
-h1
-  position relative
+.title
+  FiraSans()
   text-align right
-  padding-bottom 35px
-  margin-bottom 35px
+  font-size 26px
+  color green
 </style>
