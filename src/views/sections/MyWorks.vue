@@ -53,6 +53,9 @@ export default defineComponent({
 <style lang="stylus" scoped>
 @import "../../styles/default"
 
+.slides
+  display block
+
 h1
   position relative
   text-align right

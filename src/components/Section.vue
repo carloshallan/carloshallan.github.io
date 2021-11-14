@@ -20,7 +20,7 @@ export default defineComponent({
 
 section
   position relative
-  height 100vh
+  height auto
 
   &.background-transparent
     background-color transparent

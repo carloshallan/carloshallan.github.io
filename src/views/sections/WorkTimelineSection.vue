@@ -1,5 +1,5 @@
 <template>
-  <Section class="workTimelineSection">
+  <Section color="dark-purple" class="workTimelineSection">
     <div class="row">
       <div class="column">
         <h1><span class="green">Where</span> have I been?</h1>
@@ -30,7 +30,7 @@ export default defineComponent({
         date: 'Current Job',
         jobDescription: {
           description:
-            "I'm working with a 2D Game studio pipeline solution as UX/UI",
+            "I'm working with a 2D Game studio pipeline solution as UX/UI designer and Full Stack Engineer.",
           title: 'Stack and tools:',
           listOfStack: [
             {

@@ -69,6 +69,7 @@ export default defineComponent({
 @import '../styles/default'
 
 #slideWrapper
+  min-height 80vh
   position relative
   display: flex
   justify-content: center
