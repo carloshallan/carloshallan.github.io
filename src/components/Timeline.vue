@@ -85,7 +85,7 @@ export default defineComponent({
   width 40%
   display flex
   position relative
-  padding 7px 40px
+  padding 2px 40px
 
 .jobDescription::after
 .jobDescription::before
