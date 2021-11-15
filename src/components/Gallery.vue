@@ -1,18 +1,18 @@
 <template>
   <div class="gallery">
     <div class="column">
+      <figure>Image</figure>
       <header>
         <h2>Title 1</h2>
         <p>test 1</p>
       </header>
-      <figure>Image</figure>
     </div>
     <div class="column">
+      <figure>Image</figure>
       <header>
         <h2>Title 2</h2>
         <p>test 2</p>
       </header>
-      <figure>Image</figure>
     </div>
   </div>
 </template>
@@ -33,7 +33,6 @@ export default defineComponent({
 
 .gallery
   background-color light-pink
-  width 40%
   margin auto
   display flex
   flex-wrap wrap
@@ -41,13 +40,20 @@ export default defineComponent({
   align-items center
 
 .column
+  width 40%
   background-color pink
   display flex
   justify-content center
   align-items center
+  flex-direction row
+  gap 20px
 
   figure
-    width 70%
+    width 500px
+    min-height 400px
     background-color blue
     text-align center
+
+  header
+    width 300px
 </style>

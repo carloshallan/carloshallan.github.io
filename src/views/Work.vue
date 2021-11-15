@@ -1,5 +1,6 @@
 <template>
   <main>
+    <h1 class="title">Some Works</h1>
     <Gallery></Gallery>
   </main>
 </template>
@@ -12,3 +13,8 @@ export default defineComponent({
   components: { Gallery }
 })
 </script>
+<style lang="stylus" scoped>
+.title
+  text-align center
+  padding 150px 0
+</style>
