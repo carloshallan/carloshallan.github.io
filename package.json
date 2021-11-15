@@ -2,6 +2,8 @@
   "name": "carloshallan.github.io",
   "version": "0.1.0",
   "private": true,
+  "licence": "MIT",
+  "author": "Carlos Hallan <carloshallandev@gmail.com>(https://carloshallan.github.io)",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
