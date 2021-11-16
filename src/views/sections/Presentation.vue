@@ -3,7 +3,7 @@
     <div class="presentation">
       <Profile />
       <div class="titleGroup">
-        <h1>I'm Carlos <span class="green">Hallan</span></h1>
+        <h1>{{ $t('presentationTitle') }} <span class="green">Hallan</span></h1>
         <div class="subtitle">
           A Pipeline
           <span class="light-pink">UI/UX Designer</span>

@@ -36,3 +36,8 @@ export interface GalleryItems {
   description?: string
   asset?: string
 }
+
+export interface Phrase {
+  en: string
+  pt: string
+}
