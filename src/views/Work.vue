@@ -14,7 +14,12 @@ export default defineComponent({
 })
 </script>
 <style lang="stylus" scoped>
+@import '../styles/default.styl'
+
+main
+  background-color dark-purple
+
 .title
   text-align center
-  padding 150px 0
+  padding 100px 0
 </style>

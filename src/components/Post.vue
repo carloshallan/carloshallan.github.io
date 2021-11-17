@@ -1,10 +1,18 @@
 <template>
-  <article>Post</article>
+  <article>
+    <v-slot />
+  </article>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'postTemplate'
+  nme: 'postTemplate',
+  props: {
+    postName: String
+  },
+  created() {
+    console.log(this.postName)
+  }
 })
 </script>

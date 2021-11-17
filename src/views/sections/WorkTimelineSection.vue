@@ -145,7 +145,7 @@ export default defineComponent({
         date: '6 months',
         jobDescription: {
           description:
-            'I worked with entre process of build websites and monoliths softwares based at UX solutions. The entire process consist in the UX planning, UI prototype and code Front End development.',
+            'I worked with entire process of build websites and monoliths softwares based at UX solutions. The entire process consist in the UX planning, UI prototype and code Front End development.',
           title: 'Stack and Tools:',
           listOfStack: [
             {

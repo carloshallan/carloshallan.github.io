@@ -1,19 +1,19 @@
 <template>
   <div class="gallery">
-    <div class="column">
+    <router-link to="work" tag="div" class="row">
       <figure>Image</figure>
       <header>
         <h2>Title 1</h2>
         <p>test 1</p>
       </header>
-    </div>
-    <div class="column">
+    </router-link>
+    <router-link to="work" tag="div" class="row">
       <figure>Image</figure>
       <header>
         <h2>Title 2</h2>
         <p>test 2</p>
       </header>
-    </div>
+    </router-link>
   </div>
 </template>
 <script lang="ts">
@@ -32,28 +32,38 @@ export default defineComponent({
 @import '../styles/default.styl'
 
 .gallery
-  background-color light-pink
+  width 60%
   margin auto
   display flex
+  flex-direction column
   flex-wrap wrap
-  justify-content space-around
-  align-items center
-
-.column
-  width 40%
-  background-color pink
-  display flex
   justify-content center
   align-items center
-  flex-direction row
-  gap 20px
+
+  .row
+    width 100%
+    background-color black
+    justify-content center
+    align-items center
+    padding 0
+    margin-bottom 50px
+    border-radius 20px
+    overflow hidden
+    gap 0
 
   figure
-    width 500px
+    width 100%
     min-height 400px
     background-color blue
     text-align center
 
   header
-    width 300px
+    width 100%
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+    h2
+      color green
 </style>
