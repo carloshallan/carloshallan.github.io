@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery.vue Render gallery 1`] = `
+<div
+  class="gallery"
+>
+  <router-link
+    class="row"
+    tag="div"
+    to="work"
+  >
+    <figure>
+      Image
+    </figure>
+    <header>
+      <h2>
+        Title 1
+      </h2>
+      <p>
+        test 1
+      </p>
+    </header>
+  </router-link>
+  <router-link
+    class="row"
+    tag="div"
+    to="work"
+  >
+    <figure>
+      Image
+    </figure>
+    <header>
+      <h2>
+        Title 2
+      </h2>
+      <p>
+        test 2
+      </p>
+    </header>
+  </router-link>
+</div>
+`;

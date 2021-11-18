@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader.vue Render MainHeader 1`] = `
+<header>
+  <div
+    class="logo"
+  >
+    <a
+      class="fullName"
+      exact=""
+      href="/"
+    >
+       Carlos Hallan 
+    </a>
+    <span
+      class="templateString"
+    >
+       \`\${
+      <span
+        class="f"
+      >
+        User
+      </span>
+      .
+      <span
+        class="s"
+      >
+        name
+      </span>
+      }\` 
+    </span>
+  </div>
+  <nav>
+    
+    <a
+      class=""
+      exact=""
+      href="/"
+      tag="li"
+    >
+      Home
+    </a>
+    <a
+      class=""
+      exact=""
+      href="/work"
+      tag="li"
+    >
+      Work
+    </a>
+    <a
+      class=""
+      exact=""
+      href="/:slug"
+      tag="li"
+    >
+      post
+    </a>
+    
+  </nav>
+</header>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer.vue Render Footer component 1`] = `
+<footer>
+  <p>
+    © 2021 Carlos Hallan All rights reserved.
+  </p>
+</footer>
+`;
