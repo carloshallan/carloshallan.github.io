@@ -1,5 +1,6 @@
 module.exports = {
   root: true,
+  plugins: [ "no-loops" ],
   env: {
     node: true
   },
@@ -17,6 +18,7 @@ module.exports = {
   },
   ignorePatterns: ['**/scripts/*'],
   rules: {
+    'no-loops/no-loops': 2,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'import/prefer-default-export': 'off',
