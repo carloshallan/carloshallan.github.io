@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigator.vue Render Navigator 1`] = `
+<nav>
+  
+  <a
+    class=""
+    exact=""
+    href="/"
+    tag="li"
+  >
+    Home
+  </a>
+  <a
+    class=""
+    exact=""
+    href="/work"
+    tag="li"
+  >
+    Work
+  </a>
+  <a
+    class=""
+    exact=""
+    href="/:slug"
+    tag="li"
+  >
+    post
+  </a>
+  
+</nav>
+`;

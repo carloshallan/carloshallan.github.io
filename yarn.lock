@@ -7075,7 +7075,7 @@ jest-runtime@^24.9.0:
 
 jest-serializer-vue@^2.0.2:
   version "2.0.2"
-  resolved "https://registry.npmjs.org/jest-serializer-vue/-/jest-serializer-vue-2.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/jest-serializer-vue/-/jest-serializer-vue-2.0.2.tgz#b238ef286357ec6b480421bd47145050987d59b3"
   integrity sha1-sjjvKGNX7GtIBCG9RxRQUJh9WbM=
   dependencies:
     pretty "2.0.0"
@@ -10956,6 +10956,11 @@ ts-pnp@^1.1.6:
   version "1.2.0"
   resolved "https://registry.npmjs.org/ts-pnp/-/ts-pnp-1.2.0.tgz"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
+
+ts-vue-plugin@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/ts-vue-plugin/-/ts-vue-plugin-0.1.3.tgz#f752752e64b315195bef3374d8115e741994e5a3"
+  integrity sha512-FBfURLnwEMc9ynbdRHjI/X0R17mCyi/BdnyMFxIU833nMeprTsCNEIZSYdDybYx04jc+LbzkjgfYVk+GeEV+Hg==
 
 tsconfig@^7.0.0:
   version "7.0.0"

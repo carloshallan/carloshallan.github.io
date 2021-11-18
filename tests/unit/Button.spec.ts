@@ -7,6 +7,6 @@ describe('Button.vue', () => {
     const button = shallowMount(Button, {
       slots: { default: text }
     })
-    expect(button.text()).toContain(text)
+    expect(button.element).toMatchSnapshot()
   })
 })

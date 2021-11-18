@@ -43,11 +43,18 @@
     "eslint-plugin-vue": "^7.0.0",
     "execa": "^5.1.1",
     "husky": "^7.0.4",
+    "jest-serializer-vue": "^2.0.2",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
+    "ts-vue-plugin": "^0.1.3",
     "typescript": "~4.1.5",
     "vue-jest": "^5.0.0-0"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
   }
 }
