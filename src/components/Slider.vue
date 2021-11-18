@@ -1,4 +1,5 @@
-<template> <div id="slideWrapper">
+<template>
+  <div id="slideWrapper">
     <div class="radioGroup">
       <div v-for="(slide, index) in slides" :key="index">
         <input

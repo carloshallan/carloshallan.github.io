@@ -4,10 +4,10 @@ exports[`Gallery.vue Render gallery 1`] = `
 <div
   class="gallery"
 >
-  <router-link
+  <a
     class="row"
+    href="/work"
     tag="div"
-    to="work"
   >
     <figure>
       Image
@@ -20,11 +20,11 @@ exports[`Gallery.vue Render gallery 1`] = `
         test 1
       </p>
     </header>
-  </router-link>
-  <router-link
+  </a>
+  <a
     class="row"
+    href="/work"
     tag="div"
-    to="work"
   >
     <figure>
       Image
@@ -37,6 +37,6 @@ exports[`Gallery.vue Render gallery 1`] = `
         test 2
       </p>
     </header>
-  </router-link>
+  </a>
 </div>
 `;
