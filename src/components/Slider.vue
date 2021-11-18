@@ -1,5 +1,4 @@
-<template>
-  <div id="slideWrapper">
+<template> <div id="slideWrapper">
     <div class="radioGroup">
       <div v-for="(slide, index) in slides" :key="index">
         <input
@@ -66,7 +65,7 @@ export default defineComponent({
 })
 </script>
 <style lang="stylus" scoped>
-@import '../styles/default'
+@import '../styles/default.styl'
 
 #slideWrapper
   min-height 80vh

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider.vue Render slider component 1`] = `
+<div
+  id="slideWrapper"
+>
+  <div
+    class="radioGroup"
+  >
+    
+    <div>
+      <input
+        id="radio0"
+        name="radio"
+        type="radio"
+      />
+      <label
+        for="radio0"
+      />
+    </div>
+    
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="column slides"
+      style="top: 20px;"
+    >
+      
+      <figure
+        class="light-pink currentSlide"
+        style="right: 0px; top: 0px; z-index: 3;"
+      >
+        <!--v-if-->
+      </figure>
+      
+    </div>
+  </div>
+</div>
+`;
