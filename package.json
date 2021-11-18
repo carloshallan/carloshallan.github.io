@@ -5,13 +5,14 @@
   "licence": "MIT",
   "author": "Carlos Hallan <carloshallandev@gmail.com>(https://carloshallan.github.io)",
   "scripts": {
-     "serve": "vue-cli-service serve",
-     "build": "vue-cli-service build",
-     "test:unit": "vue-cli-service test:unit",
-     "lint": "vue-cli-service lint",
-     "deploy": "node scripts/github-pages-deploy.js",
-     "build:icons": "node scripts/build_icons.js"
-  }, 
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "deploy": "node scripts/github-pages-deploy.js",
+    "build:icons": "node scripts/build_icons.js",
+    "prepare": "husky install"
+  },
   "dependencies": {
     "@mdx-js/vue-loader": "^1.6.22",
     "@vue/composition-api": "^1.3.0",
@@ -48,11 +49,5 @@
     "stylus-loader": "^3.0.2",
     "typescript": "~4.1.5",
     "vue-jest": "^5.0.0-0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "vue-cli-service lint && vue-cli-service test:unit",
-      "pre-push": "vue-cli-service test:unit"
-    }
   }
 }
