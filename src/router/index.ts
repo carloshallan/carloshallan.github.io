@@ -2,7 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const HomeComponent = () => import('@/views/Home.vue')
 const WorkComponent = () => import('@/views/Work.vue')
-const PostComponent = () => import('@/views/Post.vue')
+const PostComponent = () => import('@/views/PostView.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     component: WorkComponent
   },
   {
-    path: '/:slug',
+    path: '/posts/:slug',
     name: 'post',
     component: PostComponent
   }

@@ -1,18 +1,15 @@
 <template>
   <article>
-    <v-slot />
+    <testing />
   </article>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
+// @tsignore
+import Testing from '../views/posts/testing.mdx'
 
 export default defineComponent({
-  nme: 'postTemplate',
-  props: {
-    postName: String
-  },
-  created() {
-    console.log(this.postName)
-  }
+  name: 'postTemplate',
+  components: { Testing }
 })
 </script>

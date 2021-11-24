@@ -22,7 +22,7 @@ exports[`Navigator.vue Render Navigator 1`] = `
   <a
     class=""
     exact=""
-    href="/:slug"
+    href="/posts/:slug"
     tag="li"
   >
     post

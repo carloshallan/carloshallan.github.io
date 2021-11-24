@@ -51,7 +51,7 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
     <a
       class=""
       exact=""
-      href="/:slug"
+      href="/posts/:slug"
       tag="li"
     >
       post
