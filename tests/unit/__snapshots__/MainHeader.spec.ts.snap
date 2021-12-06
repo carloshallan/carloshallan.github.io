@@ -35,27 +35,31 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
   </div>
    
   <nav>
-    <li
+    <a
+      aria-current="page"
       class="router-link-exact-active active"
+      href="/"
     >
       
     Home
   
-    </li>
-    <li
+    </a>
+    <a
       class=""
+      href="/work"
     >
       
     Work
   
-    </li>
-    <li
+    </a>
+    <a
       class=""
+      href="/posts/:slug"
     >
       
     post
   
-    </li>
+    </a>
   </nav>
 </header>
 `;

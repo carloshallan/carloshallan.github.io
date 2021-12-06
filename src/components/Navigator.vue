@@ -2,7 +2,6 @@
   <nav>
     <router-link
       v-for="(option, index) in options"
-      tag="li"
       :key="index"
       :to="option.path"
       active-class="active"
