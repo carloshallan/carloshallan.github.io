@@ -2,7 +2,6 @@
   <nav>
     <router-link
       v-for="(option, index) in options"
-      tag="li"
       :key="index"
       :to="option.path"
       active-class="active"
@@ -13,9 +12,9 @@
   </nav>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Navigator',
   computed: {
     options() {

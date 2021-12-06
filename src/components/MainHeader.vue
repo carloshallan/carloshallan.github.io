@@ -7,40 +7,17 @@
       </span>
     </div>
     <navigator />
-    <nav class="languages">
-      <span
-        v-for="(locale, index) in languages"
-        :key="index"
-        :class="{ active: currentLanguage === locale }"
-        @click="changeLanguage(locale)"
-      >
-        {{ locale }}
-      </span>
-    </nav>
   </header>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import Vue from 'vue'
 import Navigator from '@/components/Navigator.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'MainHeader',
   components: { Navigator },
-  setup() {
-    let currentLanguage = ref('EN')
-    const languages: string[] = ['EN', 'PT-BR']
-
-    return {
-      languages,
-      currentLanguage
-    }
-  },
   methods: {
-    changeLanguage(locale: string) {
-      this.currentLanguage = locale
-      console.log(locale, this.currentLanguage)
-    },
     toFixed() {
       const header = this.$refs.header as HTMLElement
 

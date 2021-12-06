@@ -29,3 +29,15 @@ export interface Job {
   date: string
   jobDescription: JobDescription
 }
+
+export interface GalleryItems {
+  title: string
+  subtitle: string
+  description?: string
+  asset?: string
+}
+
+export interface Phrase {
+  en: string
+  pt: string
+}

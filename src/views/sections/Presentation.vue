@@ -20,13 +20,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import Section from '@/components/Section.vue'
 import Profile from '@/components/icons/Profile.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Presentation',
   components: { Section, Profile, Button, MouseIcon }
 })

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery.vue Render gallery 1`] = `
+<div
+  class="gallery"
+>
+  <router-link-stub
+    ariacurrentvalue="page"
+    class="row"
+    event="click"
+    tag="div"
+    to="work"
+  >
+    <figure>
+      Image
+    </figure>
+     
+    <header>
+      <h2>
+        Title 1
+      </h2>
+       
+      <p>
+        test 1
+      </p>
+    </header>
+  </router-link-stub>
+   
+  <router-link-stub
+    ariacurrentvalue="page"
+    class="row"
+    event="click"
+    tag="div"
+    to="work"
+  >
+    <figure>
+      Image
+    </figure>
+     
+    <header>
+      <h2>
+        Title 2
+      </h2>
+       
+      <p>
+        test 2
+      </p>
+    </header>
+  </router-link-stub>
+</div>
+`;

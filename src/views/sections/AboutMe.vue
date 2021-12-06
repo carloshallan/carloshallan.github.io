@@ -38,11 +38,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import Section from '@/components/Section.vue'
 import Button from '@/components/Button.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'AboutMe',
   components: { Section, Button }
 })

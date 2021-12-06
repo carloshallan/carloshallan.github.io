@@ -29,10 +29,10 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import Vue, { PropType } from 'vue'
 import { Job } from '@/types'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'workTimeline',
   props: {
     jobs: {
@@ -85,7 +85,7 @@ export default defineComponent({
   width 40%
   display flex
   position relative
-  padding 7px 40px
+  padding 2px 40px
 
 .jobDescription::after
 .jobDescription::before

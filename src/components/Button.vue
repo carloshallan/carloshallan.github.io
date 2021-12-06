@@ -1,17 +1,22 @@
 <template>
-  <button :class="{ outlined }" @click="click">
+  <button :class="{ outlined }" @click="handleClick">
     <slot />
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Button',
   props: {
     click: Function,
     outlined: Boolean
+  },
+  methods: {
+    handleClick(event: HTMLElement) {
+      this.click(event)
+    }
   }
 })
 </script>

@@ -1,4 +1,4 @@
-# carloshallan.github.io
+# vue-2-test
 
 ## Project setup
 ```

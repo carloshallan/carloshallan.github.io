@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader.vue Render MainHeader 1`] = `
+<header>
+  <div
+    class="logo"
+  >
+    <a
+      aria-current="page"
+      class="fullName router-link-exact-active router-link-active"
+      href="/"
+    >
+       Carlos Hallan 
+    </a>
+     
+    <span
+      class="templateString"
+    >
+      
+      \`\${
+      <span
+        class="f"
+      >
+        User
+      </span>
+      .
+      <span
+        class="s"
+      >
+        name
+      </span>
+      }\`
+    
+    </span>
+  </div>
+   
+  <nav>
+    <a
+      aria-current="page"
+      class="router-link-exact-active active"
+      href="/"
+    >
+      
+    Home
+  
+    </a>
+    <a
+      class=""
+      href="/work"
+    >
+      
+    Work
+  
+    </a>
+    <a
+      class=""
+      href="/posts/:slug"
+    >
+      
+    post
+  
+    </a>
+  </nav>
+</header>
+`;

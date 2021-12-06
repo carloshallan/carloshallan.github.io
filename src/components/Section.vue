@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Section',
   props: {
     color: String
@@ -21,6 +21,7 @@ export default defineComponent({
 section
   position relative
   height auto
+  min-height 100vh
 
   &.background-transparent
     background-color transparent
@@ -40,4 +41,5 @@ section
 @media (max-height 768px)
   section
     height auto
+    min-height unset
 </style>
