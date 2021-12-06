@@ -35,22 +35,20 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue'
+import Vue, { PropType } from 'vue'
 import { CustomSlide } from '@/types'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Slider',
   props: {
     slides: {
       type: Array as PropType<Array<CustomSlide>>
     }
   },
-  setup() {
-    const colors: Array<string> = ['light-pink', 'light-purple', 'green']
-    const currentSlide = ref(3)
+  data() {
     return {
-      colors,
-      currentSlide
+      colors: ['light-pink', 'light-purple', 'green'],
+      currentSlide: 3
     }
   },
   methods: {

@@ -5,9 +5,7 @@ import router from '@/router'
 describe('MainHeader.vue', () => {
   it('Render MainHeader', () => {
     const mainHeader = mount(MainHeader, {
-      global: {
-        plugins: [router]
-      }
+      router
     })
     expect(mainHeader.element).toMatchSnapshot()
   })

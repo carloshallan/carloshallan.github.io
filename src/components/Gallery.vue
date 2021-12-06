@@ -17,10 +17,10 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import Vue, { PropType } from 'vue'
 import { GalleryItems } from '@/types'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Gallery',
   props: {
     galleryItems: Array as PropType<Array<GalleryItems>>

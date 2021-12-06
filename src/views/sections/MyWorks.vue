@@ -16,15 +16,15 @@
   </Section>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import Section from '@/components/Section.vue'
 import Slider from '@/components/Slider.vue'
 import Button from '@/components/Button.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'MyWorks',
   components: { Section, Slider, Button },
-  setup() {
+  data() {
     return {
       slides: [
         {

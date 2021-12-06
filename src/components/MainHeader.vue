@@ -11,10 +11,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import Navigator from '@/components/Navigator.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'MainHeader',
   components: { Navigator },
   methods: {

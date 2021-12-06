@@ -1,10 +1,13 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import Vue from 'vue'
+import VueRouter, { RouteConfig } from 'vue-router'
+
+Vue.use(VueRouter)
 
 const HomeComponent = () => import('@/views/Home.vue')
 const WorkComponent = () => import('@/views/Work.vue')
 const PostComponent = () => import('@/views/PostView.vue')
 
-const routes: Array<RouteRecordRaw> = [
+const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Home',
@@ -22,8 +25,9 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
-const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
 

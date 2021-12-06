@@ -4,8 +4,6 @@ exports[`Button.vue Render button with children 1`] = `
 <button
   class=""
 >
-  
   Click Here
-  
 </button>
 `;

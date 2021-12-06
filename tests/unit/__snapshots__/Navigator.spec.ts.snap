@@ -2,31 +2,26 @@
 
 exports[`Navigator.vue Render Navigator 1`] = `
 <nav>
-  
-  <a
-    class=""
-    exact=""
-    href="/"
-    tag="li"
+  <li
+    class="router-link-exact-active active"
   >
+    
     Home
-  </a>
-  <a
-    class=""
-    exact=""
-    href="/work"
-    tag="li"
-  >
-    Work
-  </a>
-  <a
-    class=""
-    exact=""
-    href="/posts/:slug"
-    tag="li"
-  >
-    post
-  </a>
   
+  </li>
+  <li
+    class=""
+  >
+    
+    Work
+  
+  </li>
+  <li
+    class=""
+  >
+    
+    post
+  
+  </li>
 </nav>
 `;

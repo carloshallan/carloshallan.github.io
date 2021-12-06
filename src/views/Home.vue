@@ -9,14 +9,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import Vue from 'vue'
 import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'Home',
   components: {
     Presentation,

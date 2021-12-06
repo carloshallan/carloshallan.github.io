@@ -6,16 +6,18 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
     class="logo"
   >
     <a
-      class="fullName"
-      exact=""
+      aria-current="page"
+      class="fullName router-link-exact-active router-link-active"
       href="/"
     >
        Carlos Hallan 
     </a>
+     
     <span
       class="templateString"
     >
-       \`\${
+      
+      \`\${
       <span
         class="f"
       >
@@ -27,36 +29,33 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
       >
         name
       </span>
-      }\` 
+      }\`
+    
     </span>
   </div>
+   
   <nav>
-    
-    <a
-      class=""
-      exact=""
-      href="/"
-      tag="li"
+    <li
+      class="router-link-exact-active active"
     >
-      Home
-    </a>
-    <a
+      
+    Home
+  
+    </li>
+    <li
       class=""
-      exact=""
-      href="/work"
-      tag="li"
     >
-      Work
-    </a>
-    <a
+      
+    Work
+  
+    </li>
+    <li
       class=""
-      exact=""
-      href="/posts/:slug"
-      tag="li"
     >
-      post
-    </a>
-    
+      
+    post
+  
+    </li>
   </nav>
 </header>
 `;

@@ -4,11 +4,10 @@
   </article>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue'
-// @tsignore
+import Vue from 'vue'
 import Testing from '../views/posts/testing.mdx'
 
-export default defineComponent({
+export default Vue.extend({
   name: 'postTemplate',
   components: { Testing }
 })

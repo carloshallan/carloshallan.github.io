@@ -4,39 +4,48 @@ exports[`Gallery.vue Render gallery 1`] = `
 <div
   class="gallery"
 >
-  <a
+  <router-link-stub
+    ariacurrentvalue="page"
     class="row"
-    href="/work"
+    event="click"
     tag="div"
+    to="work"
   >
     <figure>
       Image
     </figure>
+     
     <header>
       <h2>
         Title 1
       </h2>
+       
       <p>
         test 1
       </p>
     </header>
-  </a>
-  <a
+  </router-link-stub>
+   
+  <router-link-stub
+    ariacurrentvalue="page"
     class="row"
-    href="/work"
+    event="click"
     tag="div"
+    to="work"
   >
     <figure>
       Image
     </figure>
+     
     <header>
       <h2>
         Title 2
       </h2>
+       
       <p>
         test 2
       </p>
     </header>
-  </a>
+  </router-link-stub>
 </div>
 `;

@@ -13,7 +13,7 @@ const slides: Array<CustomSlide> = [
 describe('Slider.vue', () => {
   it('Render slider component', () => {
     const slider = mount(Slider, {
-      props: {
+      propsData: {
         slides
       }
     })
