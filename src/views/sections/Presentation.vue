@@ -46,4 +46,8 @@ export default Vue.extend({
 .buttonGroup
    display flex
    gap 20px
+
+@media screen and (max-width: 768px)
+  .presentation
+    background-color red
 </style>

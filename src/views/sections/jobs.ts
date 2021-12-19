@@ -113,8 +113,8 @@ export default [
   },
   {
     title: 'UI Design and Front End Director',
-    subtitle: '02 Filmes',
-    date: '6 months',
+    subtitle: 'Nuvem Agência',
+    date: '3 years and 9 months',
     jobDescription: {
       description:
         'I worked with entire process of build websites and monoliths softwares based at UX solutions. The entire process consist in the UX planning, UI prototype and code Front End development.',

@@ -6,17 +6,17 @@
         `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
     </div>
-    <navigator />
+    <!--    <navigator /> -->
   </header>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Navigator from '@/components/Navigator.vue'
+// import Navigator from '@/components/Navigator.vue'
 
 export default Vue.extend({
   name: 'MainHeader',
-  components: { Navigator },
+  //  components: { Navigator },
   methods: {
     toFixed() {
       const header = this.$refs.header as HTMLElement
@@ -87,13 +87,24 @@ header
       transition color 0.5s
 
     span:not(:last-child)::after
-     content "/"
-     padding 0 10px
+      content "/"
+      padding 0 10px
 
     span:hover
       color light-pink
       cursor pointer
 
     span.active
-     color green
+      color green
+      bottom 0
+
+@media screen and (max-width: 768px)
+  header
+    position fixed
+    left 0
+    top 0
+    z-index 999
+
+    .logo
+      display none
 </style>
