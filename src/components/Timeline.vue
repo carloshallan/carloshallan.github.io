@@ -159,5 +159,4 @@ TimelineIconAfter()
   .jobDescription::after
   .jobDescription::before
     display none
-
 </style>
