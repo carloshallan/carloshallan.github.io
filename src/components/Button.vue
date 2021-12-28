@@ -49,5 +49,5 @@ button
    background-color transparent
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
-    font-size 18px
+    font-size 22px
 </style>
