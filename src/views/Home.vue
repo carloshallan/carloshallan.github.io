@@ -37,5 +37,4 @@ export default Vue.extend({
 
   @media screen and (max-width: 768px)
     display none
-
 </style>

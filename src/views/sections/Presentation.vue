@@ -56,5 +56,4 @@ export default Vue.extend({
 .buttonGroup
    display flex
    gap 20px
-
 </style>
