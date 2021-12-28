@@ -45,7 +45,7 @@ header
   position relative
   display flex
   align-items center
-  justify-content space-between
+  justify-content center
   padding: 20px 30px
   background-color dark
   animation-duration 0.5s
@@ -99,12 +99,6 @@ header
       bottom 0
 
 @media screen and (max-width: 768px)
-  header
-    position fixed
-    left 0
-    top 0
-    z-index 999
-
-    .logo
-      display none
+  header.fixed
+    position relative !important
 </style>

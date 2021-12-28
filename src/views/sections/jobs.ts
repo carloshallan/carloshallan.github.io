@@ -1,38 +1,5 @@
 export default [
   {
-    title: 'Pipeline Full Stack Engineer',
-    subtitle: 'Garena Studio',
-    date: 'Current Job',
-    jobDescription: {
-      description:
-        "I'm working with a 2D Game studio pipeline solution as UX/UI designer and Full Stack Engineer.",
-      title: 'Stack and tools:',
-      listOfStack: [
-        {
-          description: 'Prototype with Figma.'
-        },
-        {
-          description: 'SaaS application with VueJS.'
-        },
-        {
-          description: 'Desktop and Application with ElectronJS and VueJS'
-        },
-        {
-          description: 'Firebase realtime database and storage.'
-        },
-        {
-          description: 'Design System web solution with VueJS and Figma.'
-        },
-        {
-          description: 'Extensions for Adobe softwares'
-        },
-        {
-          description: 'Integration with Monday.com'
-        }
-      ]
-    }
-  },
-  {
     title: 'Pipeline Technical Director',
     subtitle: 'Roof Studio',
     date: 'Current Job',
@@ -52,7 +19,10 @@ export default [
           description: 'Design System web and QT for python applications.'
         },
         {
-          description: 'Desktop and Autodesk Maya plugins.'
+          description: 'Desktop and Autodesk Maya applications.'
+        },
+        {
+          description: 'Houdini, Adobe Package plugins and applications.'
         }
       ]
     }

@@ -47,4 +47,7 @@ button
   &.outlined:hover
    color light-pink
    background-color transparent
+
+  @media screen and (max-width: 768px)
+    font-size 18px
 </style>
