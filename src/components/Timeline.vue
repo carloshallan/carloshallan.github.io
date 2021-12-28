@@ -133,6 +133,15 @@ TimelineIconAfter()
       align-items flex-start
       justify-content flex-start
 
+      &::after
+        content '- - - - - - - -'
+        padding-top 30px
+
+    ul
+      li
+        li
+          padding-left 20px
+
   .job::after
   .job::before
     TimelineIcon()
