@@ -2,7 +2,12 @@
   <Section color="dark-pink">
     <div class="row">
       <div class="column">
-        <slider :slides="slides" />
+        <img
+          src="../../assets/work-image-bg.png"
+          class="figure"
+          alt="My work"
+        />
+        <!-- <slider :slides="slides" /> -->
       </div>
       <div class="column">
         <h1>
@@ -10,6 +15,8 @@
           What <span class="green">I</span> can do?
         </h1>
         <p>Lorem ipsum</p>
+        <br />
+        <br />
         <Button>Read More</Button>
       </div>
     </div>
@@ -18,12 +25,12 @@
 <script lang="ts">
 import Vue from 'vue'
 import Section from '@/components/Section.vue'
-import Slider from '@/components/Slider.vue'
+// import Slider from '@/components/Slider.vue'
 import Button from '@/components/Button.vue'
 
 export default Vue.extend({
   name: 'MyWorks',
-  components: { Section, Slider, Button },
+  components: { Section, Button },
   data() {
     return {
       slides: [
@@ -62,7 +69,7 @@ h1
   padding-bottom 35px
   margin-bottom 25px
 
-h1:before
+h1::before
   titleBorderBottom()
   width: 100px
   background-color pink
@@ -81,8 +88,19 @@ h1::after
   justify-content space-between
   align-content center
   padding 120px
-  gap 0
 
-.column:first-child
-  width 60%
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    padding 50px 10%
+
+    h1::after
+      width 100%
+
+  .column:first-child
+    width 60%
+
+  .column
+    width 100%
+
+    .figure
+      width 100%
 </style>

@@ -57,7 +57,7 @@ h1
   padding-bottom 35px
   margin-bottom 25px
 
-h1:before
+h1::before
   titleBorderBottom()
   width 100px
   background-color #5858BB
