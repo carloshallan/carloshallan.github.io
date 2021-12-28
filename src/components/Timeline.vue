@@ -81,14 +81,7 @@ export default Vue.extend({
         FiraCode()
         color light-pink
 
-.jobDescription
-  width 40%
-  display flex
-  position relative
-  padding 2px 40px
-
-.jobDescription::after
-.jobDescription::before
+TimelineIcon()
   content ''
   width 12px
   background-color light-pink
@@ -97,17 +90,65 @@ export default Vue.extend({
   border-radius 30px
   left 0px
 
-.jobDescription::before
+TimelineIconBefore()
   top 12px
   height 12px !important
 
-.jobDescription::after
+TimelineIconAfter()
   top 45px
   height calc(100% - 55px)
+
+.jobDescription
+  width 40%
+  display flex
+  position relative
+  padding 2px 40px
+
+.jobDescription::after
+.jobDescription::before
+  TimelineIcon()
+
+.jobDescription::before
+  TimelineIconBefore()
+
+.jobDescription::after
+  TimelineIconAfter()
 
 .title
   FiraSans()
   text-align right
   font-size 26px
   color green
+
+@media screen and ({ScreenCondition}: ScreenConditionValue)
+  .title
+    text-align left
+
+  .job
+    flex-direction column
+    padding 2px 40px
+
+    .header
+      width 100%
+      align-items flex-start
+      justify-content flex-start
+
+  .job::after
+  .job::before
+    TimelineIcon()
+
+  .job::after
+    TimelineIconAfter()
+
+  .job::before
+    TimelineIconBefore()
+
+  .jobDescription
+    width 90%
+    padding 0
+
+  .jobDescription::after
+  .jobDescription::before
+    display none
+
 </style>
