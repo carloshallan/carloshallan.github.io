@@ -13,6 +13,9 @@ light-pink = #FF79D1
 dark-purple = #35006C
 light-purple = #B57DED
 
+ScreenCondition = 'max-width'
+ScreenConditionValue = 1024px
+
 titleBorderBottom()
   content ''
   height 13px
@@ -91,9 +94,15 @@ p, .body
 body
   background-color dark
 
-@media screen and (max-width: 768px)
+@media screen and ({ScreenCondition}: ScreenConditionValue)
   h1
     font-size 26px
 
   .subtitle, p, body
     font-size 16px
+
+  .row
+    justify-content center
+    align-items center
+    flex-direction column
+    padding 100px 10%

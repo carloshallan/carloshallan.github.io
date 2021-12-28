@@ -76,4 +76,8 @@ h1::after
 img
   width 500px
   height auto
+
+@media screen and ({ScreenCondition}: ScreenConditionValue)
+  img
+    width 200px
 </style>

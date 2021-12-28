@@ -35,6 +35,6 @@ export default Vue.extend({
   top 300px
   z-index 7
 
-  @media screen and (max-width: 768px)
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
     display none
 </style>

@@ -48,6 +48,6 @@ button
    color light-pink
    background-color transparent
 
-  @media screen and (max-width: 768px)
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
     font-size 18px
 </style>
