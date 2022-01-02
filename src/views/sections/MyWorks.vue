@@ -17,7 +17,9 @@
         <p>Lorem ipsum</p>
         <br />
         <br />
-        <Button>Read More</Button>
+        <Button href="https://carloshallancf68.myportfolio.com/works"
+          >See some works</Button
+        >
       </div>
     </div>
   </Section>

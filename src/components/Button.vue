@@ -11,10 +11,12 @@ export default Vue.extend({
   name: 'Button',
   props: {
     click: Function,
-    outlined: Boolean
+    outlined: Boolean,
+    href: String
   },
   methods: {
     handleClick(event: HTMLElement) {
+      if (this.href) window.open(this.href, '_blank')
       this.click(event)
     }
   }

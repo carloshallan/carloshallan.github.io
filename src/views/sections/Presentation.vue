@@ -12,7 +12,12 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <Button>see my works</Button> <Button outlined>about me</Button>
+        <Button href="https://carloshallancf68.myportfolio.com/works"
+          >see my works</Button
+        >
+        <Button :outlined="true" href="https://medium.com/@carloshallan"
+          >about me</Button
+        >
       </div>
       <mouse-icon />
     </div>
