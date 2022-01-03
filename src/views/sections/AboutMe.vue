@@ -78,4 +78,11 @@ img
 @media screen and ({ScreenCondition}: ScreenConditionValue)
   img
     width 200px
+
+@media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+  h1
+    text-align center
+
+  h1::before
+    display none
 </style>

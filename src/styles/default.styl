@@ -15,6 +15,7 @@ light-purple = #B57DED
 
 ScreenCondition = 'max-width'
 ScreenConditionValue = 1280px
+ScreenConditionMobilePortrait = 600px
 
 titleBorderBottom()
   content ''
@@ -106,3 +107,7 @@ body
     align-items center
     flex-direction column
     padding 100px 10%
+
+@media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+  .row
+    padding 100px 5%

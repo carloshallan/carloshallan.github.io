@@ -52,4 +52,7 @@ button
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     font-size 22px
+
+  @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+    font-size 20px
 </style>
