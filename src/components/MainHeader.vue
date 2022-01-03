@@ -122,8 +122,4 @@ header
     span.active
       color green
       bottom 0
-
-@media screen and ({ScreenCondition}: ScreenConditionValue)
-  header.fixed
-    position relative !important
 </style>

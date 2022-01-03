@@ -111,7 +111,7 @@ h1::after
       width 100%
 
   .column:first-child
-    width 60%
+    width 90%
 
   .column
     width 100%
