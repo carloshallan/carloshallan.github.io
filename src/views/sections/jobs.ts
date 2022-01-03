@@ -152,13 +152,5 @@ export default [
         }
       ]
     }
-  },
-  {
-    title: 'IT Technical Support',
-    subtitle: 'Freelancer',
-    date: '3 years and 11 months',
-    jobDescription: {
-      description: 'Hardware Maintanance'
-    }
   }
 ]
