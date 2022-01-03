@@ -81,7 +81,6 @@ header
   .right-span:hover a, .right-span:hover .v-icon
     color light-pink
 
-
   .logo
     display flex
     align-items center
@@ -122,4 +121,12 @@ header
     span.active
       color green
       bottom 0
+
+@media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+  header
+    flex-direction column
+    position relative !important
+
+    .logo
+      display none
 </style>

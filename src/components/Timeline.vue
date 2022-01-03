@@ -159,4 +159,11 @@ TimelineIconAfter()
   .jobDescription::after
   .jobDescription::before
     display none
+
+@media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+  .job
+    padding 2px 0px 2px 30px
+
+  .jobDescription
+    width 100%
 </style>

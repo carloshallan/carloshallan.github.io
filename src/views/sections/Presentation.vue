@@ -40,23 +40,27 @@ export default Vue.extend({
 @import "../../styles/default"
 
 .presentation
-   padding: 100px 0
-   background dark
-   display flex
-   align-items center
-   justify-content center
-   flex-direction column
-   gap 60px
+  padding: 100px 0
+  background dark
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  gap 60px
 
-   @media screen and ({ScreenCondition}: ScreenConditionValue)
-     text-align center
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    text-align center
 
-     .profile
-       width 171px
-       height auto
+    .profile
+      width 171px
+      height auto
 
-      .subtitle
-        padding 10px 40px
+    .subtitle
+      padding 10px 40px
+
+  @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+    .buttonGroup
+      flex-direction column
 
 .buttonGroup
    display flex

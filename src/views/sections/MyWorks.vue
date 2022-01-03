@@ -118,4 +118,8 @@ h1::after
 
     .figure
       width 100%
+
+
+  @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
+    padding 50px 5%
 </style>
