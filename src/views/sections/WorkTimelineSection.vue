@@ -49,5 +49,4 @@ h1
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     padding 40px
-
 </style>
