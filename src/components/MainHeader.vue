@@ -6,17 +6,21 @@
         `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
     </div>
-    <navigator />
+    <div class="right-span">
+      <v-icon dark> mdi-email </v-icon>
+      <a href="mailto:carloshallandev@gmail.com">Contact Me</a>
+    </div>
+    <!--    <navigator /> -->
   </header>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Navigator from '@/components/Navigator.vue'
+// import Navigator from '@/components/Navigator.vue'
 
 export default Vue.extend({
   name: 'MainHeader',
-  components: { Navigator },
+  //  components: { Navigator },
   methods: {
     toFixed() {
       const header = this.$refs.header as HTMLElement
@@ -57,6 +61,27 @@ header.fixed
   cardShadow()
 
 header
+  a
+    color white
+
+  .right-span *
+    transition: color 0.3s border-bottom 0.3s
+
+  .right-span
+    display flex
+    gap 10px
+
+  .v-icon
+    color green
+
+  .right-span:hover
+    border-bottom 1px solid light-pink
+    cursor pointer
+
+  .right-span:hover a, .right-span:hover .v-icon
+    color light-pink
+
+
   .logo
     display flex
     align-items center
@@ -87,13 +112,18 @@ header
       transition color 0.5s
 
     span:not(:last-child)::after
-     content "/"
-     padding 0 10px
+      content "/"
+      padding 0 10px
 
     span:hover
       color light-pink
       cursor pointer
 
     span.active
-     color green
+      color green
+      bottom 0
+
+@media screen and ({ScreenCondition}: ScreenConditionValue)
+  header.fixed
+    position relative !important
 </style>

@@ -11,10 +11,12 @@ export default Vue.extend({
   name: 'Button',
   props: {
     click: Function,
-    outlined: Boolean
+    outlined: Boolean,
+    href: String
   },
   methods: {
     handleClick(event: HTMLElement) {
+      if (this.href) window.open(this.href, '_blank')
       this.click(event)
     }
   }
@@ -47,4 +49,7 @@ button
   &.outlined:hover
    color light-pink
    background-color transparent
+
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    font-size 22px
 </style>

@@ -46,4 +46,7 @@ h1
     display flex
     align-items center
     justify-content center
+
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    padding 40px
 </style>

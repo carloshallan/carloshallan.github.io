@@ -1,6 +1,5 @@
 <template>
   <div>
-    <background-timeline-icon class="timelineIcon" />
     <presentation />
     <about-me />
     <my-works />
@@ -13,7 +12,6 @@ import Vue from 'vue'
 import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
-import BackgroundTimelineIcon from '@/components/icons/BackgroundTimelineIcon.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
 
 export default Vue.extend({
@@ -21,7 +19,6 @@ export default Vue.extend({
   components: {
     Presentation,
     AboutMe,
-    BackgroundTimelineIcon,
     MyWorks,
     WorkTimeline
   }
@@ -37,4 +34,7 @@ export default Vue.extend({
   right 0
   top 300px
   z-index 7
+
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    display none
 </style>

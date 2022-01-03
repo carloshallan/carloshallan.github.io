@@ -38,7 +38,7 @@ section
   &.background-purple
     background-color purple
 
-@media (max-height 768px)
+@media ({ScreenCondition}: ScreenConditionValue)
   section
     height auto
     min-height unset

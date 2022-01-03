@@ -34,32 +34,20 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
     </span>
   </div>
    
-  <nav>
-    <a
-      aria-current="page"
-      class="router-link-exact-active active"
-      href="/"
+  <div
+    class="right-span"
+  >
+    <v-icon
+      dark=""
     >
-      
-    Home
-  
-    </a>
+       mdi-email 
+    </v-icon>
+     
     <a
-      class=""
-      href="/work"
+      href="mailto:carloshallandev@gmail.com"
     >
-      
-    Work
-  
+      Contact Me
     </a>
-    <a
-      class=""
-      href="/posts/:slug"
-    >
-      
-    post
-  
-    </a>
-  </nav>
+  </div>
 </header>
 `;

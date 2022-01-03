@@ -1,5 +1,6 @@
 module.exports = {
   publicPath: '/',
+
   configureWebpack: {
     module: {
       rules: [
@@ -9,5 +10,7 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+
+  transpileDependencies: ['vuetify']
 }

@@ -1,7 +1,7 @@
 <template>
   <Section color="transparent">
     <div class="presentation">
-      <Profile />
+      <Profile class="profile" />
       <div class="titleGroup">
         <h1>I'm Carlos <span class="green">Hallan</span></h1>
         <div class="subtitle">
@@ -12,7 +12,12 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <Button>see my works</Button> <Button outlined>about me</Button>
+        <Button href="https://carloshallancf68.myportfolio.com/works"
+          >see my works</Button
+        >
+        <Button :outlined="true" href="https://medium.com/@carloshallan"
+          >about me</Button
+        >
       </div>
       <mouse-icon />
     </div>
@@ -42,6 +47,16 @@ export default Vue.extend({
    justify-content center
    flex-direction column
    gap 60px
+
+   @media screen and ({ScreenCondition}: ScreenConditionValue)
+     text-align center
+
+     .profile
+       width 171px
+       height auto
+
+      .subtitle
+        padding 10px 40px
 
 .buttonGroup
    display flex
