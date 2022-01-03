@@ -6,8 +6,8 @@
         `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
     </div>
-    <div>
-      <v-icon> mdi-domain </v-icon>
+    <div class="right-span">
+      <v-icon dark> mdi-email </v-icon>
       <a href="mailto:carloshallandev@gmail.com">Contact Me</a>
     </div>
     <!--    <navigator /> -->
@@ -62,11 +62,25 @@ header.fixed
 
 header
   a
+    color white
+
+  .right-span *
+    transition: color 0.3s border-bottom 0.3s
+
+  .right-span
+    display flex
+    gap 10px
+
+  .v-icon
     color green
 
-  a:hover
-    text-decoration underline
+  .right-span:hover
+    border-bottom 1px solid light-pink
+    cursor pointer
+
+  .right-span:hover a, .right-span:hover .v-icon
     color light-pink
+
 
   .logo
     display flex

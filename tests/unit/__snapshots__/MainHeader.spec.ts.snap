@@ -34,9 +34,13 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
     </span>
   </div>
    
-  <div>
-    <v-icon>
-       mdi-domain 
+  <div
+    class="right-span"
+  >
+    <v-icon
+      dark=""
+    >
+       mdi-email 
     </v-icon>
      
     <a
