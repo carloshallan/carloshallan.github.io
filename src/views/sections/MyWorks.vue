@@ -14,7 +14,20 @@
           <span class="light-pink">!=</span>
           What <span class="green">I</span> can do?
         </h1>
-        <p>Lorem ipsum</p>
+        <p>
+          I started as a Front End developer for applications and websites.
+          However, because I managed to adapt well, there are other languages
+          and new challenges, so I started to develop desktop solutions for
+          Windows, macOS, and Linux distributions. Some integrations for
+          software like Adobe After Effects and Autodesk Maya.
+        </p>
+        <p>
+          The software I liked the most to develop were project managers and
+          content management systems. Although always looking for challenges and
+          solutions that best solve the problem regardless of language. In this
+          way, I built solutions in Javascript (Nodejs, VueJs, and ReactJs),
+          Python, PHP, and Kotlin.
+        </p>
         <br />
         <br />
         <Button href="https://carloshallancf68.myportfolio.com/works"
@@ -80,7 +93,7 @@ h1::before
 
 h1::after
   titleBorderBottom()
-  width: 40%
+  width: 100%
   background-color pink
   right 0
   bottom 0

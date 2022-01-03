@@ -33,5 +33,17 @@ exports[`MainHeader.vue Render MainHeader 1`] = `
     
     </span>
   </div>
+   
+  <div>
+    <v-icon>
+       mdi-domain 
+    </v-icon>
+     
+    <a
+      href="mailto:carloshallandev@gmail.com"
+    >
+      Contact Me
+    </a>
+  </div>
 </header>
 `;

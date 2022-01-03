@@ -9,29 +9,27 @@
           <span class="blue">==</span> About <span class="green">Me</span>
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          pellentesque commodo arcu, tincidunt amet, massa, molestie volutpat.
-          Erat at eu quam commodo, euismod. Mattis at dictum tempor faucibus
-          quam aliquam. Ac quis ultrices facilisi magna eu sed. Feugiat elit
-          nunc, nulla lectus interdum suspendisse penatibus nec massa. Mauris
-          vestibulum magna diam ultricies mi a. Ac varius gravida lacus nam
-          adipiscing dolor lorem sed. Turpis varius vel orci vel consectetur ut
-          habitant ac in. A, vivamus arcu senectus tristique eget. Adipiscing
-          vel amet, est ac. Nunc diam cursus interdum nulla purus. Nisl
-          elementum vulputate feugiat eget gravida. Sagittis lobortis sed
-          mauris, volutpat aliquet lacus sit tristique et. Risus et, etiam non a
-          ipsum, quis mi erat quis.
+          Father of two children, husband of an incredible person and, a lover
+          of creativity. During working hours, I'm a Full Stack Engineer or UX
+          Designer versatile as the titles presented but focused on finding
+          comfortable solutions for everyone. When I'm not programming or
+          changing diapers, I'm certainly writing or reading another crazy novel
+          or playing pokemon with my oldest daughter.
         </p>
         <p>
-          Tristique quisque enim ut nec, sollicitudin integer. Feugiat nibh
-          facilisis leo, volutpat aliquam. Ullamcorper tortor, lorem neque, a
-          habitant tincidunt. Mi vestibulum diam iaculis et tellus commodo.
-          Consectetur iaculis a vulputate gravida eu non velit at. Arcu
-          facilisis elementum accumsan nam sollicitudin magnis risus placerat.
+          In the name of curiosity to have solid knowledge about my work, I
+          started to study Software Engineering. The entire set of
+          multidisciplinary knowledge brought me broader thinking to solve
+          problems, but it was in 2018 that I started to work developing
+          pipeline solutions for creative studios and since then I have improved
+          in this area as a software engineer who passes Design to ensure a good
+          result.
         </p>
         <br />
         <br />
-        <Button> Read More </Button>
+        <Button href="https://medium.com/@carloshallan">
+          Read More in Medium
+        </Button>
       </div>
     </div>
   </Section>

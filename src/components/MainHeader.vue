@@ -6,6 +6,10 @@
         `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
     </div>
+    <div>
+      <v-icon> mdi-domain </v-icon>
+      <a href="mailto:carloshallandev@gmail.com">Contact Me</a>
+    </div>
     <!--    <navigator /> -->
   </header>
 </template>
@@ -45,7 +49,7 @@ header
   position relative
   display flex
   align-items center
-  justify-content center
+  justify-content space-between
   padding: 20px 30px
   background-color dark
   animation-duration 0.5s
@@ -57,6 +61,13 @@ header.fixed
   cardShadow()
 
 header
+  a
+    color green
+
+  a:hover
+    text-decoration underline
+    color light-pink
+
   .logo
     display flex
     align-items center
