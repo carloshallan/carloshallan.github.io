@@ -7,15 +7,16 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
     "deploy": "node scripts/github-pages-deploy.js",
     "build:icons": "node scripts/build_icons.js",
-    "lint": "vue-cli-service lint",
     "prepare": "husky install"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.5.3",
+    "vuetify": "^2.4.0",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -41,10 +42,14 @@
     "jest-serializer-vue": "^2.0.2",
     "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "typescript": "~4.1.5",
-    "vue-template-compiler": "^2.6.11"
+    "vue-cli-plugin-vuetify": "~2.4.5",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "jest": {
     "snapshotSerializers": [
