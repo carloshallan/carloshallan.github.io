@@ -5,10 +5,10 @@
       <div class="titleGroup">
         <h1>I'm Carlos <span class="green">Hallan</span></h1>
         <div class="subtitle">
-          A Pipeline
+          A
           <span class="light-pink">UI/UX Designer</span>
           and
-          <span class="light-purple">Full Stack Engineer</span>
+          <span class="light-purple">Full-Stack Engineer</span>
         </div>
       </div>
       <div class="buttonGroup">
