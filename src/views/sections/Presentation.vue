@@ -48,6 +48,9 @@ export default Vue.extend({
   flex-direction column
   gap 60px
 
+  .subtitle
+    text-align center
+
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     text-align center
 
