@@ -3,7 +3,10 @@
     <div class="presentation">
       <Profile class="profile" />
       <div class="titleGroup">
-        <h1>I'm Carlos <span class="green">Hallan</span></h1>
+        <h1>
+          I'm Carlos
+          <span class="green">Hallan</span>
+        </h1>
         <div class="subtitle">
           A
           <span class="light-pink">UI/UX Designer</span>
@@ -27,7 +30,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Section from '@/components/Section.vue'
-import Profile from '@/components/icons/Profile.vue'
+import Profile from '@/components/icons/Profile2.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'
 
