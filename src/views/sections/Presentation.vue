@@ -9,9 +9,9 @@
         </h1>
         <div class="subtitle">
           A
-          <span class="light-pink">UI/UX Designer</span>
-          and
-          <span class="light-purple">Full-Stack Engineer</span>
+          <span class="light-pink">Front End Engineer</span>
+          and a
+          <span class="light-purple">UI/UX Design Lover</span>
         </div>
       </div>
       <div class="buttonGroup">

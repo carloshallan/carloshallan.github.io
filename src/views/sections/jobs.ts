@@ -28,12 +28,12 @@ export default [
     }
   },
   {
-    title: 'Pipeline Full-Stack Engineer',
+    title: 'Pipeline Front End Engineer',
     subtitle: 'Wildife Studios',
     date: '3 years and 6 months',
     jobDescription: {
       description:
-        'I built many solutions for pipeline as UX/UI designer, and Full-Stack Engineer.',
+        'I built many solutions for pipeline as UX/UI designer, and Front End Engineer. Some applications I built as a Full Stack developer, going through the whole process from design.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
