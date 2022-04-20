@@ -48,6 +48,7 @@ export default Vue.extend({
 .scroll, .arrow
   animation-name shakeScroll
   animation-timing-function easy-in-out
+  animation-delay 0.001
   animation-duration 0.2s
   animation-iteration-count infinite
   animation-direction alternate
