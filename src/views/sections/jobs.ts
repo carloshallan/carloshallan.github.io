@@ -13,27 +13,58 @@ export default [
           description: 'Prototype with Figma.'
         },
         {
-          description: 'SaaS application with VueJS.'
+          description: 'SaaS application with VueJS, typescript, vuetify.'
         },
         {
-          description: 'Design System web and QT for python applications.'
+          description: 'Plugins for Autodesk Maya.'
         },
         {
-          description: 'Desktop and Autodesk Maya applications.'
+          description:
+            'Desktop and Autodesk Maya solutions with Python and Nodejs.'
         },
         {
-          description: 'Houdini, Adobe Package plugins and applications.'
+          description: 'Google Drive Api'
+        },
+        {
+          description: 'Firebase realtime database.'
+        }
+      ]
+    }
+  },
+  {
+    title: 'Full Stack Engineer and UX/UI Designer',
+    subtitle: 'Tangerine',
+    date: 'Current Job',
+    jobDescription: {
+      description:
+        'I’m building an online classroom for specific training. The idea is a web app with PWA.',
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description: 'Prototype with Figma.'
+        },
+        {
+          description: 'SaaS application with VueJS, Typescript and Vuetify.'
+        },
+        {
+          description: 'Web app with NextJS, Typescript and ChakraUI.'
+        },
+        {
+          description: 'Firebase realtime database.'
+        },
+        {
+          description: 'Design System web solution for Vuejs with TailwindCSS.'
         }
       ]
     }
   },
   {
     title: 'Pipeline Front End Engineer',
-    subtitle: 'Wildife Studios',
+    subtitle: 'Wildlife Studios',
     date: '3 years and 6 months',
     jobDescription: {
       description:
-        'I built many solutions for pipeline as UX/UI designer, and Front End Engineer. Some applications I built as a Full Stack developer, going through the whole process from design.',
+        'I built many solutions for pipeline as UX/UI designer and, Front End Engineer. Some applications I built as a Full Stack developer, going through the whole process from design to deploy.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
@@ -42,23 +73,36 @@ export default [
         },
         {
           description:
-            'SaaS applications with Vanilla Javascript, VueJS, ReactJS, Django and Python.'
+            'SaaS applications with Vanilla Javascript, VueJS, ReactJs, Django and Python.'
         },
         {
           description:
-            'Plugins and extensions for Autodesk Maya, Adobe applications with ElectronJS + VueJS, Python + Qt.'
+            'Plugins and extensions for Autodesk Maya with Python and Pyside.'
         },
         {
           description:
-            'Desktop applications with ElectronJS + VueJS, Python + Qt.'
+            'Extensions for Adobe After Effects  with javascript, Vuejs.'
         },
         {
           description:
-            'Shotgrid (Shotgun) integrations. Shotgrid toolkit custom scripts, and automate sripts for Shotgrid web data.'
+            'Desktop solutions with ElectronJs, Nodejs, Vuejs or Python + Qt'
+        },
+        {
+          description: 'PostgresSQL and MySQL with Django or Sequelize.'
+        },
+        {
+          description: 'Mixpanel.'
         },
         {
           description:
-            'I was part of the development of Design Systems for web and desktop solutions with ReactJS and Qt.'
+            'Shotgrid (Shotgun) integrations. Shotgrid toolkit custom scripts, and automate scripts for Shotgrid web data.'
+        },
+        {
+          description: 'Trello integrations'
+        },
+        {
+          description:
+            'I was part of the development of Design System for web applications with ReactJs and one for a Python solutions with Qt.'
         }
       ]
     }
@@ -69,7 +113,7 @@ export default [
     date: '6 months',
     jobDescription: {
       description:
-        'I built a pipeline solution as UX/UI designer, and Front End Engineer. In this project I made a brand, UX low fidelity and high fidelity prototype. Also I worked as a development Front End solutioon for part of the prototype.',
+        'I built a project manager solution as UX/UI designer, and Front End Engineer. In this project I made a brand, UX low fidelity and high fidelily prototype. Also I worked as a Front End developer for part of the prototype.',
       title: 'Stack and Tools: ',
       listOfStack: [
         {
@@ -77,6 +121,9 @@ export default [
         },
         {
           description: 'SaaS application with ReactJS.'
+        },
+        {
+          description: 'Backend with python and Flask'
         }
       ]
     }
@@ -121,13 +168,13 @@ export default [
           description: 'Wordpress templates.'
         },
         {
-          description: 'Vanilla Javascript Websites.'
-        },
-        {
           description: 'Google Analytics.'
         },
         {
           description: 'Facebook ADS.'
+        },
+        {
+          description: 'Designs for Social Media'
         }
       ]
     }
