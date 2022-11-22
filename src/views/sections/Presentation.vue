@@ -9,7 +9,7 @@
         </h1>
         <div class="subtitle">
           A
-          <span class="light-pink">Front End Engineer</span>
+          <span class="light-pink">Software Engineer</span>
           and a
           <span class="light-purple">UI/UX Design Lover</span>
         </div>
