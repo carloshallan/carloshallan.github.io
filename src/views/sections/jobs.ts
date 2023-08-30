@@ -27,6 +27,43 @@ export default [
         },
         {
           description: 'Firebase realtime database.'
+        },
+        {
+          description: 'Python Qt Design System'
+        },
+        {
+          description: 'Python Desktop Apps with Gui'
+        }
+      ]
+    }
+  },
+  {
+    title: 'Game Developer',
+    subtitle: 'Dragon Lord Studio',
+    date: 'Current Job',
+    jobDescription: {
+      description: "I'm working with C# to build scripts for some Unity games.",
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description: 'Scripts with C# for Unity projects'
+        }
+      ]
+    }
+  },
+  {
+    title: 'Full Stack Engineer',
+    subtitle: 'Streetwise',
+    date: '3 Months (During 1 project)',
+    jobDescription: {
+      description:
+        "I'm working as a UI/UX Designer and Full Stack Engineer to build a After Effects Extension with ReactJS, typescript and ExtendScript. The extension is a complete application to create many different versions of a project.",
+      title: 'Stack and Tools:',
+      listOfStack: [
+        { description: 'Prototype with Figma' },
+        {
+          description:
+            'SaaS application with ReactJS + Typescript + Vite + Adobe ExtendScript'
         }
       ]
     }
@@ -34,17 +71,14 @@ export default [
   {
     title: 'Full Stack Engineer and UX/UI Designer',
     subtitle: 'Tangerine',
-    date: 'Current Job',
+    date: '1 year and 6 months (Until the end of project)',
     jobDescription: {
       description:
-        'I’m building an online classroom for specific training. The idea is a web app with PWA.',
+        'I worked building two full stack applications to manage and use the Tangerine Training. I worked as a UX/UI Designer and Full Stack Engineer working in all parts of the project.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
           description: 'Prototype with Figma.'
-        },
-        {
-          description: 'SaaS application with VueJS, Typescript and Vuetify.'
         },
         {
           description: 'Web app with NextJS, Typescript and ChakraUI.'
