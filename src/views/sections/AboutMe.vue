@@ -33,7 +33,7 @@
         <p>
           I’m a lifelong learner, a storyteller, an engineer, but above all, a
           dedicated father and husband. Every role I embody is a piece of the
-          intricate puzzle that forms the multifaceted person I am today.
+          intricate puzzle that builds the multifaceted person I am today.
         </p>
         <br />
         <br />
