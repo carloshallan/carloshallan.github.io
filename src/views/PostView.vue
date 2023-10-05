@@ -15,6 +15,9 @@ export default Vue.extend({
   components: {
     Section,
     PostTemplate
+  },
+  created() {
+    console.log(this.$route.params)
   }
 })
 </script>
