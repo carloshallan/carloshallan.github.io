@@ -9,21 +9,31 @@
           <span class="blue">==</span> About <span class="green">Me</span>
         </h1>
         <p>
-          Father of two children, husband of an incredible person and, a lover
-          of creativity. During working hours, I'm a Full Stack Engineer or UX
-          Designer versatile as the titles presented but focused on finding
-          comfortable solutions for everyone. When I'm not programming or
-          changing diapers, I'm certainly writing or reading another crazy novel
-          or playing pokemon with my oldest daughter.
+          Father of 3 amazing kids and husband to an inspirational soul. In
+          another part of my life, I am a Software Engineer with a passion for
+          crafting solutions rooted in Design. I'm fascinated by the
+          intersection of psychology and design, and nothing fulfills me more
+          than witnessing an idea positively impacting people’s lives..
         </p>
         <p>
-          In the name of curiosity to have solid knowledge about my work, I
-          started to study Software Engineering. The entire set of
-          multidisciplinary knowledge brought me broader thinking to solve
-          problems, but it was in 2018 that I started to work developing
-          pipeline solutions for creative studios and since then I have improved
-          in this area as a software engineer who passes Design to ensure a good
-          result.
+          In my free time, you can either find me concocting a new adventure
+          with my kids or penning the chapters of my next novel. Writing fuels
+          my spirit, and I’ve been channeling this energy into a personal
+          software project I’ve dubbed “Momo.” It’s a creative writing project
+          management tool (crafted with Typescript, React, and Rust) aiming to
+          streamline my novel publishing process.
+        </p>
+        <p>
+          My journey into the world of Software Engineering began in pursuit of
+          solid, foundational knowledge. Since diving into this field in 2014,
+          my multidisciplinary learning has broadened my problem-solving
+          horizons. I’m perpetually exploring new languages, tools, and anything
+          promising to elevate my current projects.
+        </p>
+        <p>
+          I’m a lifelong learner, a storyteller, an engineer, but above all, a
+          dedicated father and husband. Every role I embody is a piece of the
+          intricate puzzle that forms the multifaceted person I am today.
         </p>
         <br />
         <br />
