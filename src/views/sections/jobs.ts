@@ -43,7 +43,7 @@ export default [
   {
     title: 'Full Stack Engineer and UX/UI Designer',
     subtitle: 'Tangerine',
-    date: '1 year and 8 months',
+    date: '1 year and 8 months (temporary)',
     jobDescription: {
       description:
         'I worked building two applications to manage and use the Tangerine Training. I worked as a UX/UI Designer and Full Stack Engineer working in all parts of the project.',
