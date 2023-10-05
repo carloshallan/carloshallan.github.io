@@ -12,21 +12,29 @@
       <div class="column">
         <h1>
           <span class="light-pink">!=</span>
-          What <span class="green">I</span> can do?
+          What <span class="green">I</span> can <span class="green">do</span>?
         </h1>
-        <p>
-          I started as a Front End developer for applications and websites.
-          However, because I managed to adapt well, there are other languages
-          and new challenges, so I started to develop desktop solutions for
-          Windows, macOS, and Linux distributions. Some integrations for
-          software like Adobe After Effects and Autodesk Maya.
+        <p class="horizontalList">
+          I embarked on my career as a Front End Developer and UI/UX Designer,
+          honing my skills in web applications and websites. My creative nature
+          allowed me to broaden my expertise, leading me to develop desktop
+          solutions for Windows, macOS, and Linux, and integrate various
+          applications including:
+          <span v-for="(value, index) in appsWorked" :key="index">
+            {{ value }}
+          </span>
+        </p>
+        <p class="horizontalList">
+          Not confined to specific languages, I’ve embraced challenges and
+          crafted effective solutions using:
+          <span v-for="(value, index) in languagesWorked" :key="index">
+            {{ value }}
+          </span>
         </p>
         <p>
-          The software I liked the most to develop were project managers and
-          content management systems. Although always looking for challenges and
-          solutions that best solve the problem regardless of language. In this
-          way, I built solutions in Javascript (Nodejs, VueJs, and ReactJs),
-          Python, PHP, and Kotlin.
+          Each language and project has been a stepping stone in my diverse
+          journey of problem-solving and technological innovation, positioning
+          me as a multifaceted developer equipped to tackle complex challenges.
         </p>
         <br />
         <br />
@@ -40,7 +48,6 @@
 <script lang="ts">
 import Vue from 'vue'
 import Section from '@/components/Section.vue'
-// import Slider from '@/components/Slider.vue'
 import Button from '@/components/Button.vue'
 
 export default Vue.extend({
@@ -48,6 +55,25 @@ export default Vue.extend({
   components: { Section, Button },
   data() {
     return {
+      appsWorked: [
+        'Google Workspace',
+        'Adobe Suite: Photoshop, After Effects, XD',
+        'Blender',
+        'Autodesk Maya',
+        'Shotgrid',
+        'Perforce',
+        'Houdini',
+        'Trello',
+        'Asana'
+      ],
+      languagesWorked: [
+        'Javascript or Typescript (including frameworks like Node.js, VueJs, Nuxt, React Js, Next JS, Electron JS, Tauri)',
+        'Python (with frameworks such as Django, Flask, PyQt5, PyQt4, PySide2, PySide6, etc.)',
+        'Rust',
+        'C# (specifically within the Unity environment)',
+        'Java (exclusive to mobile development)',
+        'Kotlin (also exclusive to mobile development) '
+      ],
       slides: [
         {
           order: 3,
@@ -99,19 +125,32 @@ h1::after
   bottom 0
   z-index 6
 
+
+.horizontalList span
+  font-style italic
+  margin-right: 10px;
+  color: yellow
+
+  &:last-child
+    margin-right: unset
+
+  &::after
+    content: ';'
+    color: white
+
+  &:last-child::after
+    content: '.'
+
+
 .row
+  //flex-wrap wrap
   justify-content space-between
-  align-content center
+  align-content center !important
   padding 120px
-
-  @media screen and ({ScreenCondition}: ScreenConditionValue)
-    padding 50px 10%
-
-    h1::after
-      width 100%
 
   .column:first-child
     width 90%
+    align-self: center
 
   .column
     width 100%
@@ -119,6 +158,11 @@ h1::after
     .figure
       width 100%
 
+  @media screen and ({ScreenCondition}: ScreenConditionValue)
+    padding 50px 10%
+
+    h1::after
+      width 100%
 
   @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
     padding 50px 5%

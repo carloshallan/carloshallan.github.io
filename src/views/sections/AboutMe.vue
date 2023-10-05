@@ -75,6 +75,9 @@ img
   width 500px
   height auto
 
+.column:first-child
+  align-self: center
+
 @media screen and ({ScreenCondition}: ScreenConditionValue)
   img
     width 200px
