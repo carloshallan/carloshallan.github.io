@@ -161,6 +161,9 @@ h1::after
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     padding 50px 10%
 
+    .horizontalList span
+      font-size 18px
+
     h1::after
       width 100%
 
