@@ -2,7 +2,7 @@ export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Current Job',
+    date: 'Nov 2021 - Current Job (full time)',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
@@ -13,14 +13,20 @@ export default [
           description: 'Prototype with Figma.'
         },
         {
-          description: 'SaaS application with VueJS, typescript, vuetify.'
+          description: 'SaaS applications with VueJS, typescript, vuetify.'
         },
         {
-          description: 'Plugins for Autodesk Maya.'
+          description: 'Plugins for Autodesk Maya'
+        },
+        {
+          description: 'Scripts for Google Spreadsheet'
+        },
+        {
+          description: 'Mailchimp Integrations'
         },
         {
           description:
-            'Desktop and Autodesk Maya solutions with Python and Nodejs.'
+            'Desktop solutions with Python and Nodejs for Windows, MacOs and Linux Distros.'
         },
         {
           description: 'Google Drive Api'
@@ -30,23 +36,27 @@ export default [
         },
         {
           description: 'Python Qt Design System'
-        },
-        {
-          description: 'Python Desktop Apps with Gui'
         }
       ]
     }
   },
   {
-    title: 'Game Developer',
-    subtitle: 'Dragon Lord Studio',
-    date: 'Current Job',
+    title: 'Full Stack Engineer and UX/UI Designer',
+    subtitle: 'Tangerine',
+    date: '1 year and 8 months',
     jobDescription: {
-      description: "I'm working with C# to build scripts for some Unity games.",
+      description:
+        'I worked building two applications to manage and use the Tangerine Training. I worked as a UX/UI Designer and Full Stack Engineer working in all parts of the project.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Scripts with C# for Unity projects'
+          description: 'Prototype with Figma.'
+        },
+        {
+          description: 'Web apps with NextJS, Typescript and ChakraUI.'
+        },
+        {
+          description: 'Firebase realtime database.'
         }
       ]
     }
@@ -54,7 +64,7 @@ export default [
   {
     title: 'Full Stack Engineer',
     subtitle: 'Streetwise',
-    date: '3 Months (During 1 project)',
+    date: '4 Months (temporary)',
     jobDescription: {
       description:
         "I'm working as a UI/UX Designer and Full Stack Engineer to build a After Effects Extension with ReactJS, typescript and ExtendScript. The extension is a complete application to create many different versions of a project.",
@@ -69,25 +79,16 @@ export default [
     }
   },
   {
-    title: 'Full Stack Engineer and UX/UI Designer',
-    subtitle: 'Tangerine',
-    date: '1 year and 6 months (Until the end of project)',
+    title: 'Game Developer',
+    subtitle: 'Dragon Lord Studio',
+    date: '3 Months (temporary)',
     jobDescription: {
       description:
-        'I worked building two full stack applications to manage and use the Tangerine Training. I worked as a UX/UI Designer and Full Stack Engineer working in all parts of the project.',
+        "I'm working with C# to build scripts for one Unity game called Charge Knight.",
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Prototype with Figma.'
-        },
-        {
-          description: 'Web app with NextJS, Typescript and ChakraUI.'
-        },
-        {
-          description: 'Firebase realtime database.'
-        },
-        {
-          description: 'Design System web solution for Vuejs with TailwindCSS.'
+          description: 'Scripts with C# for Unity projects'
         }
       ]
     }
@@ -95,7 +96,7 @@ export default [
   {
     title: 'Pipeline Front End Engineer',
     subtitle: 'Wildlife Studios',
-    date: '3 years and 6 months',
+    date: '3 years and 6 months (full time)',
     jobDescription: {
       description:
         'I built many solutions for pipeline as UX/UI designer and, Front End Engineer. Some applications I built as a Full Stack developer, going through the whole process from design to deploy.',
@@ -108,6 +109,9 @@ export default [
         {
           description:
             'SaaS applications with Vanilla Javascript, VueJS, ReactJs, Django and Python.'
+        },
+        {
+          description: 'Microservices with python and javascript'
         },
         {
           description:
@@ -125,7 +129,7 @@ export default [
           description: 'PostgresSQL and MySQL with Django or Sequelize.'
         },
         {
-          description: 'Mixpanel.'
+          description: 'Mixpanel integration to a Design System.'
         },
         {
           description:
@@ -135,15 +139,17 @@ export default [
           description: 'Trello integrations'
         },
         {
-          description:
-            'I was part of the development of Design System for web applications with ReactJs and one for a Python solutions with Qt.'
+          description: 'React Design System'
+        },
+        {
+          description: ' Qt Design System for Python'
         }
       ]
     }
   },
   {
     title: 'UI/UX Designer and Front End Engineer',
-    subtitle: '02 Filmes',
+    subtitle: '02 Filmes (temporary)',
     date: '6 months',
     jobDescription: {
       description:
@@ -165,7 +171,7 @@ export default [
   {
     title: 'UI/UX Design Director and Front End Engineer',
     subtitle: 'Nuvem Agência',
-    date: '3 years and 9 months',
+    date: '3 years and 9 months (full time)',
     jobDescription: {
       description:
         'I worked with entire process of build websites and monoliths softwares based at UX solutions. The entire process consist in the UX planning, UI prototype, and Front End development.',
@@ -189,7 +195,7 @@ export default [
   {
     title: 'Digital Marketing Manager',
     subtitle: 'Accelera Vendas',
-    date: '2 years and 9 months',
+    date: '2 years and 9 months (full time)',
     jobDescription: {
       description:
         'I worked building wordpress websites, advertising teams management, and Ad Management.',
@@ -216,7 +222,7 @@ export default [
   {
     title: 'IT Technical Support',
     subtitle: 'Unitecnologia',
-    date: '7 months',
+    date: '7 months (full time)',
     jobDescription: {
       description:
         'I worked providing support service, training for customers, and database management.',
