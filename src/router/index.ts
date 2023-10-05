@@ -6,6 +6,7 @@ Vue.use(VueRouter)
 const HomeComponent = () => import('@/views/Home.vue')
 const WorkComponent = () => import('@/views/Work.vue')
 const PostComponent = () => import('@/views/PostView.vue')
+const PageNotFound = () => import('@/views/PageNotFound.vue')
 
 const routes: Array<RouteConfig> = [
   {
@@ -22,6 +23,11 @@ const routes: Array<RouteConfig> = [
     path: '/posts/:slug',
     name: 'post',
     component: PostComponent
+  },
+  {
+    path: '*',
+    name: 'PageNotFound',
+    component: PageNotFound
   }
 ]
 
