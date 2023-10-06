@@ -15,8 +15,9 @@ dark-purple = #35006C
 light-purple = #B57DED
 
 ScreenCondition = 'max-width'
-ScreenConditionValue = 1580px
+ScreenConditionValue = 1380px
 ScreenConditionMobilePortrait = 600px
+ScreenConditionTabletPortrait = 800px
 
 titleBorderBottom()
   content ''
@@ -96,6 +97,59 @@ p, .horizontalList span, .body
 body
   background-color dark
 
+.post header .v-image
+  border-radius: 20px
+  border: 2px solid green
+  position relative
+  display flex
+  justify-content center
+  align-items center
+
+  &::after, &::before
+    content: ''
+    display: block
+    position absolute
+    border-radius: 20px
+    margin auto
+
+  &::after
+    width: 100.5%;
+    height 100.5%;
+    border: 5px solid purple
+
+  &::before
+    width: 101%;
+    height 101%;
+    border: 10px solid light-pink
+    border-radius: 20px
+
+
+.post
+  width: 80%
+  height: auto
+  margin auto auto 50px auto
+
+.post .button
+  width: auto
+  margin: 40px 0
+
+.post .v-image
+  margin: 20px 0
+
+.post h1
+  font-size 36px
+
+.post h2, .post h3, .post h4, .post h5
+  font-size 30px
+
+.post h1, .post h2, .post h3, .post h4, .post h5
+  padding 20px 0
+
+.post iframe
+  width 100%
+  height 500px
+  margin: 20px 0
+
 @media screen and ({ScreenCondition}: ScreenConditionValue)
   h1
     font-size 36px
@@ -112,3 +166,10 @@ body
 @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
   .row
     padding 100px 5%
+
+  .post
+    width 95%
+
+@media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
+  .post
+    width 95%

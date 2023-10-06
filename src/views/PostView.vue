@@ -49,25 +49,3 @@ export default Vue.extend({
   }
 })
 </script>
-<style lang="stylus">
-.post
-  width: 80%
-  height: auto
-  margin auto auto 50px auto
-
-.post .button
-  width: auto
-  margin: 40px 0
-
-.post .v-image
-  margin: 20px 0
-
-.post h1
-  font-size 36px
-
-.post h2, .post h3, .post h4, .post h5
-  font-size 30px
-
-.post h1, .post h2, .post h3, .post h4, .post h5
-  padding 20px 0
-</style>
