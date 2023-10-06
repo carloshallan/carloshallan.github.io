@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ outlined }" @click="handleClick">
+  <button :class="{ outlined, button: true }" @click="handleClick">
     <slot />
   </button>
 </template>

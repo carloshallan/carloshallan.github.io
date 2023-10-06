@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Section from '@/components/Section.vue'
+import Section from '@/layouts/SectionLayout.vue'
 import Profile from '@/components/icons/Profile.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'

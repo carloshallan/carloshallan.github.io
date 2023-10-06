@@ -47,7 +47,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Section from '@/components/Section.vue'
+import Section from '@/layouts/SectionLayout.vue'
 import Button from '@/components/Button.vue'
 
 export default Vue.extend({
