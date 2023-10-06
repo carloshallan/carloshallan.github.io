@@ -53,7 +53,7 @@ header
   flex-direction: column
   align-items center
 
-  @media screen and ({ScreenCondition}: ScreenConditionValue)
+  @media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
     width: 100%
     margin-left: 0
 </style>
