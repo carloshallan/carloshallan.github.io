@@ -18,7 +18,7 @@ export default Vue.extend({
   methods: {
     handleClick(event: HTMLElement) {
       if (this.href) window.open(this.href, this.target || '_blank')
-      this.click(event)
+      if (this.click) this.click(event)
     }
   }
 })

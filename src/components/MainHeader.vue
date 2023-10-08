@@ -1,7 +1,9 @@
 <template>
   <header ref="header">
     <div class="logo">
-      <router-link class="fullName" to="/" exact> Carlos Hallan </router-link>
+      <router-link class="fullName green" to="/" exact>
+        Carlos Hallan
+      </router-link>
       <span class="templateString">
         `${<span class="f">User</span>.<span class="s">name</span>}`
       </span>
@@ -90,7 +92,7 @@ header
 
     .fullName
       display none
-      color light-pink
+
     .f
       color blue
 
@@ -124,8 +126,20 @@ header
 
 @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
   header
-    //flex-direction column
+    flex-direction column
     position relative !important
+    align-items center
+    justify-content center
+    gap: 10px
+
+    .logo
+      justify-content center
+
+  .templateString
+    display none !important
+
+  .fullName
+    display block !important
 
     //.logo
     //  display none

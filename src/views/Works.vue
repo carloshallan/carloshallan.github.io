@@ -109,6 +109,9 @@ export default Vue.extend({
   @media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
     width: 90% !important
 
+    .main-title
+      font-size 2em
+
 .card
   background-color #150823
   border-radius 10px
