@@ -1,26 +1,16 @@
 <template>
   <header>
-    <div class="post-preview">
-      //preview
-      <br />
-      title: {{ title }}
-      <br />
-      projectName: {{ projectName }}
-      <br />
-      snippet: {{ snippet }}
-      <br />
-      image: {{ imageName }}
-      <br />
-      date: {{ date }}
-      <br />
-      endPreview//
-    </div>
-
     <h1 class="post-title">
       <span v-if="projectName" class="green">{{ projectName }} - </span
       >{{ title }}
     </h1>
-    <VImg :src="`/blog/${imageName}`" :alt="alt" width="100%" height="auto" />
+    <VImg
+      v-if="imageName"
+      :src="`/blog/${imageName}`"
+      :alt="alt"
+      width="100%"
+      height="auto"
+    />
   </header>
 </template>
 

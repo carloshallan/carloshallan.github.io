@@ -1,34 +1,45 @@
-import Button from '@/components/Button.vue'
-import {VImg} from 'vuetify/lib'
 import PostHeader from "@/components/PostHeader";
+import Media from "@/components/Media";
+import BlogGallery from "@/components/BlogGallery";
 
 <PostHeader
-title='Why I chose local storage for my writing software?'
-imageName='chromebook.webp'
-snippet= 'In this article, I discuss the reasons behind choosing local storage for Momo, a writing software...'
+title='A Solução Prática para Gerenciamento de Projetos'
+snippet='O Projeto Venue é a resposta concreta para quem busca eficiência, organização e simplicidade no gerenciamento de projetos.'
 projectName='Venue'
+imageName='venue/preview-image.png'
 />
 
-In previous articles, I mentioned that I am working on the development of Momo, a software geared towards creative writing projects. The main goal of Momo is to provide me with a more useful environment that allows me to write and just write using various features that will make the most of my time. This means that the project’s primary client is myself. After giving considerable thought to how I would like to store my files, I began to consider reasons why writers would choose to use Momo over any other competitor. And I concluded that using local storage seems to be the best option. In this article, I will share the main reasons behind this decision.
+O Projeto Venue é a resposta concreta para quem busca eficiência, organização e simplicidade no gerenciamento de projetos. Esta ferramenta de software foi desenvolvida com o objetivo de eliminar complicações, tornando a execução de projetos uma tarefa mais intuitiva e acessível, sem abrir mão da eficiência e da inovação técnica.
 
-## Security and privacy
-I imagine that one of the main concerns for writers is the security and privacy of their work. By choosing local storage, it is possible to ensure that documents and projects are stored directly on the user’s device, reducing the risks associated with cloud storage, such as data leaks or unauthorized access. This creates a problem of sharing between devices, but I still don’t know how often a writer changes devices to write. To address this, I plan to add transfer solutions via Google Drive, One Drive, iCloud, or Dropbox as I develop versions for different devices, but for the initial goal, Momo should only recommend the use of backup tools.
+## Conceito Central
 
-<iframe src="https://www.youtube.com/embed/Ptt8Lsjsw0A" title="Venue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Venue funciona como um ponto central de informações, onde todos os dados relevantes para o seu projeto estão disponíveis de forma clara e ordenada. É um software desenvolvido para coletar e organizar informações cruciais em um único espaço, tornando a tomada de decisões mais rápida e embasada.
 
-## Complete control over data
-With local storage, writers have complete control over their data without relying on third-party services to manage it. This allows users to back up their projects and documents more efficiently, as well as having the freedom to move and store their files as they wish. This is because the idea is for Momo to also integrate various types of text files such as *.docx, *.txt, *.md, and *.opt.
+## Identidade Visual
 
-## Internet connection is not an obstacle
-Often I find myself looking for a quiet and comfortable environment to write, and usually, this comfort comes along with a lack of internet. I also like to leave my MacBook at home and go out with my lighter Chromebook. On it, I have locally stored texts and end up preferring to write in software like IA Writer or MarkText for local, uninterrupted writing. I also want Momo to be able to recognize texts from tools coming from other platforms and devices, such as FreeWrite, for example, further expanding its functionalities.
+O isotipo do Venue é uma simbiose do ‘V’ estilizado e um ícone de player, simbolizando dinamismo, avanço e inovação. A elegância do design, com vértices arredondados, oferece um visual contemporâneo e amigável, enquanto mantém a funcionalidade modular e responsiva.
 
-<VImg src='/blog/chromebook.webp' alt='Chromebook' width='100%' height='auto' aspect-ratio='1.7777777777777777' />
+## Experiência do Usuário
 
-## Better cost and simplicity
-Finally, by eliminating the need for cloud storage resources, I will be reducing the costs associated with the development and maintenance of Momo. In addition, the simplicity of local storage makes the software easier to use and understand by users, regardless of their level of knowledge in technology. Not to mention the speed of access to local files which will certainly be much better than accessing many texts on a remote server. Development costs also include the time and complexity of maintaining web servers. As a solo developer, any cost reduction is very welcome.
+Conscientes de que a capacidade de retenção de informação do usuário é limitada, o Venue é projetado para exibir seis blocos de informação de cada vez, com uma transição suave e opacidade reduzida para os blocos que saem da visão. Cada bloco contém três níveis de informação, apresentados como cards sobrepostos, garantindo que a informação seja absorvida sem sobrecarga.
 
-In summary, by choosing local storage for Momo, I seek to provide writers with a safer, more private, and efficient work environment. I believe that this decision will increase users’ trust in the software and contribute to a more enjoyable and productive creative writing experience. Let me know if you have another opinion on this. And if you want to know more about Momo, I invite you to read this article about the decision to use Tauri instead of Electron or another tool.
+A interação com as timelines é simplificada e intuitiva. Os usuários navegam por projetos de forma linear e lógica, facilitando a memorização do percurso e a seleção de itens específicos, eliminando a necessidade de consultas ou leituras adicionais.
 
-See you soon.
+## Funcionalidade
 
-<Button>Click Here</Button>
+O vídeo player HTML 5, um elemento central do Venue, é projetado para ser um player frame by frame. Com um visual flutuante, os usuários podem atualizar e adaptar as funcionalidades sem comprometer a estética ou a organizidade da interface.
+
+Ao lado, as informações da timeline são facilmente acessíveis. Os usuários podem fixar o bloco de opções e visualizar as modificações em tempo real. A responsividade é um princípio fundamental; assim, o aumento no número de opções não compromete a usabilidade ou a apresentação visual.
+
+## Conclusão
+
+Venue não é apenas uma ferramenta, mas uma experiência holística. Desde a marca até a interface do usuário, cada elemento é cuidadosamente concebido para garantir que os profissionais possam gerenciar projetos com eficiência, intuição e estilo. É uma confluência de informação, funcionalidade e arte, prometendo transformar a maneira como os projetos são visualizados, gerenciados e realizados.
+
+
+<div class={'blogGallery'}>
+<Media src={'/blog/venue/scene-selection-2.png'}/>
+<Media src={'/blog/venue/venue-logo.png'}/>
+<Media src={'/blog/venue/scheduler-presentation.mp4'}/>
+</div>
+
+[//]: # (<iframe src="https://www.youtube.com/embed/Ptt8Lsjsw0A" title="Venue" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>)

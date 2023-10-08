@@ -18,7 +18,6 @@ interface Post {
   title: string
   slug: string
   content: string
-  extractedText: string
   previewTitle: string
   snippet: string
   image: string
@@ -49,11 +48,6 @@ export default Vue.extend({
         slug +
         '.mdx').default
 
-      const match = content.match(/\/\/preview([\s\S]*?)endPreview\/\//)
-      const extractedText = match ? match[1].trim() : ''
-
-      console.log('extractedText', extractedText)
-
       const titleMatch = content.match(/title=['"](.*?)['"]/)
       const imageNameMatch = content.match(/imageName=['"](.*?)['"]/)
       const snippetMatch = content.match(/snippet=['"](.*?)['"]/)
@@ -66,7 +60,6 @@ export default Vue.extend({
         title,
         slug,
         content,
-        extractedText,
         previewTitle,
         snippet,
         image
