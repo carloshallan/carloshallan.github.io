@@ -97,13 +97,10 @@ p, .horizontalList span, .body
 body
   background-color dark
 
-.post header .v-image
-  border-radius: 20px
-  border: 2px solid green
+.color-border
   position relative
-  display flex
-  justify-content center
-  align-items center
+  border: 2px solid green
+  border-radius: 20px
 
   &::after, &::before
     content: ''
@@ -123,6 +120,13 @@ body
     border: 10px solid light-pink
     border-radius: 20px
 
+.post header .v-image
+  display flex
+  justify-content center
+  align-items center
+
+
+
 
 .post
   width: 80%
@@ -138,6 +142,7 @@ body
 
 .post h1
   font-size 36px
+  text-align center
 
 .post h2, .post h3, .post h4, .post h5
   font-size 30px

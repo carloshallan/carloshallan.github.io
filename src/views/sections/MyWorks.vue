@@ -38,9 +38,9 @@
         </p>
         <br />
         <br />
-        <Button href="https://carloshallancf68.myportfolio.com/works"
-          >See some works</Button
-        >
+        <router-link to="/work">
+          <Button> See some works </Button>
+        </router-link>
       </div>
     </div>
   </Section>

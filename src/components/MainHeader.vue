@@ -124,9 +124,9 @@ header
 
 @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
   header
-    flex-direction column
+    //flex-direction column
     position relative !important
 
-    .logo
-      display none
+    //.logo
+    //  display none
 </style>

@@ -15,9 +15,9 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <Button href="https://carloshallancf68.myportfolio.com/works"
-          >see my works</Button
-        >
+        <router-link to="/work">
+          <Button> see my works </Button>
+        </router-link>
         <Button :outlined="true" href="https://medium.com/@carloshallan"
           >about me</Button
         >

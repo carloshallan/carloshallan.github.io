@@ -12,11 +12,12 @@ export default Vue.extend({
   props: {
     click: Function,
     outlined: Boolean,
-    href: String
+    href: String,
+    target: String
   },
   methods: {
     handleClick(event: HTMLElement) {
-      if (this.href) window.open(this.href, '_blank')
+      if (this.href) window.open(this.href, this.target || '_blank')
       this.click(event)
     }
   }

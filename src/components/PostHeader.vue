@@ -5,8 +5,9 @@
       >{{ title }}
     </h1>
     <VImg
+      class="color-border"
       v-if="imageName"
-      :src="`/blog/${imageName}`"
+      :src="`/work/${imageName}`"
       :alt="alt"
       width="100%"
       height="auto"
@@ -23,7 +24,8 @@ export default Vue.extend({
     alt: String,
     imageName: String,
     snippet: String,
-    date: String
+    date: String,
+    order: String
   },
   name: 'PostHeader'
 })
