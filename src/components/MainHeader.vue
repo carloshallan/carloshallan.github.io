@@ -1,26 +1,31 @@
 <template>
   <header ref="header">
-    <div class="logo">
-      <router-link to="/" exact>
-        <creative-logo class="creative-olympus-logo" />
-      </router-link>
-    </div>
-    <div class="menu">
-      <router-link active-class="active" to="/" exact> Home </router-link>
-      <router-link active-class="active" to="/work"> Work </router-link>
+    <div class="left-side">
+      <div class="logo">
+        <router-link to="/" exact>
+          <creative-logo class="creative-olympus-logo" />
+        </router-link>
+      </div>
+      <div class="menu">
+        <router-link active-class="active" to="/" exact> home </router-link>
+        <router-link active-class="active" to="/work"> work </router-link>
+      </div>
     </div>
     <div class="right-span">
       <div>
-        <v-icon dark> mdi-github </v-icon>
-        <a href="https://github.com/carloshallan" />
+        <a href="https://github.com/carloshallan" target="_blank">
+          <v-icon dark> mdi-github </v-icon>
+        </a>
       </div>
       <div>
-        <v-icon dark> mdi-linkedin </v-icon>
-        <a href="https://www.linkedin.com/in/carlos-hallan/" />
+        <a href="https://www.linkedin.com/in/carlos-hallan/" target="_blank">
+          <v-icon dark> mdi-linkedin </v-icon>
+        </a>
       </div>
       <div>
-        <v-icon dark> mdi-email </v-icon>
-        <a href="mailto:carloshallandev@gmail.com" />
+        <a href="mailto:carloshallandev@gmail.com" target="_blank">
+          <v-icon dark> mdi-email </v-icon>
+        </a>
       </div>
     </div>
     <!--    <navigator /> -->
@@ -121,15 +126,24 @@ header
   .right-span div:hover a, .right-span div:hover .v-icon
     color light-pink
 
+  .left-side
+    display flex
+    align-items center
+    justify-content flex-start
+    text-transform uppercase
+    gap 40px
+
   .logo
     display flex
     align-items center
     justify-content left
-    color white
 
     .creative-olympus-logo
       width 30px
       height 30px
+      align-self center
+      position relative
+      top 5px
 
     .fullName
       display none
@@ -172,4 +186,10 @@ header
     justify-content center
     position relative !important
     gap: 20px
+
+    .left-side
+      flex-direction column
+      align-items center
+      justify-content center
+      gap: 20px
 </style>
