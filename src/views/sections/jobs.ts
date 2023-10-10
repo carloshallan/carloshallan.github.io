@@ -73,7 +73,7 @@ export default [
         { description: 'Prototype with Figma' },
         {
           description:
-            'SaaS application with ReactJS + Typescript + Vite + Adobe ExtendScript'
+            'SPA application with ReactJS + Typescript + Vite + Adobe ExtendScript'
         }
       ]
     }
