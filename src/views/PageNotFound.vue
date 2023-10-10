@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Section from '@/components/Section'
+import Section from '@/layouts/SectionLayout'
 export default {
   name: 'PageNotFound',
   components: { Section }

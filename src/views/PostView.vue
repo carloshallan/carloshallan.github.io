@@ -1,23 +1,51 @@
 <template>
   <main>
-    <Section color="dark">
-      <post-template />
+    <Section class="post" color="dark">
+      <PostLayout>
+        <component :is="dynamicComponent" />
+      </PostLayout>
     </Section>
   </main>
 </template>
+
 <script lang="ts">
-import Vue from 'vue'
-import Section from '@/components/Section.vue'
-import PostTemplate from '@/components/PostTemplate.vue'
+import Vue, { VueConstructor } from 'vue'
+import Section from '@/layouts/SectionLayout.vue'
+import PostLayout from '@/layouts/PostLayout.vue'
 
 export default Vue.extend({
   name: 'PostView',
   components: {
     Section,
-    PostTemplate
+    PostLayout
   },
-  created() {
-    console.log(this.$route.params)
+  data() {
+    const dynamicComponent: VueConstructor | null = null
+    return { dynamicComponent }
+  },
+  watch: {
+    '$route.params.slug': {
+      immediate: true,
+      handler: 'loadComponent'
+    }
+  },
+  methods: {
+    async loadComponent(newSlug: string, oldSlug: string) {
+      if (newSlug !== oldSlug || !this.dynamicComponent) {
+        let module = null
+        try {
+          module = await import(
+            /* webpackChunkName: "post-[request]" */ `@/views/posts/${newSlug}.mdx`
+          )
+          this.dynamicComponent = module.default
+        } catch (error) {
+          module = await import('@/views/PageNotFound.vue')
+          console.error('Erro ao carregar o componente MDX', error)
+        }
+
+        this.dynamicComponent = module.default
+      }
+    }
   }
 })
 </script>

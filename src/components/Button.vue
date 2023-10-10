@@ -1,5 +1,5 @@
 <template>
-  <button :class="{ outlined }" @click="handleClick">
+  <button :class="{ outlined, button: true }" @click="handleClick">
     <slot />
   </button>
 </template>
@@ -12,12 +12,13 @@ export default Vue.extend({
   props: {
     click: Function,
     outlined: Boolean,
-    href: String
+    href: String,
+    target: String
   },
   methods: {
     handleClick(event: HTMLElement) {
-      if (this.href) window.open(this.href, '_blank')
-      this.click(event)
+      if (this.href) window.open(this.href, this.target || '_blank')
+      if (this.click) this.click(event)
     }
   }
 })

@@ -4,8 +4,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 Vue.use(VueRouter)
 
 const HomeComponent = () => import('@/views/Home.vue')
-const WorkComponent = () => import('@/views/Work.vue')
 const PostComponent = () => import('@/views/PostView.vue')
+const WorkComponent = () => import('@/views/Works.vue')
 const PageNotFound = () => import('@/views/PageNotFound.vue')
 
 const routes: Array<RouteConfig> = [
@@ -20,8 +20,8 @@ const routes: Array<RouteConfig> = [
     component: WorkComponent
   },
   {
-    path: '/posts/:slug',
-    name: 'post',
+    path: '/work/:slug',
+    name: 'Post',
     component: PostComponent
   },
   {
@@ -34,7 +34,10 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
   mode: 'hash',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return savedPosition ? savedPosition : { x: 0, y: 0 }
+  }
 })
 
 export default router

@@ -15,8 +15,9 @@ dark-purple = #35006C
 light-purple = #B57DED
 
 ScreenCondition = 'max-width'
-ScreenConditionValue = 1580px
+ScreenConditionValue = 1440px
 ScreenConditionMobilePortrait = 600px
+ScreenConditionTabletPortrait = 800px
 
 titleBorderBottom()
   content ''
@@ -96,6 +97,119 @@ p, .horizontalList span, .body
 body
   background-color dark
 
+.color-border
+  position relative
+  border: 2px solid green
+  border-radius: 20px
+
+  &::after, &::before
+    content: ''
+    display: block
+    position absolute
+    border-radius: 20px
+    margin auto
+
+  &::after
+    width: 100.5%;
+    height 100.5%;
+    border: 5px solid purple
+
+  &::before
+    width: 101%;
+    height 101%;
+    border: 10px solid light-pink
+    border-radius: 20px
+
+.post header .v-image
+  display flex
+  justify-content center
+  align-items center
+
+.post
+  width: 80%
+  height: auto
+  margin auto auto 50px auto
+
+.post .button
+  width: auto
+  margin: 40px 0
+
+.post .v-image
+  margin: 20px 0
+  background-color: dark-pink
+
+.post .v-image.media
+  margin: unset
+
+.post h1
+  font-size 36px
+  text-align center
+
+.post h2, .post h3, .post h4, .post h5
+  font-size 30px
+
+  &:not(:first-child)::before
+    content '>'
+    color green
+    padding-right 15px
+
+.post h1, .post h2, .post h3, .post h4, .post h5
+  padding 20px 0
+
+.post iframe
+  width 100%
+  height 500px
+  margin: 20px 0
+
+.post .Media
+  width 100%
+  height auto
+
+.post p
+  color: rgba(255,255,255,1)
+
+.post p:last-child
+  margin-bottom 40px
+
+.post ol, .post ul
+  margin: 10px 0 10px 40px;
+
+.post ol { counter-reset: item; }
+.post ol li { display: block; }
+.post ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: green;
+}
+
+.blogGallery
+  display: flex
+  flex-direction column
+  flex-wrap: wrap
+  justify-content: center
+  gap: 30px
+  font-style italic
+  font-size 20px
+  text-align center
+
+  &.mosaic
+    flex-flow wrap
+
+    .Media
+        max-width 300px
+        height auto
+
+    .fullWidth
+      max-width 900px
+
+  .buttonGroup
+    display: flex
+    justify-content: center
+    gap 20px
+
+  button
+    font-style normal
+
 @media screen and ({ScreenCondition}: ScreenConditionValue)
   h1
     font-size 36px
@@ -112,3 +226,20 @@ body
 @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
   .row
     padding 100px 5%
+
+  .post
+    width 95%
+
+  .blogGallery
+    .button
+      margin: 10px 0
+
+
+  .buttonGroup
+    flex-direction column
+    gap 10px !important
+
+@media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
+  .post
+    width 95%
+

@@ -15,9 +15,9 @@
         </div>
       </div>
       <div class="buttonGroup">
-        <Button href="https://carloshallancf68.myportfolio.com/works"
-          >see my works</Button
-        >
+        <router-link to="/work">
+          <Button> see my works </Button>
+        </router-link>
         <Button :outlined="true" href="https://medium.com/@carloshallan"
           >about me</Button
         >
@@ -29,7 +29,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Section from '@/components/Section.vue'
+import Section from '@/layouts/SectionLayout.vue'
 import Profile from '@/components/icons/Profile.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'

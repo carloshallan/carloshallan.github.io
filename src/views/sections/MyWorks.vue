@@ -38,16 +38,16 @@
         </p>
         <br />
         <br />
-        <Button href="https://carloshallancf68.myportfolio.com/works"
-          >See some works</Button
-        >
+        <router-link to="/work">
+          <Button> See some works </Button>
+        </router-link>
       </div>
     </div>
   </Section>
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import Section from '@/components/Section.vue'
+import Section from '@/layouts/SectionLayout.vue'
 import Button from '@/components/Button.vue'
 
 export default Vue.extend({
