@@ -1,16 +1,27 @@
 <template>
   <header ref="header">
     <div class="logo">
-      <router-link class="fullName green" to="/" exact>
-        Carlos Hallan
+      <router-link to="/" exact>
+        <creative-logo class="creative-olympus-logo" />
       </router-link>
-      <span class="templateString">
-        `${<span class="f">User</span>.<span class="s">name</span>}`
-      </span>
+    </div>
+    <div class="menu">
+      <router-link active-class="active" to="/" exact> Home </router-link>
+      <router-link active-class="active" to="/work"> Work </router-link>
     </div>
     <div class="right-span">
-      <v-icon dark> mdi-email </v-icon>
-      <a href="mailto:carloshallandev@gmail.com">Contact Me</a>
+      <div>
+        <v-icon dark> mdi-github </v-icon>
+        <a href="https://github.com/carloshallan" />
+      </div>
+      <div>
+        <v-icon dark> mdi-linkedin </v-icon>
+        <a href="https://www.linkedin.com/in/carlos-hallan/" />
+      </div>
+      <div>
+        <v-icon dark> mdi-email </v-icon>
+        <a href="mailto:carloshallandev@gmail.com" />
+      </div>
     </div>
     <!--    <navigator /> -->
   </header>
@@ -18,10 +29,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import CreativeLogo from '@/components/icons/creative-logo.vue'
 // import Navigator from '@/components/Navigator.vue'
 
 export default Vue.extend({
   name: 'MainHeader',
+  components: { CreativeLogo },
   //  components: { Navigator },
   methods: {
     toFixed() {
@@ -63,8 +76,28 @@ header.fixed
   cardShadow()
 
 header
+
   a
     color white
+
+  .menu
+    display flex
+    align-items center
+    justify-content center
+    gap 20px
+
+    a.active
+      color green
+      border-bottom: 2px solid green
+
+    a
+      border-bottom: 2px solid transparent
+      transition color 0.5s, border 0.5s
+
+    a:hover
+      color light-pink
+      cursor pointer
+      border-bottom: 2px solid light-pink
 
   .right-span *
     transition: color 0.3s border-bottom 0.3s
@@ -76,11 +109,16 @@ header
   .v-icon
     color green
 
-  .right-span:hover
-    border-bottom 1px solid light-pink
+  .right-span div
+    display: flex
+    align-items center
+    justify-content flex-start
+    gap: 5px
+
+  .right-span div:hover
     cursor pointer
 
-  .right-span:hover a, .right-span:hover .v-icon
+  .right-span div:hover a, .right-span div:hover .v-icon
     color light-pink
 
   .logo
@@ -88,7 +126,10 @@ header
     align-items center
     justify-content left
     color white
-    width: 200px
+
+    .creative-olympus-logo
+      width 30px
+      height 30px
 
     .fullName
       display none
@@ -127,20 +168,8 @@ header
 @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
   header
     flex-direction column
-    position relative !important
     align-items center
     justify-content center
-    gap: 10px
-
-    .logo
-      justify-content center
-
-  .templateString
-    display none !important
-
-  .fullName
-    display block !important
-
-    //.logo
-    //  display none
+    position relative !important
+    gap: 20px
 </style>

@@ -125,9 +125,6 @@ body
   justify-content center
   align-items center
 
-
-
-
 .post
   width: 80%
   height: auto
@@ -139,6 +136,10 @@ body
 
 .post .v-image
   margin: 20px 0
+  background-color: dark-pink
+
+.post .v-image.media
+  margin: unset
 
 .post h1
   font-size 36px
@@ -167,6 +168,48 @@ body
 .post p
   color: rgba(255,255,255,1)
 
+.post p:last-child
+  margin-bottom 40px
+
+.post ol, .post ul
+  margin: 10px 0 10px 40px;
+
+.post ol { counter-reset: item; }
+.post ol li { display: block; }
+.post ol li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  color: green;
+}
+
+.blogGallery
+  display: flex
+  flex-direction column
+  flex-wrap: wrap
+  justify-content: center
+  gap: 30px
+  font-style italic
+  font-size 20px
+  text-align center
+
+  &.mosaic
+    flex-flow wrap
+
+    .Media
+        max-width 300px
+        height auto
+
+    .fullWidth
+      max-width 900px
+
+  .buttonGroup
+    display: flex
+    justify-content: center
+    gap 20px
+
+  button
+    font-style normal
+
 @media screen and ({ScreenCondition}: ScreenConditionValue)
   h1
     font-size 36px
@@ -186,6 +229,15 @@ body
 
   .post
     width 95%
+
+  .blogGallery
+    .button
+      margin: 10px 0
+
+
+  .buttonGroup
+    flex-direction column
+    gap 10px !important
 
 @media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
   .post
