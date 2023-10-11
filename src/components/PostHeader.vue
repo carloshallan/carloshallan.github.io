@@ -4,6 +4,9 @@
       <span v-if="projectName" class="green">{{ projectName }} - </span
       >{{ title }}
     </h1>
+    <p>
+      <em parentname="p">{{ stack }}</em>
+    </p>
     <VImg
       class="color-border"
       v-if="imageName"
@@ -25,7 +28,8 @@ export default Vue.extend({
     imageName: String,
     snippet: String,
     date: String,
-    order: String
+    order: String,
+    stack: String
   },
   name: 'PostHeader'
 })
