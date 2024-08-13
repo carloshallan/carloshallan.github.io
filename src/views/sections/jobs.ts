@@ -41,7 +41,7 @@ export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - Current Job (full time until april 2024)',
+    date: 'Nov 2021 - Nov 2023',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
