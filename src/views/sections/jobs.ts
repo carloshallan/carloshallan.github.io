@@ -1,5 +1,44 @@
 export default [
   {
+    title: 'FullStack Engineer',
+    subtitle: 'Assembly',
+    date: 'April 2024 - Current Job (part time, twenty hours per week)',
+    jobDescription: {
+      description:
+        'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description:
+            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Chakra-UI.'
+        },
+        {
+          description:
+            'Python 3.9, Flask, SQLAlchemy with MySQL, Alembic, Pytest.'
+        }
+      ]
+    }
+  },
+  {
+    title: 'Software Engineer',
+    subtitle: 'NetCracker Technology',
+    date: 'Dec 2023 - April 2024 (full time)',
+    jobDescription: {
+      description:
+        'I was part of an amazing engineering team, working as a frontend engineer on a mobile and web application for a telecommunications company based in Denmark.',
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description: 'React Native'
+        },
+        {
+          description:
+            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Graphql'
+        }
+      ]
+    }
+  },
+  {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
     date: 'Nov 2021 - Current Job (full time)',
@@ -10,32 +49,32 @@ export default [
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Prototype with Figma.'
+          description: 'Desktop Applications with PySide 6'
+        },
+        {
+          description: 'QT Design System for Python'
+        },
+        {
+          description:
+            'Desktop applications with Python + ElectronJS for Windows, MacOs and Linux Distros.'
         },
         {
           description: 'SaaS applications with VueJS, typescript, vuetify.'
         },
         {
+          description: 'Prototype with Figma.'
+        },
+        {
           description: 'Plugins for Autodesk Maya'
         },
         {
-          description: 'Scripts for Google Spreadsheet'
+          description: 'Scripts for Google Spreadsheet and Google Drive API'
         },
         {
           description: 'Mailchimp Integrations'
         },
         {
-          description:
-            'Desktop solutions with Python and Nodejs for Windows, MacOs and Linux Distros.'
-        },
-        {
-          description: 'Google Drive Api'
-        },
-        {
           description: 'Firebase realtime database.'
-        },
-        {
-          description: 'Python Qt Design System'
         }
       ]
     }
