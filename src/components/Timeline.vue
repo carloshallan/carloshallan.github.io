@@ -120,8 +120,12 @@ TimelineIconAfter()
   font-size 26px
   color green
 
+.subtitle
+  text-wrap balance
+  text-align right
+
 @media screen and ({ScreenCondition}: ScreenConditionValue)
-  .title
+  .title, .subtitle
     text-align left
 
   .job
