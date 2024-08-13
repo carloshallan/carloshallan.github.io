@@ -41,7 +41,7 @@ export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - Current Job (full time)',
+    date: 'Nov 2021 - Current Job (full time until april 2024)',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
@@ -113,21 +113,6 @@ export default [
         {
           description:
             'SPA application with ReactJS + Typescript + Vite + Adobe ExtendScript'
-        }
-      ]
-    }
-  },
-  {
-    title: 'Game Developer',
-    subtitle: 'Dragon Lord Studio',
-    date: '3 Months (temporary)',
-    jobDescription: {
-      description:
-        "I'm working with C# to build scripts for one Unity game called Charge Knight.",
-      title: 'Stack and Tools:',
-      listOfStack: [
-        {
-          description: 'Scripts with C# for Unity projects'
         }
       ]
     }
