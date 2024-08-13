@@ -2,7 +2,7 @@ export default [
   {
     title: 'FullStack Engineer',
     subtitle: 'Assembly',
-    date: 'April 2024 - Current Job (part-time, twenty hours per week)',
+    date: 'April 2024 - Current Job (part-time)',
     jobDescription: {
       description:
         'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
