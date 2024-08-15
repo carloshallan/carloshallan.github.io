@@ -2,7 +2,7 @@ export default [
   {
     title: 'FullStack Engineer',
     subtitle: 'Assembly',
-    date: 'April 2024 - Current Job (part-time)',
+    date: 'Jan 2024 - Current Job (part-time)',
     jobDescription: {
       description:
         'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
@@ -41,7 +41,7 @@ export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - Nov 2023',
+    date: 'Nov 2021 - full time until Nov 2023, part-time after that',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
