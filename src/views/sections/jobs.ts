@@ -19,29 +19,29 @@ export default [
       ]
     }
   },
-  {
-    title: 'Software Engineer',
-    subtitle: 'NetCracker Technology',
-    date: 'Dec 2023 - April 2024 (full time)',
-    jobDescription: {
-      description:
-        'I was part of an amazing engineering team, working as a frontend engineer on a mobile and web application for a telecommunications company based in Denmark.',
-      title: 'Stack and Tools:',
-      listOfStack: [
-        {
-          description: 'React Native'
-        },
-        {
-          description:
-            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Graphql'
-        }
-      ]
-    }
-  },
+  // {
+  //   title: 'Software Engineer',
+  //   subtitle: 'NetCracker Technology',
+  //   date: 'Dec 2023 - April 2024 (full time)',
+  //   jobDescription: {
+  //     description:
+  //       'I was part of an amazing engineering team, working as a frontend engineer on a mobile and web application for a telecommunications company based in Denmark.',
+  //     title: 'Stack and Tools:',
+  //     listOfStack: [
+  //       {
+  //         description: 'React Native'
+  //       },
+  //       {
+  //         description:
+  //           'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Graphql'
+  //       }
+  //     ]
+  //   }
+  // },
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - full time until Nov 2023, part-time after that',
+    date: 'Nov 2021 - full time until April 2024, part-time after that',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
