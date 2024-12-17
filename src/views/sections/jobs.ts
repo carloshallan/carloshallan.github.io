@@ -1,24 +1,4 @@
 export default [
-  {
-    title: 'FullStack Engineer',
-    subtitle: 'Assembly',
-    date: 'Jan 2024 - Current Job (part-time)',
-    jobDescription: {
-      description:
-        'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
-      title: 'Stack and Tools:',
-      listOfStack: [
-        {
-          description:
-            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Chakra-UI.'
-        },
-        {
-          description:
-            'Python 3.9, Flask, SQLAlchemy with MySQL, Alembic, Pytest.'
-        }
-      ]
-    }
-  },
   // {
   //   title: 'Software Engineer',
   //   subtitle: 'NetCracker Technology',
@@ -41,7 +21,7 @@ export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - full time until April 2024, part-time after that',
+    date: 'Nov 2021 - Current Job',
     jobDescription: {
       description:
         "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
@@ -75,6 +55,26 @@ export default [
         },
         {
           description: 'Firebase realtime database.'
+        }
+      ]
+    }
+  },
+  {
+    title: 'FullStack Engineer',
+    subtitle: 'Assembly',
+    date: 'Jan 2024 - Dec 2024',
+    jobDescription: {
+      description:
+        'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description:
+            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Chakra-UI.'
+        },
+        {
+          description:
+            'Python 3.9, Flask, SQLAlchemy with MySQL, Alembic, Pytest.'
         }
       ]
     }
