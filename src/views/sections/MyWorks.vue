@@ -5,46 +5,65 @@
         <img
           src="../../assets/work-image-bg.png"
           class="figure"
-          alt="My work"
+          alt="My work showcase"
         />
-        <!-- <slider :slides="slides" /> -->
       </div>
       <div class="column">
         <h1>
           <span class="light-pink">!=</span>
-          What <span class="green">I</span> can <span class="green">do</span>?
+          My Journey <span class="green">as a Developer</span>
         </h1>
-        <p class="horizontalList">
-          I embarked on my career as a Front End Developer and UI/UX Designer,
-          honing my skills in web applications and websites. My creative nature
-          allowed me to broaden my expertise, leading me to develop desktop
-          solutions for Windows, macOS, and Linux, and integrate various
-          applications including:
-          <span v-for="(value, index) in appsWorked" :key="index">
-            {{ value }}
-          </span>
-        </p>
-        <p class="horizontalList">
-          Not confined to specific languages, I’ve embraced challenges and
-          crafted effective solutions using:
-          <span v-for="(value, index) in languagesWorked" :key="index">
-            {{ value }}
-          </span>
-        </p>
         <p>
-          Each language and project has been a stepping stone in my diverse
-          journey of problem-solving and technological innovation, positioning
-          me as a multifaceted developer equipped to tackle complex challenges.
+          I am an accomplished <strong>Full Stack Developer</strong> and
+          <strong>UI/UX Designer</strong> with over a decade of diverse
+          experience leading impactful projects across industries such as VFX,
+          gaming, and creative studios. My focus has always been on creating
+          scalable, user-centric solutions that enhance workflows, optimize
+          processes, and deliver exceptional user experiences.
         </p>
-        <br />
+        <p>Some of my notable achievements include:</p>
+        <ul>
+          <li>
+            <span class="strong">Pipeline Development:</span> Spearheaded the
+            creation of advanced 3D production pipelines integrating tools like
+            Autodesk ShotGrid and custom Python-based applications.
+          </li>
+          <li>
+            <span class="strong">CRM Systems:</span> Designed and deployed
+            robust CRM solutions tailored to VFX studio needs, enhancing team
+            productivity and communication.
+          </li>
+          <li>
+            <span class="strong">Training Platforms:</span> Developed and
+            integrated training platforms with real-time data synchronization,
+            enabling seamless collaboration and learning.
+          </li>
+          <li>
+            <span class="strong">Cross-Platform Applications:</span> Delivered
+            hybrid desktop applications using ElectronJS, Python, and VueJS,
+            ensuring compatibility across Windows, macOS, and Linux.
+          </li>
+        </ul>
+        <p>My expertise spans a wide range of technologies, including:</p>
+        <ul class="horizontalList">
+          <li v-for="(value, index) in techStack" :key="index">
+            {{ value }}
+          </li>
+        </ul>
+        <p>
+          With every project, I bring a blend of technical acumen, creative
+          vision, and a dedication to delivering solutions that empower teams
+          and businesses to excel in their domains.
+        </p>
         <br />
         <router-link to="/work">
-          <Button> See some works </Button>
+          <Button> See My Portfolio </Button>
         </router-link>
       </div>
     </div>
   </Section>
 </template>
+
 <script lang="ts">
 import Vue from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
@@ -55,43 +74,15 @@ export default Vue.extend({
   components: { Section, Button },
   data() {
     return {
-      appsWorked: [
-        'Google Workspace',
-        'Adobe Suite: Photoshop, After Effects, XD',
-        'Blender',
-        'Autodesk Maya',
-        'Shotgrid',
-        'Perforce',
-        'Houdini',
-        'Trello',
-        'Asana'
-      ],
-      languagesWorked: [
-        'Javascript or Typescript (including frameworks like Node.js, VueJs, Nuxt, React Js, Next JS, Electron JS, Tauri)',
-        'Python (with frameworks such as Django, Flask, PyQt5, PyQt4, PySide2, PySide6, etc.)',
-        'Rust',
-        'C# (specifically within the Unity environment)',
-        'Java (exclusive to mobile development)',
-        'Kotlin (also exclusive to mobile development) '
-      ],
-      slides: [
-        {
-          order: 3,
-          title: 'Product manager',
-          description: 'test',
-          image: 'test',
-          path: require('@/assets/venue-select-scene.png')
-        },
-        {
-          order: 2,
-          title: 'Task manager',
-          description: 'description 2'
-        },
-        {
-          order: 1,
-          title: 'Version Control',
-          description: 'description 2'
-        }
+      techStack: [
+        'Python (Flask, Django, PySide6, SQLAlchemy)',
+        'JavaScript/TypeScript (React, Vue, Nuxt, Electron, Node.js)',
+        'UI/UX Tools (Figma, Adobe XD, Sketch)',
+        'Database (PostgreSQL, MySQL, Firebase)',
+        'DevOps (Docker, CI/CD Pipelines, Alembic)',
+        '3D and VFX Tools (Autodesk Maya, Houdini, Blender)',
+        'CRM and SaaS Development',
+        'Cloud Integrations (Google Drive API, Firebase Realtime Database)'
       ]
     }
   }
@@ -99,10 +90,45 @@ export default Vue.extend({
 </script>
 
 <style lang="stylus" scoped>
-@import "../../styles/default"
+@import "../../styles/default";
 
-.slides
-  display block
+ul
+  display: flex;
+  flex-direction: column;
+  gap 10px
+
+ul li
+  font-size 20px;
+
+li
+  list-style none
+  padding-bottom 10px
+  font-size 16px
+  opacity 0.8
+
+li span.strong
+  font-weight bold
+  color white
+
+li::before
+  content '-> '
+  FiraCode()
+  color yellow
+
+.row
+  justify-content space-between
+  align-content center !important
+  padding 120px
+
+  .column:first-child
+    width 90%
+    align-self: center
+
+  .column
+    width 100%
+
+    .figure
+      width 100%
 
 h1
   position relative
@@ -125,38 +151,35 @@ h1::after
   bottom 0
   z-index 6
 
+.horizontalList
+  margin: 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column
+  // flex-wrap: wrap;
+  gap 5px
 
-.horizontalList span
+.horizontalList li
+  padding: 0 !important;
+  margin: 0;
   font-style italic
-  margin-right: 10px;
-  color: yellow
+  color: white
+  font-size: 18px;
 
   &:last-child
     margin-right: unset
 
+  &::before
+    content '-> '
+    FiraCode()
+    color yellow
+
   &::after
-    content: ';'
+    content: '.'
     color: white
 
   &:last-child::after
     content: '.'
-
-
-.row
-  //flex-wrap wrap
-  justify-content space-between
-  align-content center !important
-  padding 120px
-
-  .column:first-child
-    width 90%
-    align-self: center
-
-  .column
-    width 100%
-
-    .figure
-      width 100%
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     padding 50px 10%
@@ -166,7 +189,4 @@ h1::after
 
     h1::after
       width 100%
-
-  @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
-    padding 50px 5%
 </style>

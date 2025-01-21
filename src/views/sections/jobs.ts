@@ -1,60 +1,61 @@
 export default [
-  // {
-  //   title: 'Software Engineer',
-  //   subtitle: 'NetCracker Technology',
-  //   date: 'Dec 2023 - April 2024 (full time)',
-  //   jobDescription: {
-  //     description:
-  //       'I was part of an amazing engineering team, working as a frontend engineer on a mobile and web application for a telecommunications company based in Denmark.',
-  //     title: 'Stack and Tools:',
-  //     listOfStack: [
-  //       {
-  //         description: 'React Native'
-  //       },
-  //       {
-  //         description:
-  //           'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Graphql'
-  //       }
-  //     ]
-  //   }
-  // },
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - Current Job',
+    date: 'Nov 2021 - Current Job (3 years and 2 months)',
     jobDescription: {
       description:
-        "I'm working with 3D Studio solutions as UX/UI designer and Full Stack Engineer.",
-
+        'Leading the design and implementation of an advanced 3D production pipeline integrating Shotgun (Autodesk Flow Production Tools) with custom applications and plugins. Developing user-centric solutions as a Full Stack Engineer and UX/UI Designer, driving efficiency and scalability in creative workflows.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Desktop Applications with PySide 6'
-        },
-        {
-          description: 'QT Design System for Python'
+          description:
+            'Python 3.9 for developing scalable backend services and automation scripts.'
         },
         {
           description:
-            'Desktop applications with Python + ElectronJS for Windows, MacOs and Linux Distros.'
+            'Flask framework for building lightweight APIs and server-side logic.'
         },
         {
-          description: 'SaaS applications with VueJS, typescript, vuetify.'
+          description:
+            'SQLAlchemy with MySQL for database modeling and management.'
+        },
+        { description: 'Alembic for database migrations.' },
+        { description: 'Pytest for writing and automating unit tests.' },
+        {
+          description:
+            'PySide 6 for creating cross-platform desktop applications with native UIs.'
         },
         {
-          description: 'Prototype with Figma.'
+          description:
+            'QT Design System to standardize Python application interfaces.'
         },
         {
-          description: 'Plugins for Autodesk Maya'
+          description:
+            'ElectronJS combined with Python for hybrid desktop apps supporting Windows, macOS, and Linux.'
         },
         {
-          description: 'Scripts for Google Spreadsheet and Google Drive API'
+          description:
+            'VueJS and Vuetify for building interactive and responsive SaaS applications.'
         },
         {
-          description: 'Mailchimp Integrations'
+          description: 'Figma for rapid prototyping and collaborative design.'
         },
         {
-          description: 'Firebase realtime database.'
+          description:
+            'Autodesk Maya plugin development to extend 3D modeling capabilities.'
+        },
+        {
+          description:
+            'Google Drive API and Spreadsheet scripting for automation and data integration.'
+        },
+        {
+          description:
+            'Firebase Realtime Database for responsive and synchronized data handling.'
+        },
+        {
+          description:
+            'Mailchimp API for marketing automation and email campaign management.'
         }
       ]
     }
@@ -62,19 +63,37 @@ export default [
   {
     title: 'FullStack Engineer',
     subtitle: 'Assembly',
-    date: 'Jan 2024 - Dec 2024',
+    date: '1 year (temporary)',
     jobDescription: {
       description:
-        'I worked on building a CRM for a VFX studio from the ground up, starting from the design phase.',
+        'Developed a comprehensive CRM system for a VFX studio, leading from conceptual design to full deployment. Collaborated across teams to deliver an intuitive and robust solution tailored to studio needs.',
       title: 'Stack and Tools:',
       listOfStack: [
+        { description: 'ReactJS for dynamic and reusable UI components.' },
         {
-          description:
-            'ReactJS, Typescript, Redux, Redux-toolkit, Styled-Components, Chakra-UI.'
+          description: 'TypeScript to enhance code quality and maintainability.'
         },
         {
           description:
-            'Python 3.9, Flask, SQLAlchemy with MySQL, Alembic, Pytest.'
+            'Redux and Redux-toolkit for state management in complex applications.'
+        },
+        {
+          description:
+            'Styled-Components for styling React components with dynamic theming.'
+        },
+        {
+          description:
+            'Chakra-UI for implementing accessible and customizable design systems.'
+        },
+        { description: 'Python 3.9 for backend logic and integrations.' },
+        { description: 'Flask for API development and backend services.' },
+        {
+          description: 'SQLAlchemy with MySQL for robust database interactions.'
+        },
+        { description: 'Alembic for efficient schema migrations.' },
+        {
+          description:
+            'Pytest for testing backend services and ensuring code quality.'
         }
       ]
     }
@@ -85,17 +104,28 @@ export default [
     date: '1 year and 8 months (temporary)',
     jobDescription: {
       description:
-        'I worked building two applications to manage and use the Tangerine Training. I worked as a UX/UI Designer and Full Stack Engineer working in all parts of the project.',
+        'Designed and developed two integrated applications for managing and using the Tangerine Training platform. Played a dual role as UX/UI Designer and Full Stack Engineer, ensuring seamless user experience and robust technical functionality.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Prototype with Figma.'
+          description:
+            'Figma for creating detailed prototypes and design workflows.'
         },
         {
-          description: 'Web apps with NextJS, Typescript and ChakraUI.'
+          description:
+            'NextJS for server-side rendering and optimized web application performance.'
         },
         {
-          description: 'Firebase realtime database.'
+          description:
+            'TypeScript for improving development scalability and debugging.'
+        },
+        {
+          description:
+            'ChakraUI for consistent and accessible component design.'
+        },
+        {
+          description:
+            'Firebase Realtime Database for real-time data synchronization.'
         }
       ]
     }
@@ -106,13 +136,28 @@ export default [
     date: '4 Months (temporary)',
     jobDescription: {
       description:
-        "I'm working as a UI/UX Designer and Full Stack Engineer to build a After Effects Extension with ReactJS, typescript and ExtendScript. The extension is a complete application to create many different versions of a project.",
+        'Developed an After Effects extension offering streamlined project management capabilities. Managed the entire development cycle as a UX/UI Designer and Full Stack Engineer, delivering a cross-platform solution.',
       title: 'Stack and Tools:',
       listOfStack: [
-        { description: 'Prototype with Figma' },
         {
           description:
-            'SPA application with ReactJS + Typescript + Vite + Adobe ExtendScript'
+            'Figma for prototyping UI/UX workflows and user interactions.'
+        },
+        {
+          description:
+            'ReactJS for building modular and reusable single-page applications (SPAs).'
+        },
+        {
+          description:
+            'TypeScript for ensuring type safety and code robustness.'
+        },
+        {
+          description:
+            'Vite for fast and optimized development build processes.'
+        },
+        {
+          description:
+            'Adobe ExtendScript for scripting and extending After Effects capabilities.'
         }
       ]
     }
@@ -123,51 +168,42 @@ export default [
     date: '3 years and 6 months (full time)',
     jobDescription: {
       description:
-        'I built many solutions for pipeline as UX/UI designer and, Front End Engineer. Some applications I built as a Full Stack developer, going through the whole process from design to deploy.',
+        'Engineered scalable pipeline solutions as a Front End Engineer and UX/UI Designer. Contributed as a Full Stack Developer, delivering projects from concept to deployment, driving improvements in game production workflows.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
           description:
-            'Prototypes with Adobe XD, Sketch, Figma and Invision Studio.'
+            'Adobe XD, Sketch, Figma, and Invision Studio for prototyping and collaboration.'
         },
         {
           description:
-            'SaaS applications with Vanilla Javascript, VueJS, ReactJs, Django and Python.'
-        },
-        {
-          description: 'Microservices with python and javascript'
+            'Vanilla JavaScript for lightweight and fast application logic.'
         },
         {
           description:
-            'Plugins and extensions for Autodesk Maya with Python and Pyside.'
+            'VueJS and ReactJS for building responsive and interactive SaaS applications.'
+        },
+        { description: 'Django for developing server-side web applications.' },
+        {
+          description:
+            'Microservices with Python and JavaScript for modular functionality.'
         },
         {
           description:
-            'Extensions for Adobe After Effects  with javascript, Vuejs.'
+            'Plugins for Autodesk Maya to enhance 3D production workflows.'
+        },
+        {
+          description: 'Desktop applications using ElectronJS or Python + Qt.'
         },
         {
           description:
-            'Desktop solutions with ElectronJs, Nodejs, Vuejs or Python + Qt'
-        },
-        {
-          description: 'PostgresSQL and MySQL with Django or Sequelize.'
-        },
-        {
-          description: 'Mixpanel integration to a Design System.'
+            'PostgreSQL and MySQL for database scalability and reliability.'
         },
         {
           description:
-            'Shotgrid (Shotgun) integrations. Shotgrid toolkit custom scripts, and automate scripts for Shotgrid web data.'
+            'ShotGrid integrations to streamline production data workflows.'
         },
-        {
-          description: 'Trello integrations'
-        },
-        {
-          description: 'React Design System'
-        },
-        {
-          description: ' Qt Design System for Python'
-        }
+        { description: 'Trello integrations for agile project management.' }
       ]
     }
   },
@@ -177,18 +213,15 @@ export default [
     date: '6 months',
     jobDescription: {
       description:
-        'I built a project manager solution as UX/UI designer, and Front End Engineer. In this project I made a brand, UX low fidelity and high fidelily prototype. Also I worked as a Front End developer for part of the prototype.',
-      title: 'Stack and Tools: ',
+        'Designed and developed a project management solution, including branding, UX prototypes, and front-end implementation, delivering an intuitive tool for creative teams.',
+      title: 'Stack and Tools:',
       listOfStack: [
+        { description: 'Adobe XD for creating UX/UI prototypes.' },
         {
-          description: 'Prototype with Adobe XD.'
+          description:
+            'ReactJS for building dynamic and user-friendly SaaS applications.'
         },
-        {
-          description: 'SaaS application with ReactJS.'
-        },
-        {
-          description: 'Backend with python and Flask'
-        }
+        { description: 'Python and Flask for backend API development.' }
       ]
     }
   },
@@ -198,20 +231,24 @@ export default [
     date: '3 years and 9 months (full time)',
     jobDescription: {
       description:
-        'I worked with entire process of build websites and monoliths softwares based at UX solutions. The entire process consist in the UX planning, UI prototype, and Front End development.',
+        'Led end-to-end development of websites and monolithic software solutions, combining UX strategy, UI prototyping, and front-end development to deliver impactful digital products.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Prototype with Sketch and Inkscape.'
+          description:
+            'Sketch and Inkscape for crafting high-quality prototypes and designs.'
         },
         {
-          description: 'Monolith application with vanilla javascript and PHP.'
+          description:
+            'Vanilla JavaScript for developing responsive and lightweight applications.'
         },
         {
-          description: 'Websites with vanilla javascript and PHP.'
+          description:
+            'PHP for building backend logic and integration with databases.'
         },
         {
-          description: 'Wordpress templates and API.'
+          description:
+            'WordPress templates and APIs for CMS-based web development.'
         }
       ]
     }
@@ -222,23 +259,20 @@ export default [
     date: '2 years and 9 months (full time)',
     jobDescription: {
       description:
-        'I worked building wordpress websites, advertising teams management, and Ad Management.',
+        'Managed digital marketing campaigns and web development projects, focusing on WordPress websites, team coordination, and optimizing online presence for increased visibility.',
       title: 'Stack and Tools:',
       listOfStack: [
         {
-          description: 'Websites with vanilla javascript.'
+          description: 'WordPress for creating and managing CMS-based websites.'
         },
         {
-          description: 'Wordpress templates.'
+          description:
+            'Google Analytics for tracking and optimizing web traffic.'
         },
+        { description: 'Facebook Ads for targeted marketing campaigns.' },
         {
-          description: 'Google Analytics.'
-        },
-        {
-          description: 'Facebook ADS.'
-        },
-        {
-          description: 'Designs for Social Media'
+          description:
+            'Social media design and content creation for brand promotion.'
         }
       ]
     }
@@ -249,18 +283,15 @@ export default [
     date: '7 months (full time)',
     jobDescription: {
       description:
-        'I worked providing support service, training for customers, and database management.',
+        'Provided technical support, customer training, and database management, ensuring seamless operation of Delphi and web-based software solutions.',
       title: 'Stack and Tools:',
       listOfStack: [
+        { description: 'Support for Delphi-based software solutions.' },
         {
-          description: 'Support for Delphi Softwares.'
+          description:
+            'PHP and Vanilla JavaScript for maintaining web applications.'
         },
-        {
-          description: 'PHP and Vanilla javascript softwares.'
-        },
-        {
-          description: 'MySql Database.'
-        }
+        { description: 'MySQL for database management and optimization.' }
       ]
     }
   }
