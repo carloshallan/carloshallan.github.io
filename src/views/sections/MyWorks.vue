@@ -44,12 +44,12 @@
             ensuring compatibility across Windows, macOS, and Linux.
           </li>
         </ul>
-        <p>My expertise spans a wide range of technologies, including:</p>
+        <!-- <p>My expertise spans a wide range of technologies, including:</p>
         <ul class="horizontalList">
           <li v-for="(value, index) in techStack" :key="index">
             {{ value }}
           </li>
-        </ul>
+        </ul> -->
         <p>
           With every project, I bring a blend of technical acumen, creative
           vision, and a dedication to delivering solutions that empower teams

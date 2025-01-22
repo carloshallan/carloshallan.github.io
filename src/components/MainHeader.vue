@@ -1,7 +1,7 @@
 <template>
   <header ref="header">
     <div class="left-side">
-      <div class="logo">
+      <div alt="Creative Olympus" class="logo">
         <router-link to="/" exact>
           <creative-logo class="creative-olympus-logo" />
         </router-link>
