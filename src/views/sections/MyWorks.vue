@@ -118,7 +118,6 @@ li::before
 .row
   justify-content space-between
   align-content center !important
-  padding 120px
 
   .column:first-child
     width 90%
