@@ -29,6 +29,17 @@
             Autodesk ShotGrid and custom Python-based applications.
           </li>
           <li>
+            <span class="strong">
+              AI Image Searcher Application: Designed, developed, and deployed a
+              fully integrated AI-powered image search solution, handling
+              everything from UI/UX design to backend infrastructure. The system
+              runs on a scalable AWS server for high performance and
+              reliability. On the frontend, I built a desktop application using
+              Rust (Tauri) and TypeScript + React, ensuring a seamless and
+              efficient user experience.
+            </span>
+          </li>
+          <li>
             <span class="strong">CRM Systems:</span> Designed and deployed
             robust CRM solutions tailored to VFX studio needs, enhancing team
             productivity and communication.
@@ -76,7 +87,7 @@ export default Vue.extend({
     return {
       techStack: [
         'Python (Flask, Django, PySide6, SQLAlchemy)',
-        'JavaScript/TypeScript (React, Vue, Nuxt, Electron, Node.js)',
+        'JavaScript/TypeScript (React, Vue, Nuxt, Electron/Rust (Tauri), Node.js)',
         'UI/UX Tools (Figma, Adobe XD, Sketch)',
         'Database (PostgreSQL, MySQL, Firebase)',
         'DevOps (Docker, CI/CD Pipelines, Alembic)',

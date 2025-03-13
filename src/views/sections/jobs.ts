@@ -16,11 +16,15 @@ export default [
           description: 'Desktop Applications with PySide 6'
         },
         {
-          description: 'QT Design System for Python'
+          description:
+            'Desktop Applications with Rust (Tauri), React + Typescript.'
         },
         {
           description:
-            'Desktop applications with Python + ElectronJS for Windows, MacOs and Linux Distros.'
+            'Desktop applications with Python + Vuejs + Typescript + ElectronJS.'
+        },
+        {
+          description: 'QT Design System for Python'
         },
         {
           description: 'SaaS applications with VueJS, typescript, vuetify.'
