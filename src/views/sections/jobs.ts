@@ -31,7 +31,7 @@ function calculateWorkPeriod(
 
 export default [
   {
-    title: 'Pipeline Technical Director | Full-Stack Engineer',
+    title: 'Software Engineer | Pipeline Technical Director',
     subtitle: 'Roof Studio',
     date: `Nov 2021 - Current Job (${calculateWorkPeriod('2021-11-20', null)})`,
     jobDescription: {
@@ -79,7 +79,7 @@ export default [
     }
   },
   {
-    title: 'FullStack Engineer',
+    title: 'Software Engineer',
     subtitle: 'Assembly',
     date: '1 year (temporary)',
     jobDescription: {
@@ -99,7 +99,7 @@ export default [
     }
   },
   {
-    title: 'Full Stack Engineer and UX/UI Designer',
+    title: 'Software Engineer and UX/UI Designer',
     subtitle: 'Tangerine',
     date: '1 year and 8 months (temporary)',
     jobDescription: {
@@ -120,7 +120,7 @@ export default [
     }
   },
   {
-    title: 'Full Stack Engineer',
+    title: 'Software Engineer',
     subtitle: 'Streetwise',
     date: '4 Months (temporary)',
     jobDescription: {
@@ -137,7 +137,7 @@ export default [
     }
   },
   {
-    title: 'Pipeline Front End Engineer',
+    title: 'Pipeline Front End Developer',
     subtitle: 'Wildlife Studios',
     date: '3 years and 6 months (full time)',
     jobDescription: {
