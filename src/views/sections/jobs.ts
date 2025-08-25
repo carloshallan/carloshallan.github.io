@@ -1,8 +1,31 @@
+function calculateWorkPeriod(entryDate, exitDate = null) {
+  const start = new Date(entryDate);
+  const end = exitDate ? new Date(exitDate) : new Date();
+
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  if (years > 0 && months > 0) {
+    return `${years} ${years === 1 ? "year" : "years"} and ${months} ${months === 1 ? "month" : "months"}`;
+  } else if (years > 0) {
+    return `${years} ${years === 1 ? "year" : "years"}`;
+  } else {
+    return `${months} ${months === 1 ? "month" : "months"}`;
+  }
+}
+
+
+
 export default [
   {
     title: 'Pipeline Technical Director | Full-Stack Engineer',
     subtitle: 'Roof Studio',
-    date: 'Nov 2021 - Current Job (3 years and 2 months)',
+    date: `Nov 2021 - Current Job (${calculateWorkPeriod('2021-11-20', null)})`,
     jobDescription: {
       description:
         'Leading the design and implementation of an advanced 3D production pipeline integrating Shotgun (Autodesk Flow Production Tools) with custom applications and plugins. Developing user-centric solutions as a Full Stack Engineer and UX/UI Designer, driving efficiency and scalability in creative workflows.',
