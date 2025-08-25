@@ -1,25 +1,33 @@
-function calculateWorkPeriod(entryDate, exitDate = null) {
-  const start = new Date(entryDate);
-  const end = exitDate ? new Date(exitDate) : new Date();
+function parseDate(dateString: string): Date {
+  const [year, month, day] = dateString.split('-').map(Number)
+  return new Date(year, month - 1, day) // month is 0-based
+}
 
-  let years = end.getFullYear() - start.getFullYear();
-  let months = end.getMonth() - start.getMonth();
+function calculateWorkPeriod(
+  entryDate: string,
+  exitDate: string | null = null
+): string {
+  const start: Date = parseDate(entryDate)
+  const end: Date = exitDate ? parseDate(exitDate) : new Date()
+
+  let years: number = end.getFullYear() - start.getFullYear()
+  let months: number = end.getMonth() - start.getMonth()
 
   if (months < 0) {
-    years -= 1;
-    months += 12;
+    years -= 1
+    months += 12
   }
 
   if (years > 0 && months > 0) {
-    return `${years} ${years === 1 ? "year" : "years"} and ${months} ${months === 1 ? "month" : "months"}`;
+    return `${years} ${years === 1 ? 'year' : 'years'} and ${months} ${
+      months === 1 ? 'month' : 'months'
+    }`
   } else if (years > 0) {
-    return `${years} ${years === 1 ? "year" : "years"}`;
+    return `${years} ${years === 1 ? 'year' : 'years'}`
   } else {
-    return `${months} ${months === 1 ? "month" : "months"}`;
+    return `${months} ${months === 1 ? 'month' : 'months'}`
   }
 }
-
-
 
 export default [
   {
