@@ -70,7 +70,7 @@ export default Vue.extend({
         },
         {
           name: 'EN',
-          filepath: '/carloshallan-resume-pt-br.pdf'
+          filepath: '/carloshallan-resume-en.pdf'
         }
       ]
     }
