@@ -27,6 +27,26 @@
           <v-icon dark> mdi-email </v-icon>
         </a>
       </div>
+      <div>
+        <v-menu dark offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon v-bind="attrs" v-on="on" dark>mdi-download</v-icon>
+          </template>
+
+          <v-list dark two-line>
+            <v-list-item
+              v-for="(item, i) in resumeItems"
+              :key="i"
+              :href="item.filepath"
+              rel="noopener"
+              tag="a"
+              download
+            >
+              <v-list-item-title> <v-icon>mdi-file-pdf-box</v-icon> {{ item.name }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </div>
     <!--    <navigator /> -->
   </header>
@@ -41,6 +61,20 @@ export default Vue.extend({
   name: 'MainHeader',
   components: { CreativeLogo },
   //  components: { Navigator },
+  data: () => {
+    return {
+      resumeItems: [
+        {
+          name: 'PT-BR',
+          filepath: '/carloshallan-resume-pt-br.pdf'
+        },
+        {
+          name: 'EN',
+          filepath: '/carloshallan-resume-pt-br.pdf'
+        }
+      ]
+    }
+  },
   methods: {
     toFixed() {
       const header = this.$refs.header as HTMLElement
@@ -84,6 +118,22 @@ header
 
   a
     color white
+
+  .v-list
+    background-color dark
+    color white
+    display flex
+    flex-direction column
+    align-items flex-start
+    justify-content center
+
+    .v-list-item
+      width 200px
+      padding 10px 20px
+
+      &:hover
+        background-color grey-darker
+        cursor pointer
 
   .menu
     display flex
