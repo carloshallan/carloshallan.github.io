@@ -42,7 +42,10 @@
               tag="a"
               download
             >
-              <v-list-item-title> <v-icon>mdi-file-pdf-box</v-icon> {{ item.name }}</v-list-item-title>
+              <v-list-item-title>
+                <v-icon>mdi-file-pdf-box</v-icon>
+                {{ item.name }}</v-list-item-title
+              >
             </v-list-item>
           </v-list>
         </v-menu>
