@@ -7,8 +7,7 @@ module.exports = {
     'plugin:vue/essential',
     'eslint:recommended',
     '@vue/typescript/recommended',
-    '@vue/prettier',
-    '@vue/prettier/@typescript-eslint'
+    '@vue/prettier'
   ],
   parserOptions: {
     parser: require.resolve('@typescript-eslint/parser'),
@@ -27,7 +26,8 @@ module.exports = {
         argsIgnorePattern: '^_',
         varsIgnorePattern: '^_'
       }
-    ]
+    ],
+    'vue/multi-word-component-names': 'off'
   },
   overrides: [
     {
