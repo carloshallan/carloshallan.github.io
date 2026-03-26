@@ -1,0 +1,84 @@
+import PostHeader from '@/components/PostHeader'
+import Media from '@/components/Media'
+import BlogGallery from '@/components/BlogGallery'
+
+<PostHeader
+  title="Momo – Creative Writing Desktop Application"
+  snippet="A privacy-first, local-first writing app for novelists. Founded and built from scratch under Creative Olympus."
+  projectName="Momo"
+  imageName="momo/preview-image.jpg"
+  date="2021 - Present"
+  order="1"
+  stack="(React, TypeScript, Tauri, Rust, Vite, TailwindCSS, Django, PostgreSQL, Docker, Stripe)"
+/>
+
+## Creative Olympus
+
+In **2021**, I founded **Creative Olympus**, an indie software studio focused on building tools for creative professionals. Momo is its flagship product — a desktop application designed specifically for novelists.
+
+I handled everything: product vision, UX/UI design, full-stack engineering, backend infrastructure, marketing website, subscription billing, and cross-platform distribution.
+
+## Why Momo Exists
+
+I built Momo because I needed it myself.
+
+I'm also a writer — I've been working on novels for years under the pen name **C.H. Blacksmith** (<a href="https://chblacksmith.com.br" target="_blank">chblacksmith.com.br</a>). Every writing tool I tried was either too generic, too bloated, or required me to hand over my manuscripts to a cloud service. Nothing fit the way I actually think and work as a novelist.
+
+So I built Momo to scratch my own itch — and it turns out other writers had the same problem.
+
+## What is Momo?
+
+Momo is a **local-first, privacy-focused creative writing application** for novelists. Unlike most writing tools, Momo stores all data locally on the user's machine — no cloud lock-in, no AI features, no telemetry. Writers own their work, completely.
+
+It is distributed for **Windows, macOS, and Linux**, with optional cloud sync for users who want it.
+
+<div class="blogGallery">
+  <Media src="/work/momo/preview-image.jpg" alt="Momo – Cyberpunk theme" />
+  <Media src="/work/momo/dark-green.jpg" alt="Momo – Dark green theme" />
+  <Media src="/work/momo/white-carvao.jpg" alt="Momo – Light theme" />
+  <Media src="/work/momo/black.jpg" alt="Momo – Dark theme" />
+</div>
+
+## Challenge
+
+Building a product from scratch — alone — means wearing every hat:
+
+- **Product**: Define the right features for a niche audience (novelists), prioritize them, and evolve based on real user feedback.
+- **Design**: Create a UI that feels focused and distraction-free, with multiple themes and full keyboard navigation support.
+- **Engineering**: Build a cross-platform desktop app with a native feel, local storage, and optional cloud sync — all in a small binary.
+- **Infrastructure**: Build the full backend ecosystem: API, subscription billing, release management, and a marketing site.
+- **Business**: Design a pricing model (Basic, Pro, Cloud Pro), integrate payments, and handle user accounts.
+
+## Key Features
+
+Momo ships with **18 core features** built for the complete novel-writing workflow:
+
+- **Project Manager** — organize multiple books and projects in one place
+- **Timeline** — visualize story events and character arcs chronologically
+- **Kanban Boards** — manage scenes, chapters, and tasks visually
+- **Goals & Achievements** — set word count targets and track daily progress
+- **References** — store research, notes, images, and links per project
+- **EPUB Editor** — design the final book layout before exporting
+- **Revision History** — track every change without leaving the app
+- **Pomodoro Timer** — built-in focus sessions for deep writing
+- **Themes** — 10+ color themes, light and dark, fully customizable
+- **Export** — export to DOCX, PDF, and EPUB formats
+- **Backup** — encrypted local backups with one click
+- **Reports** — writing statistics and session summaries
+- **Templates** — reusable project structures for different genres
+- **Keyboard Shortcuts** — full keyboard-driven navigation
+
+## Architecture
+
+Momo is built as a monorepo ecosystem across three layers:
+
+**Desktop App** — built with **Tauri (Rust)** for the shell and **React + TypeScript + Vite** for the UI. TailwindCSS handles styling. Tauri gives native performance and a minimal binary size, while React handles the complex UI state.
+
+**Poseidon API** — a **Django 5 + Django REST Framework** backend running on **PostgreSQL** in Docker. Handles user authentication, subscription plans, feature access control, Stripe billing, and GitHub release proxying. Built to support multiple Creative Olympus products, not just Momo.
+
+**Marketing Website** — built with **React + TypeScript + TailwindCSS + Framer Motion**, with full **i18n** support (English and Portuguese via i18next). Includes testimonials, feature showcases, pricing tiers, and download pages.
+
+## Impact
+
+Momo is a live, commercially available product with a paying user base. It has been presented at **writing workshops and events**, where it has received direct feedback from novelists that shaped its feature set. The project represents over 3 years of continuous development, design, and iteration — proof that shipping a real product requires far more than just writing code.
+

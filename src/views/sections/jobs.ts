@@ -31,6 +31,50 @@ function calculateWorkPeriod(
 
 export default [
   {
+    title: 'Founder & Lead Engineer',
+    subtitle: 'Creative Olympus',
+    date: `Jan 2021 - Present (${calculateWorkPeriod('2021-01-01', null)})`,
+    jobDescription: {
+      description:
+        'Founded Creative Olympus, an indie software studio building tools for creative professionals. Designed and shipped Momo — a privacy-first, local-first desktop application for novelists — from zero to a commercially available product with a paying user base. Owned the full product lifecycle: UX/UI design, full-stack engineering, backend infrastructure, subscription billing, marketing website, and cross-platform distribution for Windows, macOS, and Linux.',
+      title: 'Stack and Tools:',
+      listOfStack: [
+        {
+          description:
+            'Desktop app with React, TypeScript, Tauri (Rust), and Vite.'
+        },
+        {
+          description: 'TailwindCSS for UI styling and theming.'
+        },
+        {
+          description:
+            'REST API backend with Python, Django 5, and Django REST Framework.'
+        },
+        {
+          description: 'PostgreSQL database with Docker containerization.'
+        },
+        {
+          description:
+            'Stripe integration for subscription billing and plan management (Basic, Pro, Cloud Pro).'
+        },
+        {
+          description:
+            'Marketing website with React, TypeScript, TailwindCSS, and Framer Motion.'
+        },
+        {
+          description: 'i18n with i18next (English and Portuguese).'
+        },
+        {
+          description:
+            'GitHub API integration for automated release management and distribution.'
+        },
+        {
+          description: 'Prototypes with Figma.'
+        }
+      ]
+    }
+  },
+  {
     title: 'Software Engineer | Pipeline Technical Director',
     subtitle: 'Roof Studio',
     date: `Nov 2021 - Current Job (${calculateWorkPeriod('2021-11-20', null)})`,

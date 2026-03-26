@@ -8,10 +8,11 @@
           <span class="green">Hallan</span>
         </h1>
         <div class="subtitle">
-          A
           <span class="light-pink">Software Engineer</span>
-          and a
-          <span class="light-purple">UI/UX Design Lover</span>
+          <span class="separator"> · </span>
+          <span class="light-purple">Indie Founder</span>
+          <span class="separator"> · </span>
+          <span class="green">Writer</span>
         </div>
       </div>
       <div class="buttonGroup">
@@ -53,6 +54,10 @@ export default Vue.extend({
 
   .subtitle
     text-align center
+
+  .separator
+    color light-purple
+    opacity 0.4
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     text-align center
