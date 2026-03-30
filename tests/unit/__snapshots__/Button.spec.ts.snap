@@ -2,7 +2,7 @@
 
 exports[`Button.vue Render button with children 1`] = `
 <button
-  class=""
+  class="button"
 >
   Click Here
 </button>

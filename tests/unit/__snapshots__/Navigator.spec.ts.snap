@@ -5,7 +5,7 @@ exports[`Navigator.vue Render Navigator 1`] = `
   <a
     aria-current="page"
     class="router-link-exact-active active"
-    href="/"
+    href="#/"
   >
     
     Home
@@ -13,7 +13,7 @@ exports[`Navigator.vue Render Navigator 1`] = `
   </a>
   <a
     class=""
-    href="/work"
+    href="#/work"
   >
     
     Work
@@ -21,10 +21,18 @@ exports[`Navigator.vue Render Navigator 1`] = `
   </a>
   <a
     class=""
-    href="/posts/:slug"
+    href="#/work/:slug"
   >
     
-    post
+    Post
+
+  </a>
+  <a
+    class=""
+    href="#/*"
+  >
+
+    PageNotFound
   
   </a>
 </nav>
