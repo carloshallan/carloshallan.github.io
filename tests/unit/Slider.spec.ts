@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Slider from '@/components/Slider.vue'
-import { CustomSlide } from '@/types'
+import type { CustomSlide } from '@/types'
 
 const slides: Array<CustomSlide> = [
   {
@@ -13,7 +13,7 @@ const slides: Array<CustomSlide> = [
 describe('Slider.vue', () => {
   it('Render slider component', () => {
     const slider = mount(Slider, {
-      propsData: {
+      props: {
         slides
       }
     })

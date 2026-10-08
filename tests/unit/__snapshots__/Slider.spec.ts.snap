@@ -1,38 +1,50 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Slider.vue Render slider component 1`] = `
+exports[`Slider.vue > Render slider component 1`] = `
 <div
+  data-v-7e4654c2=""
   id="slideWrapper"
 >
   <div
     class="radioGroup"
+    data-v-7e4654c2=""
   >
-    <div>
+    
+    <div
+      data-v-7e4654c2=""
+    >
       <input
+        checked=""
+        data-v-7e4654c2=""
         id="radio0"
         name="radio"
         type="radio"
       />
-       
       <label
+        data-v-7e4654c2=""
         for="radio0"
       />
     </div>
+    
   </div>
-   
   <div
     class="row"
+    data-v-7e4654c2=""
   >
     <div
       class="column slides"
+      data-v-7e4654c2=""
       style="top: 20px;"
     >
+      
       <figure
         class="light-pink currentSlide"
+        data-v-7e4654c2=""
         style="right: 0px; top: 0px; z-index: 3;"
       >
-        <!---->
+        <!--v-if-->
       </figure>
+      
     </div>
   </div>
 </div>

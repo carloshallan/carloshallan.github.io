@@ -1,7 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Timeline.vue Render timeline component 1`] = `
+exports[`Timeline.vue > Render timeline component 1`] = `
 <div
   class="WorkTimeline"
-/>
+  data-v-228c0a9d=""
+>
+  
+  
+</div>
 `;

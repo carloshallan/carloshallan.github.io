@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Button',
   props: {
     click: Function,
@@ -16,7 +16,7 @@ export default Vue.extend({
     target: String
   },
   methods: {
-    handleClick(event: HTMLElement) {
+    handleClick(event: MouseEvent) {
       if (this.href) window.open(this.href, this.target || '_blank')
       if (this.click) this.click(event)
     }

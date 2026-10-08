@@ -2,6 +2,7 @@
   <div class="Media">
     <v-img v-if="isImage" :src="src" max-width="100%" class="media"></v-img>
 
+    <!-- prettier-ignore-attribute allow -->
     <iframe
       v-else-if="isUrl"
       class="media"
@@ -22,9 +23,9 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   props: {
     src: {
       type: String,

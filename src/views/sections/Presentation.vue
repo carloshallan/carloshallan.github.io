@@ -4,24 +4,24 @@
       <Profile class="profile" />
       <div class="titleGroup">
         <h1>
-          I'm Carlos
+          {{ $t('hero.greeting') }}
           <span class="green">Hallan</span>
         </h1>
         <div class="subtitle">
-          <span class="light-pink">Software Engineer</span>
+          <span class="green">{{ $t('hero.role') }}</span>
           <span class="separator"> · </span>
-          <span class="light-purple">Indie Founder</span>
+          <span class="light-pink">{{ $t('hero.ux') }}</span>
           <span class="separator"> · </span>
-          <span class="green">Writer</span>
+          <span class="light-purple">{{ $t('hero.momo') }}</span>
         </div>
       </div>
       <div class="buttonGroup">
         <router-link to="/work">
-          <Button> see my works </Button>
+          <Button> {{ $t('hero.seeWorks') }} </Button>
         </router-link>
-        <Button :outlined="true" href="https://medium.com/@carloshallan"
-          >about me</Button
-        >
+        <Button :outlined="true" href="https://medium.com/@carloshallan">
+          {{ $t('hero.aboutMe') }}
+        </Button>
       </div>
       <mouse-icon />
     </div>
@@ -29,13 +29,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
 import Profile from '@/components/icons/Profile.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Presentation',
   components: { Section, Profile, Button, MouseIcon }
 })
@@ -51,6 +51,9 @@ export default Vue.extend({
   justify-content center
   flex-direction column
   gap 60px
+
+  .titleGroup
+    text-align center
 
   .subtitle
     text-align center

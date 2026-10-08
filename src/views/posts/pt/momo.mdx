@@ -1,0 +1,92 @@
+import PostHeader from '@/components/PostHeader'
+import Media from '@/components/Media'
+import Button from '@/components/Button'
+
+<PostHeader
+  title="Aplicativo desktop para escrita criativa"
+  snippet="Um aplicativo de escrita para romancistas que prioriza a privacidade e guarda tudo no computador do autor. Criado do zero pela Creative Olympus."
+  projectName="Momo"
+  imageName="momo/momo-custom-background.png"
+  date="2022 - Atual"
+  order="1"
+  featured="true"
+  stack="(Tauri, Rust, React, TypeScript, Django, PostgreSQL, Stripe)"
+/>
+
+## Em resumo
+
+O Momo é um **produto desktop comercial** que eu mesmo projetei, desenvolvi e publico: um aplicativo de escrita para romancistas que guarda tudo no computador do autor, disponível para **Windows (na Microsoft Store), macOS e Linux**, e que já tem usuários pagantes.
+
+- **Papel**: fundador e único engenheiro, responsável por produto, UX/UI, aplicativo desktop, API, cobrança, site e distribuição.
+- **Tamanho do trabalho**: versão 1.10, mais de 800 commits e três bases de código (aplicativo desktop, API e site).
+- **Modelo de negócio**: licença vitalícia para uma ou para todas as plataformas, ou assinatura com sincronização na nuvem, com 30 dias de teste grátis.
+
+<div class="blogGallery">
+  <div class="buttonGroup">
+    <Button href="https://momoparaescritores.com.br" target="_blank">
+      Conheça o momoparaescritores.com.br
+    </Button>
+  </div>
+</div>
+
+## O problema
+
+Eu também sou escritor. Há anos escrevo romances com o pseudônimo **C.H. Blacksmith** (<a href="https://chblacksmith.com.br" target="_blank">chblacksmith.com.br</a>), e todas as ferramentas de escrita que testei eram genéricas demais, pesadas demais ou exigiam que eu entregasse meus manuscritos a um serviço na nuvem.
+
+Quem escreve romances precisa planejar, escrever, revisar e diagramar o livro em um só lugar, e precisa ter certeza de que o manuscrito continua sendo seu. Então criei o Momo, e descobri que outros escritores tinham o mesmo problema.
+
+## Origem
+
+O Momo é o resultado de anos trabalhando na mesma ideia:
+
+- **2016**: Pena, meus primeiros experimentos com ferramentas de escrita
+- **2019**: Feather Text Editor, um editor de texto simples para escritores
+- **2020–2021**: Feather e Apollo Writer
+- **2022**: experimentos com aplicativos desktop, a arquitetura e o nome Momo
+- **2023**: primeira implementação do Momo
+- **2025**: reimplementação completa e lançamento público
+
+Cada tentativa me ensinou algo sobre o que os escritores realmente precisam, e sobre o que é preciso para lançar um produto, e não só um protótipo.
+
+## O produto
+
+O Momo reúne o livro inteiro em um único projeto, da primeira ideia ao EPUB final. Tudo fica salvo **no computador do autor, em um formato de arquivo aberto**, funciona offline e nunca é usado para treinar IA.
+
+<div class="blogGallery">
+  <Media src="/work/momo/momo-project-page.png" alt="Momo: projetos" />
+  {'Livros organizados em projetos.'}
+  <Media src="/work/momo/momo-review-page.png" alt="Momo: revisão" />
+  {'Revisão com comentários, sugestões e versões.'}
+  <Media src="/work/momo/momo-diagramacao.png" alt="Momo: diagramação" />
+  {'Editor visual de diagramação para publicar em EPUB.'}
+  <Media src="/work/momo/momo-report-page.png" alt="Momo: relatórios" />
+  {'Relatórios de sessões, sequências de dias e progresso por capítulo.'}
+  <Media src="/work/momo/momo-themes.png" alt="Momo: temas" />
+  {'Temas escuros, claros e transparentes, com papéis de parede personalizados.'}
+</div>
+
+Principais funcionalidades:
+
+- **Projetos, personagens e linha do tempo**: o universo da história organizado ao lado do manuscrito
+- **Editor sem distrações**: modo foco, corretor ortográfico, atalhos de teclado e modo Vim opcional
+- **Sistema de revisão**: comentários, sugestões e várias versões do manuscrito
+- **Backup automático**: versões salvas a cada 5 minutos, que podem ser restauradas com um clique
+- **Quadro de tarefas, metas e conquistas**: para o livro avançar mesmo com pouco tempo para escrever
+- **Modelos narrativos**: Estrutura em 3 Atos, Jornada do Herói, Save the Cat! e modelos de projeto personalizados
+- **Roteiros em Fountain**: roteiros dentro do mesmo universo criativo
+- **Diagramação e exportação**: EPUB, DOCX e PDF
+- **Documentação no próprio app**, em 3 idiomas
+
+## Engenharia
+
+O Momo é um ecossistema de três bases de código que eu projetei e mantenho:
+
+**Aplicativo desktop**: **Tauri 2 (Rust)** na camada nativa e **React, TypeScript e Vite** na interface, com TailwindCSS. O Tauri deixa o aplicativo leve e rápido, enquanto o React cuida do editor e do estado dos projetos, que são complexos. A distribuição é feita pela Microsoft Store e por instaladores próprios (macOS, AppImage, .deb e .rpm).
+
+**API Poseidon**: **Django 5 e Django REST Framework** com **PostgreSQL**, rodando em Docker. Cuida das contas, das licenças e do acesso às funcionalidades, do período de teste, dos pagamentos com **Stripe** e **Mercado Pago** (inclusive Pix), do programa de parceria com autores e da distribuição das versões. Foi pensada para atender vários produtos da Creative Olympus, não só o Momo.
+
+**Site**: **React, TypeScript, TailwindCSS e Framer Motion**, com checkout, área do cliente e tradução completa para inglês, português e espanhol.
+
+## Impacto
+
+O Momo está no ar e é vendido para escritores, que também o usam para publicar seus livros. Ele já foi apresentado em **oficinas e eventos de escrita**, e o retorno direto dos romancistas continua guiando o que vem pela frente. Construí-lo sozinho me mostrou que lançar um produto de verdade exige muito mais do que escrever código: decisões de produto, design, infraestrutura, pagamentos, suporte e distribuição precisam funcionar juntos.

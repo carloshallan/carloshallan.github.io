@@ -4,7 +4,7 @@ import router from '@/router'
 
 describe('Navigator.vue', () => {
   it('Render Navigator', () => {
-    const navigator = mount(Nav, { router })
+    const navigator = mount(Nav, { global: { plugins: [router] } })
 
     expect(navigator.element).toMatchSnapshot()
   })

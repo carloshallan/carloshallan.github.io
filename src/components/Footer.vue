@@ -1,13 +1,16 @@
 <template>
   <footer>
-    <p>© 2021 Carlos Hallan All rights reserved.</p>
+    <p>© 2014–{{ year }} Carlos Hallan. {{ $t('footer.rights') }}</p>
   </footer>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
-  name: 'Footer'
+export default defineComponent({
+  name: 'Footer',
+  data() {
+    return { year: new Date().getFullYear() }
+  }
 })
 </script>
 <style lang="stylus" scoped>

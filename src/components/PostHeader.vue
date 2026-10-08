@@ -18,9 +18,9 @@
   </header>
 </template>
 
-<script>
-import Vue from 'vue'
-export default Vue.extend({
+<script lang="ts">
+import { defineComponent } from 'vue'
+export default defineComponent({
   props: {
     title: String,
     projectName: String,
@@ -29,6 +29,7 @@ export default Vue.extend({
     snippet: String,
     date: String,
     order: String,
+    featured: String,
     stack: String
   },
   name: 'PostHeader'
@@ -48,6 +49,9 @@ header
   display: flex
   flex-direction: column
   align-items center
+
+  p
+    text-align center
 
   @media screen and ({ScreenCondition}: ScreenConditionTabletPortrait)
     width: 100%

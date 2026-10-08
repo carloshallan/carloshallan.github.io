@@ -1,6 +1,5 @@
-import Vue from 'vue'
-import Vuetify from 'vuetify/lib/framework'
+import 'vuetify/styles'
+import '@/styles/vuetify-compat.css'
+import { createVuetify } from 'vuetify'
 
-Vue.use(Vuetify)
-
-export default new Vuetify({})
+export default createVuetify({})

@@ -35,14 +35,15 @@
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
-import { CustomSlide } from '@/types'
+import { defineComponent, type PropType } from 'vue'
+import type { CustomSlide } from '@/types'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Slider',
   props: {
     slides: {
-      type: Array as PropType<Array<CustomSlide>>
+      type: Array as PropType<Array<CustomSlide>>,
+      default: () => []
     }
   },
   data() {

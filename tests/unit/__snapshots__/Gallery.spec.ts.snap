@@ -1,51 +1,25 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Gallery.vue Render gallery 1`] = `
+exports[`Gallery.vue > Render gallery 1`] = `
 <div
   class="gallery"
+  data-v-6f46c37e=""
 >
   <router-link-stub
     ariacurrentvalue="page"
-    class="row"
-    event="click"
-    tag="div"
-    to="work"
-  >
-    <figure>
-      Image
-    </figure>
-     
-    <header>
-      <h2>
-        Title 1
-      </h2>
-       
-      <p>
-        test 1
-      </p>
-    </header>
-  </router-link-stub>
-   
+    custom="true"
+    data-v-6f46c37e=""
+    replace="false"
+    to="/work"
+    viewtransition="false"
+  />
   <router-link-stub
     ariacurrentvalue="page"
-    class="row"
-    event="click"
-    tag="div"
-    to="work"
-  >
-    <figure>
-      Image
-    </figure>
-     
-    <header>
-      <h2>
-        Title 2
-      </h2>
-       
-      <p>
-        test 2
-      </p>
-    </header>
-  </router-link-stub>
+    custom="true"
+    data-v-6f46c37e=""
+    replace="false"
+    to="/work"
+    viewtransition="false"
+  />
 </div>
 `;

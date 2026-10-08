@@ -9,7 +9,26 @@
       </div>
       <ul class="jobDescription">
         <li>{{ job.jobDescription.description }}</li>
-        <li>
+        <li
+          v-for="(client, c) in job.jobDescription.clients"
+          :key="`client-${c}`"
+          class="client"
+        >
+          <h4 class="client-name">
+            {{ client.name }}
+            <span v-if="client.tag" class="client-tag">{{ client.tag }}</span>
+          </h4>
+          <div class="client-role">
+            <span class="light-pink">{{ client.role }}</span>
+            {{ client.date }}
+          </div>
+          <ul>
+            <li v-for="(highlight, h) in client.highlights" :key="h">
+              {{ highlight }}
+            </li>
+          </ul>
+        </li>
+        <li v-if="job.jobDescription.listOfStack?.length">
           <strong class="description-title">{{
             job.jobDescription.title
           }}</strong>
@@ -29,10 +48,10 @@
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
-import { Job } from '@/types'
+import { defineComponent, type PropType } from 'vue'
+import type { Job } from '@/types'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'workTimeline',
   props: {
     jobs: {
@@ -113,6 +132,29 @@ TimelineIconAfter()
 
 .jobDescription::after
   TimelineIconAfter()
+
+.client
+  .client-name
+    FiraSans()
+    font-size 22px
+    color green
+
+  .client-tag
+    FiraCode()
+    font-size 13px
+    font-weight 500
+    text-transform uppercase
+    letter-spacing 0.08em
+    color yellow
+    margin-left 8px
+    vertical-align middle
+
+  .client-role
+    font-size 16px
+    margin-top 4px
+
+  ul
+    margin-top 12px
 
 .title
   FiraSans()

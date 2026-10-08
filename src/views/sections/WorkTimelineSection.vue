@@ -4,7 +4,8 @@
       <div class="column">
         <h1>
           <span class="light-pink">>=</span>
-          <span class="green">Where</span> have I been?
+          <span class="green">{{ $t('timeline.title') }}</span>
+          {{ $t('timeline.titleRest') }}
         </h1>
       </div>
       <div class="column">
@@ -14,23 +15,20 @@
   </Section>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
 import WorkTimeline from '@/components/Timeline.vue'
-import ListOfJobs from './jobs'
-import { Job } from '@/types'
+import { getJobs } from './jobs'
 
-const jobs: Array<Job> = ListOfJobs
-
-export default Vue.extend({
+export default defineComponent({
   name: 'WorkTimelineSection',
   components: {
     Section,
     WorkTimeline
   },
-  data() {
-    return {
-      jobs
+  computed: {
+    jobs() {
+      return getJobs(this.$i18n.locale)
     }
   }
 })

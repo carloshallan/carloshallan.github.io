@@ -1,22 +1,17 @@
 <template>
-  <v-layout row wrap class="blog-gallery">
-    <v-flex
-      xs12
-      sm6
-      md4
-      lg3
-      v-for="(item, index) in $slots.default"
-      :key="index"
-    >
-      <slot :name="item"></slot>
-    </v-flex>
-  </v-layout>
+  <v-row class="blog-gallery">
+    <v-col cols="12" sm="6" md="4" lg="3">
+      <slot />
+    </v-col>
+  </v-row>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'BlogGallery'
-}
+})
 </script>
 
 <style scoped>

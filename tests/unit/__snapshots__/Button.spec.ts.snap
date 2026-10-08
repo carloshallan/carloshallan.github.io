@@ -1,9 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Button.vue Render button with children 1`] = `
+exports[`Button.vue > Render button with children 1`] = `
 <button
-  class=""
+  class="button"
+  data-v-3c9d0845=""
 >
+  
   Click Here
+  
 </button>
 `;

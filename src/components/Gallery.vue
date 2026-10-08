@@ -1,26 +1,30 @@
 <template>
   <div class="gallery">
-    <router-link to="work" tag="div" class="row">
-      <figure>Image</figure>
-      <header>
-        <h2>Title 1</h2>
-        <p>test 1</p>
-      </header>
+    <router-link v-slot="{ navigate }" to="/work" custom>
+      <div class="row" @click="navigate">
+        <figure>Image</figure>
+        <header>
+          <h2>Title 1</h2>
+          <p>test 1</p>
+        </header>
+      </div>
     </router-link>
-    <router-link to="work" tag="div" class="row">
-      <figure>Image</figure>
-      <header>
-        <h2>Title 2</h2>
-        <p>test 2</p>
-      </header>
+    <router-link v-slot="{ navigate }" to="/work" custom>
+      <div class="row" @click="navigate">
+        <figure>Image</figure>
+        <header>
+          <h2>Title 2</h2>
+          <p>test 2</p>
+        </header>
+      </div>
     </router-link>
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropType } from 'vue'
-import { GalleryItems } from '@/types'
+import { defineComponent, type PropType } from 'vue'
+import type { GalleryItems } from '@/types'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Gallery',
   props: {
     galleryItems: Array as PropType<Array<GalleryItems>>

@@ -1,9 +1,13 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer.vue Render Footer component 1`] = `
-<footer>
-  <p>
-    © 2021 Carlos Hallan All rights reserved.
+exports[`Footer.vue > Render Footer component 1`] = `
+<footer
+  data-v-4896eafd=""
+>
+  <p
+    data-v-4896eafd=""
+  >
+    © 2014–2026 Carlos Hallan. All rights reserved.
   </p>
 </footer>
 `;

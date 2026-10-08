@@ -3,56 +3,29 @@
     <div class="row">
       <div class="column">
         <img
-          src="../../assets/work-image-bg.png"
+          src="../../assets/momo-themes-showcase.png"
           class="figure"
-          alt="My work showcase"
+          :alt="$t('journey.imageAlt')"
         />
       </div>
       <div class="column">
         <h1>
           <span class="light-pink">!=</span>
-          My Journey <span class="green">as a Developer</span>
+          {{ $t('journey.title') }}
+          <span class="green">{{ $t('journey.titleHighlight') }}</span>
         </h1>
         <p>
-          I am an accomplished <strong>Full Stack Developer</strong> and
-          <strong>UI/UX Designer</strong> with over a decade of diverse
-          experience leading impactful projects across industries such as VFX,
-          gaming, and creative studios. My focus has always been on creating
-          scalable, user-centric solutions that enhance workflows, optimize
-          processes, and deliver exceptional user experiences.
+          {{ $t('journey.introBefore') }}
+          <strong>{{ $t('journey.introRole') }}</strong>
+          {{ $t('journey.introAfter') }}
         </p>
-        <p>Some of my notable achievements include:</p>
+        <p>{{ $t('journey.highlightsTitle') }}</p>
         <ul>
-          <li>
-            <span class="strong">Pipeline Development:</span> Spearheaded the
-            creation of advanced 3D production pipelines integrating tools like
-            Autodesk ShotGrid and custom Python-based applications.
-          </li>
-          <li>
-            <span class="strong">
-              AI Image Searcher Application: Designed, developed, and deployed a
-              fully integrated AI-powered image search solution, handling
-              everything from UI/UX design to backend infrastructure. The system
-              runs on a scalable AWS server for high performance and
-              reliability. On the frontend, I built a desktop application using
-              Rust (Tauri) and TypeScript + React, ensuring a seamless and
-              efficient user experience.
-            </span>
-          </li>
-          <li>
-            <span class="strong">CRM Systems:</span> Designed and deployed
-            robust CRM solutions tailored to VFX studio needs, enhancing team
-            productivity and communication.
-          </li>
-          <li>
-            <span class="strong">Training Platforms:</span> Developed and
-            integrated training platforms with real-time data synchronization,
-            enabling seamless collaboration and learning.
-          </li>
-          <li>
-            <span class="strong">Cross-Platform Applications:</span> Delivered
-            hybrid desktop applications using ElectronJS, Python, and VueJS,
-            ensuring compatibility across Windows, macOS, and Linux.
+          <li v-for="key in highlights" :key="key">
+            <span class="strong">{{
+              $t(`journey.highlights.${key}.label`)
+            }}</span>
+            {{ $t(`journey.highlights.${key}.text`) }}
           </li>
         </ul>
         <!-- <p>My expertise spans a wide range of technologies, including:</p>
@@ -61,14 +34,9 @@
             {{ value }}
           </li>
         </ul> -->
-        <p>
-          With every project, I bring a blend of technical acumen, creative
-          vision, and a dedication to delivering solutions that empower teams
-          and businesses to excel in their domains.
-        </p>
         <br />
         <router-link to="/work">
-          <Button> See My Portfolio </Button>
+          <Button> {{ $t('journey.cta') }} </Button>
         </router-link>
       </div>
     </div>
@@ -76,15 +44,16 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
 import Button from '@/components/Button.vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'MyWorks',
   components: { Section, Button },
   data() {
     return {
+      highlights: ['momo', 'pipelines', 'business', 'desktop'],
       techStack: [
         'Python (Flask, Django, PySide6, SQLAlchemy)',
         'JavaScript/TypeScript (React, Vue, Nuxt, Electron/Rust (Tauri), Node.js)',

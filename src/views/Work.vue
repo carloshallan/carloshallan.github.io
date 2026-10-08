@@ -5,10 +5,10 @@
   </main>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import Gallery from '@/components/Gallery.vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'WorkPage',
   components: { Gallery }
 })

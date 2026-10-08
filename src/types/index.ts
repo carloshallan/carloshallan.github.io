@@ -17,10 +17,19 @@ export interface Children {
   children?: Array<Children>
 }
 
+export interface JobClient {
+  name: string
+  tag?: string
+  role: string
+  date: string
+  highlights: Array<string>
+}
+
 export interface JobDescription {
   description: string
-  title: string
-  listOfStack: Array<Children>
+  title?: string
+  listOfStack?: Array<Children>
+  clients?: Array<JobClient>
 }
 
 export interface Job {

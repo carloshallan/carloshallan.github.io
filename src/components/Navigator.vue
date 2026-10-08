@@ -4,17 +4,16 @@
       v-for="(option, index) in options"
       :key="index"
       :to="option.path"
-      active-class="active"
-      exact
+      exact-active-class="active"
     >
       {{ option.name }}
     </router-link>
   </nav>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Navigator',
   computed: {
     options() {

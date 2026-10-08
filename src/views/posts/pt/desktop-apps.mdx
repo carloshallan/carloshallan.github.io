@@ -1,0 +1,115 @@
+import PostHeader from '@/components/PostHeader'
+import Media from '@/components/Media'
+import BlogGallery from '@/components/BlogGallery'
+
+<PostHeader
+  title="Aplicativos desktop com Electron e Tauri"
+  snippet=""
+  projectName="Desktop Apps"
+  imageName="tauri/desktop-app.png"
+  date="2018 - 2025"
+  order="2"
+  stack="(Tauri, Electron, Vue.js, React, Rust, TypeScript, Vuetify, TailwindCSS, Node.js)"
+/>
+
+## [2025] Roof Cover Look: busca visual e player quadro a quadro
+
+Em **janeiro de 2025**, desenvolvi um aplicativo desktop com **Tauri 2, React e TailwindCSS** no front-end e uma **API em Python** no back-end. A ferramenta foi feita para a **Roof Studio** e usada na produção do filme que celebrou os **100 anos da revista _The New Yorker_**, com mais de **5.000 capas históricas**.
+
+{<>
+  <a href="https://roofstudio.tv/work/the-new-yorker-100" target="_blank">Clique aqui</a>
+  {" para ver os detalhes do projeto no site da Roof Studio."}
+</>}
+
+<div class="blogGallery">
+  <Media
+    src="https://www.youtube.com/embed/-pwoj0YdG78"
+    alt="Roof Cover Look"
+  />
+</div>
+
+## Desafio
+
+- **Prazo curto**: 1 semana para um protótipo utilizável e 1 mês para a versão final.
+- **Grande volume de dados**: **5.000 capas em alta resolução**.
+- **Busca criativa**: os artistas precisavam encontrar padrões visuais, como **contexto, cor e temperatura**, para ligar uma capa à outra e montar sequências sem cortes bruscos.
+- **Player específico**: navegação quadro a quadro, sem áudio, mas com precisão visual.
+
+## Solução
+
+- **Front-end em Tauri 2**: aplicativo desktop leve e multiplataforma.
+- **React e TailwindCSS**: iterações rápidas e uma interface fácil de usar.
+- **Back-end em Python**: API para processar e indexar as imagens.
+- **Principais funcionalidades**:
+  - Seleção de imagens a partir de uma pasta local.
+  - Visualização em grade e linha do tempo interativa.
+  - **Player quadro a quadro** para revisar as sequências.
+  - **Busca visual por contexto, cor e temperatura**, para encontrar capas parecidas em segundos.
+
+## Impacto
+
+O aplicativo foi usado durante toda a produção e ajudou a equipe de criação a **encontrar e conectar padrões visuais entre milhares de capas**. O que começou como um protótipo feito em 7 dias virou, em um mês, uma ferramenta de produção robusta e essencial para organizar e construir a narrativa visual do filme.
+
+---
+
+## [2021 - 2023] Roof Share Tool: transferência de arquivos para produção 3D
+
+Em **2021**, desenvolvi o **Roof Share Tool**, um aplicativo desktop feito com **Electron, Vue 3, TypeScript e Vuetify**. A ferramenta foi criada para uma **pipeline de produção de filmes em 3D** e permitia que os artistas em home office **sincronizassem arquivos grandes** com eficiência, como um Dropbox pensado para os arquivos pesados de produção.
+
+<div class="blogGallery">
+  <Media
+    src="https://www.youtube.com/embed/S_oZfkxhK-w"
+    alt="Roof Share Tool"
+  />
+</div>
+
+## Desafio
+
+- **Tamanho e confiabilidade**: transferir e sincronizar assets 3D e sequências muito grandes.
+- **Controle de versão**: garantir a sincronização correta e manter as versões locais íntegras.
+- **Redução de custos**: usar **as máquinas dos artistas para processar as cenas 3D**, em vez de depender só dos servidores da AWS.
+- **Integrações**: dar suporte aos fluxos de trabalho com **Autodesk Maya** e **Adobe After Effects**.
+
+## Solução
+
+- **Aplicativo em Electron**: solução desktop multiplataforma.
+- **Vue 3, TypeScript e Vuetify**: interface moderna, consistente e rápida de desenvolver.
+- **Armazenamento na AWS**: hospedagem e download de arquivos com segurança.
+- **Automações integradas** para a produção (upload, sincronização e criação da estrutura de projetos).
+- **Integração direta** com Maya e After Effects, as ferramentas que os artistas já usavam.
+
+## Impacto
+
+O Roof Share Tool virou uma **peça central da produção remota do estúdio**, com transferência e versionamento de arquivos confiáveis para artistas em lugares diferentes. Ao levar parte da renderização 3D para as máquinas locais, a ferramenta também ajudou a **reduzir os custos com a AWS**, sem prejudicar a colaboração.
+
+---
+
+## [2019] Maya Animation Exporter: ferramenta de pipeline para games 3D
+
+Em **2019**, desenvolvi uma ferramenta desktop para a **Wildlife Studios** com **Electron, React e CSS puro**. O aplicativo era integrado ao **Perforce** e servia para **exportar cenas e animações de personagens 3D** do **Autodesk Maya** para jogos mobile.
+
+<div class="blogGallery">
+  <Media
+    src="https://www.youtube.com/embed/IegnixWP4F4"
+    alt="Animation Exporter"
+  />
+</div>
+
+## Desafio
+
+- Garantir uma **integração estável com o Autodesk Maya** por meio do Electron.
+- Automatizar um **fluxo de exportação que era manual**: os animadores precisavam enviar os arquivos aos desenvolvedores do jogo um a um.
+- Manter a compatibilidade com o Perforce, usado para o controle de versão na pipeline do estúdio.
+
+## Solução
+
+- **Aplicativo desktop em Electron**: solução multiplataforma acessível aos artistas.
+- **React e CSS**: interface simples para navegar pelos arquivos e exportar.
+- **Integração direta com o Maya**: os animadores passaram a exportar animações e assets com um clique.
+- **Integração com o Perforce**: os arquivos exportados já saíam versionados e sincronizados com a pipeline do estúdio.
+
+## Impacto
+
+A ferramenta **reduziu bastante o tempo que os animadores gastavam exportando e enviando assets 3D**, e melhorou o fluxo entre as equipes de animação e de desenvolvimento. O que antes exigia várias etapas manuais virou um **processo de exportação rápido e confiável**, e os desenvolvedores passaram a receber os assets atualizados quase na hora.
+
+---

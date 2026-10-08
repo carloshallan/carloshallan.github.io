@@ -1,31 +1,38 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Navigator.vue Render Navigator 1`] = `
-<nav>
+exports[`Navigator.vue > Render Navigator 1`] = `
+<nav
+  data-v-2cde1173=""
+>
+  
   <a
-    aria-current="page"
-    class="router-link-exact-active active"
-    href="/"
+    class=""
+    data-v-2cde1173=""
+    href="#/"
   >
-    
     Home
-  
   </a>
   <a
     class=""
-    href="/work"
+    data-v-2cde1173=""
+    href="#/work"
   >
-    
     Work
-  
   </a>
   <a
     class=""
-    href="/posts/:slug"
+    data-v-2cde1173=""
+    href="#/work/:slug"
   >
-    
-    post
-  
+    Post
   </a>
+  <a
+    class=""
+    data-v-2cde1173=""
+    href="#/:pathMatch(.*)*"
+  >
+    PageNotFound
+  </a>
+  
 </nav>
 `;

@@ -1,20 +1,20 @@
 <template>
   <div>
     <presentation />
-    <about-me />
     <my-works />
     <work-timeline />
+    <about-me />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'Home',
   components: {
     Presentation,

@@ -1,13 +1,12 @@
-const fs = require('fs')
-const path = require('path')
-const execa = require('execa')
+import fs from 'node:fs'
+import path from 'node:path'
+import { execa } from 'execa'
 const mainFolder = 'src/assets/'
 const iconsFolder = 'src/components/icons/'
 const validExtensions = ['.svg']
 
 function runLint() {
-  // const { stdout } = execa('yarn', ['lint'])
-  execa('echo', ['vue-cli-service lint']).stdout.pipe(process.stdout)
+  execa('echo', ['npm run lint']).stdout.pipe(process.stdout)
 }
 
 console.log(`// Converting svg files to vue component...`)
@@ -25,7 +24,7 @@ fs.readdir(mainFolder, (err, files) => {
       console.log(`Checking ${filePath}...`)
       const output = `${iconsFolder}${basename}.vue`
 
-      fs.access(output, fs.F_OK, err => {
+      fs.access(output, fs.constants.F_OK, err => {
         if (err) {
           promises.push(
             fs.readFile(filePath, { encoding: 'UTF8' }, (err, data) => {
@@ -35,9 +34,9 @@ fs.readdir(mainFolder, (err, files) => {
                                     ${data}
                                 </template>
                                 <script lang="ts">
-                                import Vue from "vue";
+                                import { defineComponent } from "vue";
                             
-                                export default Vue.extend({
+                                export default defineComponent({
                                     name: "${basename}"
                                 });
                                 </script>

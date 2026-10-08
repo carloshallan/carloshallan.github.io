@@ -1,10 +1,13 @@
 <template>
   <div class="blog-container">
-    <h1 class="main-title">Some Works</h1>
+    <h1 class="main-title">{{ $t('work.title') }}</h1>
     <div v-for="post in posts" :key="post.slug" class="card">
       <router-link :to="`/work/${post.slug}`" class="card-link">
-        <v-img :src="post.image" class="card-img" />
+        <v-img :src="post.image" class="card-img" width="auto" />
         <div class="card-content">
+          <span v-if="post.featured" class="featured">
+            {{ $t('work.featured') }}
+          </span>
           <span class="project-name">{{ post.projectName }}</span>
           <span class="date">{{ post.date }}</span>
         </div>
@@ -14,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
 interface Post {
   title: string
@@ -26,64 +29,71 @@ interface Post {
   projectName: string
   date: string
   order: string
+  featured: boolean
 }
 
-export default Vue.extend({
+// As opções do import.meta.glob precisam ser literais (o Vite as lê no build)
+const postSources = import.meta.glob<string>('@/views/posts/*.mdx', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+})
+// Versões em português; quando faltar uma, o post em inglês é usado
+const ptPostSources = import.meta.glob<string>('@/views/posts/pt/*.mdx', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+})
+
+export default defineComponent({
   name: 'BlogView',
-  data() {
-    return {
-      posts: [] as Array<Post>
+  computed: {
+    posts(): Array<Post> {
+      return this.loadPosts(this.$i18n.locale)
     }
   },
-  created() {
-    const requireContext = require.context(
-      '@/views/posts/',
-      false,
-      /\.mdx$/,
-      'sync'
-    )
+  methods: {
+    loadPosts(locale: string): Array<Post> {
+      const posts = Object.entries(postSources).map(([filename, enContent]) => {
+        const slug = filename.replace(/^.*\/(.*)\.mdx$/, '$1')
+        const title = slug
+        const ptContent = ptPostSources[`/src/views/posts/pt/${slug}.mdx`]
+        const content = locale === 'pt-BR' && ptContent ? ptContent : enContent
 
-    console.log(requireContext.keys())
+        const titleMatch = content.match(/title=['"](.*?)['"]/)
+        const imageNameMatch = content.match(/imageName=['"](.*?)['"]/)
+        const snippetMatch = content.match(/snippet=['"](.*?)['"]/)
+        const dateMatch = content.match(/date=['"](.*?)['"]/)
+        const projectNameMatch = content.match(/projectName=['"](.*?)['"]/)
+        const orderMatch = content.match(/order=['"](.*?)['"]/)
+        const featuredMatch = content.match(/featured=['"](.*?)['"]/)
 
-    const posts = requireContext.keys().map((filename: string) => {
-      const slug = filename.replace(/^\.\/(.*)\.mdx$/, '$1')
-      const title = slug
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
-      const content = require('!!raw-loader!@/views/posts/' +
-        slug +
-        '.mdx').default
+        const previewTitle = titleMatch ? titleMatch[1] : ''
+        const image = imageNameMatch ? '/work/' + imageNameMatch[1] : ''
+        const snippet = snippetMatch ? snippetMatch[1] : ''
+        const date = dateMatch ? dateMatch[1] : ''
+        const projectName = projectNameMatch ? projectNameMatch[1] : ''
+        const order = orderMatch ? orderMatch[1] : '-1'
+        const featured = featuredMatch ? featuredMatch[1] === 'true' : false
 
-      const titleMatch = content.match(/title=['"](.*?)['"]/)
-      const imageNameMatch = content.match(/imageName=['"](.*?)['"]/)
-      const snippetMatch = content.match(/snippet=['"](.*?)['"]/)
-      const dateMatch = content.match(/date=['"](.*?)['"]/)
-      const projectNameMatch = content.match(/projectName=['"](.*?)['"]/)
-      const orderMatch = content.match(/order=['"](.*?)['"]/)
+        return {
+          title,
+          slug,
+          content,
+          previewTitle,
+          snippet,
+          image,
+          date,
+          projectName,
+          order,
+          featured
+        }
+      })
 
-      const previewTitle = titleMatch ? titleMatch[1] : ''
-      const image = imageNameMatch ? '/work/' + imageNameMatch[1] : ''
-      const snippet = snippetMatch ? snippetMatch[1] : ''
-      const date = dateMatch ? dateMatch[1] : ''
-      const projectName = projectNameMatch ? projectNameMatch[1] : ''
-      const order = orderMatch ? orderMatch[1] : -1
-
-      return {
-        title,
-        slug,
-        content,
-        previewTitle,
-        snippet,
-        image,
-        date,
-        projectName,
-        order
-      }
-    })
-
-    console.log(posts) // Aqui, você pode ver os textos extraídos no console
-    this.posts = posts.sort(
-      (a: Post, b: Post) => parseInt(a.order) - parseInt(b.order)
-    )
+      return posts.sort(
+        (a: Post, b: Post) => parseInt(a.order) - parseInt(b.order)
+      )
+    }
   }
 })
 </script>
@@ -184,6 +194,13 @@ export default Vue.extend({
   justify-content center
   flex-direction column
 }
+
+.featured
+  color: light-pink
+  font-size 0.9em
+  text-transform uppercase
+  letter-spacing 0.1em
+  margin-bottom 10px
 
 .project-name
   color: green
