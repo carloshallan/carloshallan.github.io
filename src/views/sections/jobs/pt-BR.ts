@@ -49,7 +49,7 @@ const jobs: Array<Job> = [
         {
           name: 'Tangerine',
           role: 'Software Engineer e UX/UI Designer',
-          date: '1 ano e 8 meses',
+          date: 'Fev 2022 - Set 2023 (1 ano e 8 meses)',
           highlights: [
             'Desenvolvi do zero duas aplicações integradas de treinamento em segurança alimentar, cuidando da arquitetura, do design e da implementação (Next.js, TypeScript, Chakra UI e Firebase).',
             'Impacto: a ideia virou um produto completo, disponível em 3 idiomas.'
@@ -70,7 +70,7 @@ const jobs: Array<Job> = [
   {
     title: 'Pipeline Front End Engineer',
     subtitle: 'Wildlife Studios',
-    date: '3 anos e 6 meses (tempo integral)',
+    date: 'Mai 2018 - Nov 2021 (3 anos e 7 meses, tempo integral)',
     jobDescription: {
       description:
         'Atuei como Front End Engineer e UX/UI Designer, criando ferramentas e integrações para a pipeline de produção de games, usadas por animadores, motion designers e desenvolvedores de pipeline.',
@@ -97,8 +97,8 @@ const jobs: Array<Job> = [
   },
   {
     title: 'UI/UX Designer e Front End Engineer',
-    subtitle: '02 Filmes (freela)',
-    date: '6 meses',
+    subtitle: 'O2 Filmes (freela)',
+    date: 'Nov 2019 - Mar 2020 (5 meses)',
     jobDescription: {
       description:
         'Criei uma ferramenta de gestão de projetos para uma produtora de filmes, da identidade visual e dos protótipos de UX até o front-end.',
@@ -122,7 +122,7 @@ const jobs: Array<Job> = [
   {
     title: 'UI/UX Design Director e Front End Engineer',
     subtitle: 'Nuvem Agência',
-    date: '2014 - 2018 (3 anos e 9 meses)',
+    date: 'Set 2014 - Mai 2018 (3 anos e 9 meses)',
     jobDescription: {
       description:
         'Liderei o desenvolvimento de sites e sistemas para os clientes da agência, do início ao fim, unindo estratégia de UX, prototipação de interfaces e front-end. Também cuidava do atendimento e das vendas.',
@@ -146,11 +146,11 @@ const jobs: Array<Job> = [
       listOfStack: [
         {
           description:
-            'Accelera Vendas (2 anos e 9 meses): Gerente de Marketing Digital e Desenvolvedor Web Júnior. Cuidava de sites em WordPress, campanhas e da coordenação da equipe.'
+            'Accelera Vendas (Mar 2014 - Nov 2016): Gerente de Marketing Digital e Desenvolvedor Web Júnior. Cuidava de sites em WordPress, campanhas e da coordenação da equipe.'
         },
         {
           description:
-            'Unitecnologia (7 meses): Suporte Técnico de TI e Desenvolvedor Júnior. Fazia suporte, treinamento de clientes e manutenção de banco de dados.'
+            'Unitecnologia (Mar 2014 - Set 2014): Suporte Técnico de TI e Desenvolvedor Júnior. Fazia suporte, treinamento de clientes e manutenção de banco de dados.'
         }
       ]
     }

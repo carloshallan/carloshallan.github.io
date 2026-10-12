@@ -48,7 +48,7 @@ const jobs: Array<Job> = [
         {
           name: 'Tangerine',
           role: 'Software Engineer and UX/UI Designer',
-          date: '1 year and 8 months',
+          date: 'Feb 2022 - Sep 2023 (1 year and 8 months)',
           highlights: [
             'Built two integrated food-safety training apps from scratch: architecture, design, and implementation (Next.js, TypeScript, Chakra UI, Firebase).',
             'Impact: an idea turned into a complete product, translated into 3 languages.'
@@ -69,7 +69,7 @@ const jobs: Array<Job> = [
   {
     title: 'Pipeline Front End Engineer',
     subtitle: 'Wildlife Studios',
-    date: '3 years and 6 months (full time)',
+    date: 'May 2018 - Nov 2021 (3 years and 7 months, full time)',
     jobDescription: {
       description:
         'Built tools and integrations for the game production pipeline, serving animators, motion designers, and pipeline developers, as a Front End Engineer and UX/UI Designer.',
@@ -96,8 +96,8 @@ const jobs: Array<Job> = [
   },
   {
     title: 'UI/UX Designer and Front End Engineer',
-    subtitle: '02 Filmes (freelance client)',
-    date: '6 months (contract)',
+    subtitle: 'O2 Filmes (freelance client)',
+    date: 'Nov 2019 - Mar 2020 (5 months, contract)',
     jobDescription: {
       description:
         'Designed and built a project management tool for a film production company, from branding and UX prototypes to the front end.',
@@ -121,7 +121,7 @@ const jobs: Array<Job> = [
   {
     title: 'UI/UX Design Director and Front End Engineer',
     subtitle: 'Nuvem Agência',
-    date: '2014 - 2018 (3 years and 9 months)',
+    date: 'Sep 2014 - May 2018 (3 years and 9 months)',
     jobDescription: {
       description:
         'Led end-to-end development of websites and monolithic systems for agency clients, combining UX strategy, UI prototyping, and front-end development. Also handled client service and sales.',
@@ -145,11 +145,11 @@ const jobs: Array<Job> = [
       listOfStack: [
         {
           description:
-            'Accelera Vendas (2 years and 9 months) — Digital Marketing Manager and Junior Web Developer: WordPress sites, campaigns, and team coordination.'
+            'Accelera Vendas (Mar 2014 - Nov 2016) — Digital Marketing Manager and Junior Web Developer: WordPress sites, campaigns, and team coordination.'
         },
         {
           description:
-            'Unitecnologia (7 months) — IT Technical Support and Junior Developer: support, client training, and database maintenance.'
+            'Unitecnologia (Mar 2014 - Sep 2014) — IT Technical Support and Junior Developer: support, client training, and database maintenance.'
         }
       ]
     }
