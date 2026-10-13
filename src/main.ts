@@ -4,4 +4,8 @@ import App from './App.vue'
 import router from './router'
 import i18n from './i18n'
 
-createApp(App).use(router).use(i18n).use(vuetify).mount('#app')
+const app = createApp(App).use(router).use(i18n).use(vuetify)
+
+// Espera a rota inicial (carregada sob demanda) resolver antes de montar,
+// senão header e footer aparecem colados no topo enquanto a página carrega
+router.isReady().then(() => app.mount('#app'))

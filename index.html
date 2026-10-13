@@ -19,6 +19,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Yanone+Kaffeesatz:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
     <meta name="theme-color" content="#220c3a" />
+    <style>
+      /* Loading inicial: fica dentro do #app e some quando o Vue monta */
+      body { margin: 0; background-color: #220c3a; }
+      .app-loading { position: fixed; inset: 0; display: grid; place-items: center; }
+      .app-loading span {
+        width: 48px; height: 48px; border-radius: 50%;
+        border: 3px solid rgba(26, 235, 195, 0.2); border-top-color: #1aebc3;
+        animation: app-loading-spin 0.8s linear infinite;
+      }
+      @keyframes app-loading-spin { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .app-loading span { animation-duration: 2.4s; } }
+    </style>
   </head>
   <body>
     <noscript>
@@ -27,7 +39,9 @@
       <p>Resume: <a href="/carloshallan-resume-en.pdf">English (PDF)</a> · <a href="/carloshallan-resume-pt-br.pdf">Português (PDF)</a></p>
       <p>This site needs JavaScript to show the full portfolio.</p>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="app-loading" role="status" aria-label="Loading"><span></span></div>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
