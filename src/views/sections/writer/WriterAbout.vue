@@ -2,12 +2,15 @@
   <Section id="writer" class="writerAbout" color="dark">
     <div class="row">
       <div class="column photo">
-        <img
-          src="/writer/chblacksmith.webp"
-          alt="C.H. Blacksmith"
-          width="400"
-          height="400"
-          loading="lazy"
+        <Book3D
+          cover="/writer/book3d/retaliacao-capa.webp"
+          spine="/writer/book3d/retaliacao-lombada.webp"
+          back-cover="/writer/book3d/retaliacao-contra-capa.webp"
+          :alt="
+            $t('writer.books.coverAlt', {
+              title: 'O Andarilho Clemente: Retaliação'
+            })
+          "
         />
       </div>
       <div class="column">
@@ -36,10 +39,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
+import Book3D from '@/components/Book3D.vue'
 
 export default defineComponent({
   name: 'WriterAbout',
-  components: { Section },
+  components: { Section, Book3D },
   data: () => ({ stats: ['donated', 'years', 'books'] })
 })
 </script>
@@ -53,9 +57,9 @@ h1
 .row
   padding-left 120px
 
-.photo img
-  width 400px
-  height auto
+.photo
+  display flex
+  justify-content center
 
 .column:first-child
   align-self center
@@ -90,8 +94,8 @@ h1
   .row
     padding-left 10%
 
-  .photo img
-    width 200px
+  .photo .book3d
+    --book-height 280px
 
   .stats
     grid-template-columns repeat(2, 1fr)
