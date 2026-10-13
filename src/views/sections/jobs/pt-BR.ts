@@ -154,11 +154,11 @@ const jobs: Array<Job> = [
         },
         {
           description:
-            'Designer (2012 - 2014): trabalhei com design gráfico do fim de 2012 até o início de 2014, quando entrei na Accelera Vendas.'
+            'Designer autônomo (2012 - 2014): trabalhei com design gráfico do fim de 2012 até o início de 2014, quando entrei na Accelera Vendas.'
         },
         {
           description:
-            'Técnico em manutenção de computadores (2011 - 2012): montagem, manutenção e suporte de computadores.'
+            'Técnico em manutenção de computadores, autônomo (2011 - 2012): montagem, manutenção e suporte de computadores.'
         }
       ]
     }

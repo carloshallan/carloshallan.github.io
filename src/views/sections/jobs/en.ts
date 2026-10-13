@@ -153,11 +153,11 @@ const jobs: Array<Job> = [
         },
         {
           description:
-            'Designer (2012 - 2014): graphic design work from late 2012 until early 2014, when I joined Accelera Vendas.'
+            'Freelance designer (2012 - 2014): graphic design work from late 2012 until early 2014, when I joined Accelera Vendas.'
         },
         {
           description:
-            'Computer maintenance technician (2011 - 2012): assembling, repairing, and supporting computers.'
+            'Freelance computer maintenance technician (2011 - 2012): assembling, repairing, and supporting computers.'
         }
       ]
     }
