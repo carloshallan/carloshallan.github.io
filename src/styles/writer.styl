@@ -11,6 +11,16 @@ writer-red = #E74C3C
   animation none
   mix-blend-mode normal
 
+// A foto só entra na transição para servir de origem do círculo (ver
+// writerMode.ts): fica parada na posição nova, sem deslizar nem esmaecer
+::view-transition-group(profile-switch),
+::view-transition-old(profile-switch),
+::view-transition-new(profile-switch)
+  animation none
+
+::view-transition-old(profile-switch)
+  display none
+
 html.writer
   background-color writer-black
 

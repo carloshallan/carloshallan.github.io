@@ -28,25 +28,18 @@ export function toggleWriterMode(event?: MouseEvent) {
   }
 
   const target = event?.currentTarget as HTMLElement | undefined
-  let x = window.innerWidth / 2
-  let y = window.innerHeight / 2
 
-  // Mede a origem depois da troca: no celular o header muda de altura entre
-  // os modos e empurra a foto, então a posição de antes do clique fica errada
-  const transition = document.startViewTransition(async () => {
-    await flip()
-    const rect = target?.isConnected ? target.getBoundingClientRect() : null
-    if (rect) {
-      x = rect.left + rect.width / 2
-      y = rect.top + rect.height / 2
-    }
-  })
+  // A foto ganha um nome de transição para o navegador posicioná-la dentro da
+  // própria animação. No celular, a camada da animação inclui a área da barra
+  // de endereço e não bate com as coordenadas da página, então a origem do
+  // círculo é lida da posição da foto nessa camada
+  if (target) target.style.viewTransitionName = PHOTO_TRANSITION
+
+  const transition = document.startViewTransition(flip)
 
   transition.ready.then(() => {
-    const radius = Math.hypot(
-      Math.max(x, window.innerWidth - x),
-      Math.max(y, window.innerHeight - y)
-    )
+    const { x, y, width, height } = transitionOrigin(target)
+    const radius = Math.hypot(Math.max(x, width - x), Math.max(y, height - y))
     document.documentElement.animate(
       {
         clipPath: [
@@ -61,4 +54,44 @@ export function toggleWriterMode(event?: MouseEvent) {
       }
     )
   })
+
+  transition.finished.finally(() => {
+    if (target) target.style.viewTransitionName = ''
+  })
+}
+
+const PHOTO_TRANSITION = 'profile-switch'
+
+// Centro da foto e tamanho da camada da animação, nas coordenadas dela
+function transitionOrigin(target?: HTMLElement) {
+  const html = document.documentElement
+  const layer = getComputedStyle(html, '::view-transition')
+  const width = parseFloat(layer.width) || window.innerWidth
+  const height = parseFloat(layer.height) || window.innerHeight
+
+  const group = getComputedStyle(
+    html,
+    `::view-transition-group(${PHOTO_TRANSITION})`
+  )
+  const offset = group.transform.match(/matrix\(([^)]+)\)/)
+  const groupWidth = parseFloat(group.width)
+  const groupHeight = parseFloat(group.height)
+  if (offset && groupWidth && groupHeight) {
+    const values = offset[1].split(',').map(Number)
+    return {
+      x: values[4] + groupWidth / 2,
+      y: values[5] + groupHeight / 2,
+      width,
+      height
+    }
+  }
+
+  // Sem a foto na transição, usa a posição dela na página
+  const rect = target?.isConnected ? target.getBoundingClientRect() : null
+  return {
+    x: rect ? rect.left + rect.width / 2 : width / 2,
+    y: rect ? rect.top + rect.height / 2 : height / 2,
+    width,
+    height
+  }
 }
