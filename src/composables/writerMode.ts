@@ -28,17 +28,25 @@ export function toggleWriterMode(event?: MouseEvent) {
   }
 
   const target = event?.currentTarget as HTMLElement | undefined
-  const rect = target?.getBoundingClientRect()
-  const x = rect ? rect.left + rect.width / 2 : window.innerWidth / 2
-  const y = rect ? rect.top + rect.height / 2 : window.innerHeight / 2
-  const radius = Math.hypot(
-    Math.max(x, window.innerWidth - x),
-    Math.max(y, window.innerHeight - y)
-  )
+  let x = window.innerWidth / 2
+  let y = window.innerHeight / 2
 
-  const transition = document.startViewTransition(flip)
+  // Mede a origem depois da troca: no celular o header muda de altura entre
+  // os modos e empurra a foto, então a posição de antes do clique fica errada
+  const transition = document.startViewTransition(async () => {
+    await flip()
+    const rect = target?.isConnected ? target.getBoundingClientRect() : null
+    if (rect) {
+      x = rect.left + rect.width / 2
+      y = rect.top + rect.height / 2
+    }
+  })
 
   transition.ready.then(() => {
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    )
     document.documentElement.animate(
       {
         clipPath: [

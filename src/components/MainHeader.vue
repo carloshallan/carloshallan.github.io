@@ -373,4 +373,13 @@ header
       align-items center
       justify-content center
       gap: 20px
+
+    // Alturas fixas: as fontes e o logo mudam no modo escritor, e sem isso o
+    // header muda de tamanho e empurra a página durante a troca de modo
+    .logo
+      height 40px
+
+    .menu, .right-span
+      height 32px
+      align-items center
 </style>

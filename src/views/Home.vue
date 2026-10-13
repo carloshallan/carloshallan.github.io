@@ -2,6 +2,7 @@
   <div>
     <presentation />
     <template v-if="writerMode">
+      <writer-books-sold />
       <writer-about />
       <writer-events />
       <writer-books />
@@ -21,6 +22,7 @@ import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
 import WriterAbout from './sections/writer/WriterAbout.vue'
+import WriterBooksSold from './sections/writer/WriterBooksSold.vue'
 import WriterBooks from './sections/writer/WriterBooks.vue'
 import WriterEvents from './sections/writer/WriterEvents.vue'
 import { writerMode } from '@/composables/writerMode'
@@ -34,6 +36,7 @@ export default defineComponent({
     WorkTimeline,
     WriterAbout,
     WriterBooks,
+    WriterBooksSold,
     WriterEvents
   },
   setup() {

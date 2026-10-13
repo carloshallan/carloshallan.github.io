@@ -15,7 +15,6 @@
           <span>{{ $t('writer.hero.genres') }}</span>
         </div>
       </div>
-      <BooksSoldCounter v-if="writerMode" />
       <div v-else class="titleGroup">
         <h1>
           {{ $t('hero.greeting') }}
@@ -51,7 +50,7 @@
         :aria-label="
           writerMode ? $t('writer.hero.seeAbout') : $t('hero.seeExperience')
         "
-        @click="scrollTo(writerMode ? 'writer' : 'experience')"
+        @click="scrollTo(writerMode ? 'booksSold' : 'experience')"
       >
         <mouse-icon />
       </button>
@@ -63,14 +62,13 @@
 import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
 import ProfileSwitch from '@/components/ProfileSwitch.vue'
-import BooksSoldCounter from '@/components/BooksSoldCounter.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'
 import { writerMode } from '@/composables/writerMode'
 
 export default defineComponent({
   name: 'Presentation',
-  components: { Section, ProfileSwitch, BooksSoldCounter, Button, MouseIcon },
+  components: { Section, ProfileSwitch, Button, MouseIcon },
   setup() {
     return { writerMode }
   },

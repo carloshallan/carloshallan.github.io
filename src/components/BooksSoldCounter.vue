@@ -13,10 +13,14 @@ export const BOOKS_SOLD = 1201
 
 const DURATION = 1800
 
-// Conta de 0 até o total de livros vendidos quando o modo escritor abre
+// Conta de 0 até o total de livros vendidos quando o contador fica visível
 export default defineComponent({
   name: 'BooksSoldCounter',
-  data: () => ({ current: 0, frame: 0 }),
+  data: () => ({
+    current: 0,
+    frame: 0,
+    observer: null as IntersectionObserver | null
+  }),
   computed: {
     formatted(): string {
       return BOOKS_SOLD.toLocaleString(this.$i18n.locale)
@@ -32,22 +36,37 @@ export default defineComponent({
     const reduced = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches
-    if (reduced) {
+    if (reduced || !('IntersectionObserver' in window)) {
       this.current = BOOKS_SOLD
       return
     }
 
-    const start = performance.now()
-    const step = (now: number) => {
-      const progress = Math.min((now - start) / DURATION, 1)
-      const eased = 1 - Math.pow(1 - progress, 4)
-      this.current = BOOKS_SOLD * eased
-      if (progress < 1) this.frame = requestAnimationFrame(step)
-    }
-    this.frame = requestAnimationFrame(step)
+    // Só começa a contar quando o contador aparece na tela
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return
+        this.observer?.disconnect()
+        this.animate()
+      },
+      { threshold: 0.5 }
+    )
+    this.observer.observe(this.$el as Element)
   },
   beforeUnmount() {
+    this.observer?.disconnect()
     cancelAnimationFrame(this.frame)
+  },
+  methods: {
+    animate() {
+      const start = performance.now()
+      const step = (now: number) => {
+        const progress = Math.min((now - start) / DURATION, 1)
+        const eased = 1 - Math.pow(1 - progress, 4)
+        this.current = BOOKS_SOLD * eased
+        if (progress < 1) this.frame = requestAnimationFrame(step)
+      }
+      this.frame = requestAnimationFrame(step)
+    }
   }
 })
 </script>
