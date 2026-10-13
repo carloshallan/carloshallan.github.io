@@ -16,6 +16,7 @@
     "lint": "eslint --fix .",
     "lint:check": "eslint .",
     "build:icons": "node scripts/build_icons.js",
+    "build:resume": "node scripts/build_resume.js",
     "prepare": "husky"
   },
   "lint-staged": {

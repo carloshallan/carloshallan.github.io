@@ -34,6 +34,12 @@ npm run test:unit
 npm run lint
 ```
 
+### Regenerate the resume PDFs
+```
+npm run build:resume
+```
+Builds `public/carloshallan-resume-{pt-br,en}.pdf` from the same job data the site uses (`src/views/sections/jobs/`). Needs Google Chrome or Chromium (or `CHROME_PATH`). Run it after editing the jobs and commit the PDFs.
+
 ### Deploy to GitHub Pages
 Every push to `main` is deployed automatically by the GitHub Actions workflow in `.github/workflows/deploy.yml` (lint, unit tests, build, publish). It can also be run manually from the Actions tab.
 

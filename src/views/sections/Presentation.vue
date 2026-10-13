@@ -23,7 +23,14 @@
           {{ $t('hero.aboutMe') }}
         </Button>
       </div>
-      <mouse-icon />
+      <button
+        type="button"
+        class="scrollHint"
+        :aria-label="$t('hero.seeExperience')"
+        @click="scrollToExperience"
+      >
+        <mouse-icon />
+      </button>
     </div>
   </Section>
 </template>
@@ -37,7 +44,14 @@ import MouseIcon from '@/components/icons/Mouse.vue'
 
 export default defineComponent({
   name: 'Presentation',
-  components: { Section, Profile, Button, MouseIcon }
+  components: { Section, Profile, Button, MouseIcon },
+  methods: {
+    scrollToExperience() {
+      document
+        .getElementById('experience')
+        ?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 })
 </script>
 <style lang="stylus">
@@ -75,6 +89,21 @@ export default defineComponent({
   @media screen and ({ScreenCondition}: ScreenConditionMobilePortrait)
     .buttonGroup
       flex-direction column
+
+.scrollHint
+  background none
+  border none
+  padding 0
+  cursor pointer
+  transition opacity 0.3s
+
+  &:hover
+    opacity 0.7
+
+  &:focus-visible
+    outline 2px solid green
+    outline-offset 8px
+    border-radius 12px
 
 .buttonGroup
    display flex

@@ -14,7 +14,8 @@ export default {
     ux: 'UX/UI',
     momo: 'Creator of Momo For Writers',
     seeWorks: 'see my works',
-    aboutMe: 'about me'
+    aboutMe: 'about me',
+    seeExperience: 'see my experience'
   },
   journey: {
     title: 'My Journey',
@@ -32,7 +33,7 @@ export default {
       },
       pipelines: {
         label: 'Production pipelines:',
-        text: 'built the 3D pipeline at Roof Studio, integrating ShotGrid with custom apps and plugins, making processes up to 80% faster.'
+        text: 'built the 3D pipeline at Roof Studio, integrating ShotGrid with custom apps and plugins, which made it viable to run the studio at low cost.'
       },
       business: {
         label: 'Business systems:',

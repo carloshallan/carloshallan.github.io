@@ -32,14 +32,14 @@ const jobs: Array<Job> = [
             'Projetei e desenvolvi a pipeline de produção 3D do estúdio, integrando o ShotGrid (Autodesk Flow Production Tracking) a aplicações próprias e plugins para Maya.',
             'Migrei a infraestrutura para um ambiente remoto de baixo custo, o que permitiu o trabalho remoto com segurança, antes restrito ao escritório.',
             'Desenvolvi ferramentas desktop (Tauri e React, Electron e Vue.js, PySide6), entre elas um app de busca visual usado no filme de 100 anos da revista The New Yorker.',
-            'Impacto: processos até 80% mais rápidos nas áreas de produção, financeiro e marketing.'
+            'Impacto: a pipeline e a infraestrutura que construí tornaram viável a operação do estúdio com baixo custo, integrando produção, financeiro e marketing.'
           ]
         },
         {
           name: 'Assembly',
           tag: 'estúdio de VFX',
           role: 'Software Engineer e Designer',
-          date: '1 ano',
+          date: 'Jan 2024 - Dez 2024 (1 ano)',
           highlights: [
             'Substituí planilhas extensas por um CRM completo, que conduzi do design de UX até o deploy (React, TypeScript, Flask, MySQL, Docker e AWS).',
             'Integrei o CRM ao Flow Production Tracking, o que facilitou a análise de custos.',
@@ -61,7 +61,7 @@ const jobs: Array<Job> = [
           date: '4 meses',
           highlights: [
             'Desenvolvi uma extensão para o After Effects que automatiza a criação de versões de vídeos publicitários (React, TypeScript e ExtendScript).',
-            'Impacto: redução de até 90% no tempo de trabalho dos artistas.'
+            'Impacto: os artistas deixaram de montar cada versão à mão, e as várias versões de um mesmo filme passaram a sair em bem menos tempo.'
           ]
         }
       ]
@@ -137,8 +137,8 @@ const jobs: Array<Job> = [
   },
   {
     title: 'Experiências anteriores',
-    subtitle: 'Marketing e suporte de TI',
-    date: '',
+    subtitle: 'Design, marketing e suporte de TI',
+    date: '2011 - 2016',
     jobDescription: {
       description:
         'Experiências que me trouxeram para o desenvolvimento de software, passando por design, sites e suporte.',
@@ -151,6 +151,14 @@ const jobs: Array<Job> = [
         {
           description:
             'Unitecnologia (Mar 2014 - Set 2014): Suporte Técnico de TI e Desenvolvedor Júnior. Fazia suporte, treinamento de clientes e manutenção de banco de dados.'
+        },
+        {
+          description:
+            'Designer (2012 - 2014): trabalhei com design gráfico do fim de 2012 até o início de 2014, quando entrei na Accelera Vendas.'
+        },
+        {
+          description:
+            'Técnico em manutenção de computadores (2011 - 2012): montagem, manutenção e suporte de computadores.'
         }
       ]
     }

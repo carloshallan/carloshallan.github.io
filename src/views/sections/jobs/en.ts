@@ -31,14 +31,14 @@ const jobs: Array<Job> = [
             'Designed and built the 3D production pipeline, integrating ShotGrid (Autodesk Flow Production Tracking) with custom apps and Maya plugins.',
             'Moved the studio to a low-cost remote infrastructure, enabling secure remote work that was previously limited to the office.',
             'Built desktop tools (Tauri + React, Electron + Vue.js, PySide6), including a visual search app used in the film for The New Yorker’s 100th anniversary.',
-            'Impact: processes up to 80% faster across production, finance, and marketing.'
+            'Impact: the pipeline and infrastructure I built made it viable to run the studio at low cost, connecting production, finance, and marketing.'
           ]
         },
         {
           name: 'Assembly',
           tag: 'VFX studio',
           role: 'Software Engineer and Designer',
-          date: '1 year',
+          date: 'Jan 2024 - Dec 2024 (1 year)',
           highlights: [
             'Replaced large spreadsheets with a full CRM, from UX design to deployment (React, TypeScript, Flask, MySQL, Docker, AWS).',
             'Integrated it with Flow Production Tracking to make cost evaluation easier.',
@@ -60,7 +60,7 @@ const jobs: Array<Job> = [
           date: '4 months',
           highlights: [
             'Built an After Effects extension that automates versioning of advertising videos (React, TypeScript, ExtendScript).',
-            'Impact: up to 90% less working time for artists.'
+            'Impact: artists no longer build each version by hand, so multiple versions of the same spot ship in far less time.'
           ]
         }
       ]
@@ -136,8 +136,8 @@ const jobs: Array<Job> = [
   },
   {
     title: 'Earlier experience',
-    subtitle: 'Marketing and IT support',
-    date: '',
+    subtitle: 'Design, marketing, and IT support',
+    date: '2011 - 2016',
     jobDescription: {
       description:
         'Roles that led me into software development, working with design, websites, and support.',
@@ -150,6 +150,14 @@ const jobs: Array<Job> = [
         {
           description:
             'Unitecnologia (Mar 2014 - Sep 2014) — IT Technical Support and Junior Developer: support, client training, and database maintenance.'
+        },
+        {
+          description:
+            'Designer (2012 - 2014): graphic design work from late 2012 until early 2014, when I joined Accelera Vendas.'
+        },
+        {
+          description:
+            'Computer maintenance technician (2011 - 2012): assembling, repairing, and supporting computers.'
         }
       ]
     }

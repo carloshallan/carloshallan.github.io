@@ -16,7 +16,8 @@ const ptBR: typeof en = {
     ux: 'UX/UI',
     momo: 'Criador do Momo para Escritores',
     seeWorks: 'ver meus trabalhos',
-    aboutMe: 'sobre mim'
+    aboutMe: 'sobre mim',
+    seeExperience: 'ver minha experiência'
   },
   journey: {
     title: 'Minha Jornada',
@@ -34,7 +35,7 @@ const ptBR: typeof en = {
       },
       pipelines: {
         label: 'Pipelines de produção:',
-        text: 'criei a pipeline 3D da Roof Studio, integrando o ShotGrid a aplicações e plugins próprios, com processos até 80% mais rápidos.'
+        text: 'criei a pipeline 3D da Roof Studio, integrando o ShotGrid a aplicações e plugins próprios, o que tornou viável a operação do estúdio com baixo custo.'
       },
       business: {
         label: 'Sistemas de negócio:',

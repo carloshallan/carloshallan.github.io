@@ -1,5 +1,5 @@
 <template>
-  <Section color="dark-purple" class="workTimelineSection">
+  <Section id="experience" color="dark-purple" class="workTimelineSection">
     <div class="row">
       <div class="column">
         <h1>
