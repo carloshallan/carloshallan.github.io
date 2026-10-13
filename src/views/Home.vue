@@ -1,9 +1,16 @@
 <template>
   <div>
     <presentation />
-    <my-works />
-    <work-timeline />
-    <about-me />
+    <template v-if="writerMode">
+      <writer-about />
+      <writer-events />
+      <writer-books />
+    </template>
+    <template v-else>
+      <my-works />
+      <work-timeline />
+      <about-me />
+    </template>
   </div>
 </template>
 
@@ -13,6 +20,10 @@ import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
+import WriterAbout from './sections/writer/WriterAbout.vue'
+import WriterBooks from './sections/writer/WriterBooks.vue'
+import WriterEvents from './sections/writer/WriterEvents.vue'
+import { writerMode } from '@/composables/writerMode'
 
 export default defineComponent({
   name: 'Home',
@@ -20,7 +31,17 @@ export default defineComponent({
     Presentation,
     AboutMe,
     MyWorks,
-    WorkTimeline
+    WorkTimeline,
+    WriterAbout,
+    WriterBooks,
+    WriterEvents
+  },
+  setup() {
+    return { writerMode }
+  },
+  // O lado escritor só existe na home; ao sair dela, o site volta ao normal
+  beforeRouteLeave() {
+    writerMode.value = false
   }
 })
 </script>

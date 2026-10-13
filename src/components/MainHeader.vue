@@ -3,7 +3,8 @@
     <div class="left-side">
       <div alt="Creative Olympus" class="logo">
         <router-link to="/">
-          <creative-logo class="creative-olympus-logo" />
+          <crow-seal v-if="writerMode" class="crow-logo" />
+          <creative-logo v-else class="creative-olympus-logo" />
         </router-link>
       </div>
       <div class="menu">
@@ -11,6 +12,7 @@
           {{ $t('nav.home') }}
         </router-link>
         <router-link
+          v-if="!writerMode"
           to="/work"
           :class="{ active: $route.path.startsWith('/work') }"
         >
@@ -64,7 +66,7 @@
 
           <v-list theme="dark" lines="two">
             <v-list-item
-              v-for="(item, i) in resumeItems"
+              v-for="(item, i) in downloadItems"
               :key="i"
               :href="item.filepath"
               rel="noopener"
@@ -86,6 +88,8 @@
 <script lang="ts">
 import { defineComponent, type Ref } from 'vue'
 import CreativeLogo from '@/components/icons/creative-logo.vue'
+import CrowSeal from '@/components/icons/CrowSeal.vue'
+import { writerMode } from '@/composables/writerMode'
 import { setLocale, type Locale } from '@/i18n'
 // import Navigator from '@/components/Navigator.vue'
 
@@ -128,7 +132,10 @@ function menuLocation(
 
 export default defineComponent({
   name: 'MainHeader',
-  components: { CreativeLogo },
+  components: { CreativeLogo, CrowSeal },
+  setup() {
+    return { writerMode }
+  },
   //  components: { Navigator },
   data: () => {
     return {
@@ -141,6 +148,18 @@ export default defineComponent({
         {
           name: 'EN',
           filepath: '/carloshallan-resume-en.pdf'
+        }
+      ]
+    }
+  },
+  computed: {
+    // No modo escritor, o download entrega o mídia kit do C.H. Blacksmith
+    downloadItems() {
+      if (!this.writerMode) return this.resumeItems
+      return [
+        {
+          name: this.$t('writer.mediaKit'),
+          filepath: '/chblacksmith-midia-kit.pdf'
         }
       ]
     }
@@ -294,6 +313,13 @@ header
       align-self center
       position relative
       top 5px
+
+    // Selo do modo escritor, centralizado com o texto do menu
+    .crow-logo
+      display block
+      width auto
+      height 34px
+      color white
 
     .fullName
       display none

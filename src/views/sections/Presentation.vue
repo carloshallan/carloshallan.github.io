@@ -1,8 +1,22 @@
 <template>
   <Section color="transparent">
     <div class="presentation">
-      <Profile class="profile" />
-      <div class="titleGroup">
+      <ProfileSwitch class="profile" />
+      <div v-if="writerMode" class="titleGroup">
+        <h1>
+          {{ $t('writer.hero.greeting') }}
+          <span class="green">C.H. Blacksmith</span>
+        </h1>
+        <div class="subtitle">
+          <span class="green">{{ $t('writer.hero.role') }}</span>
+          <span class="separator"> · </span>
+          <span>{{ $t('writer.hero.craft') }}</span>
+          <span class="separator"> · </span>
+          <span>{{ $t('writer.hero.genres') }}</span>
+        </div>
+      </div>
+      <BooksSoldCounter v-if="writerMode" />
+      <div v-else class="titleGroup">
         <h1>
           {{ $t('hero.greeting') }}
           <span class="green">Hallan</span>
@@ -15,7 +29,15 @@
           <span class="light-purple">{{ $t('hero.momo') }}</span>
         </div>
       </div>
-      <div class="buttonGroup">
+      <div v-if="writerMode" class="buttonGroup">
+        <Button :click="() => scrollTo('books')">
+          {{ $t('writer.hero.seeBooks') }}
+        </Button>
+        <Button :outlined="true" href="https://chblacksmith.com.br">
+          chblacksmith.com.br
+        </Button>
+      </div>
+      <div v-else class="buttonGroup">
         <router-link to="/work">
           <Button> {{ $t('hero.seeWorks') }} </Button>
         </router-link>
@@ -26,8 +48,10 @@
       <button
         type="button"
         class="scrollHint"
-        :aria-label="$t('hero.seeExperience')"
-        @click="scrollToExperience"
+        :aria-label="
+          writerMode ? $t('writer.hero.seeAbout') : $t('hero.seeExperience')
+        "
+        @click="scrollTo(writerMode ? 'writer' : 'experience')"
       >
         <mouse-icon />
       </button>
@@ -38,18 +62,21 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
-import Profile from '@/components/icons/Profile.vue'
+import ProfileSwitch from '@/components/ProfileSwitch.vue'
+import BooksSoldCounter from '@/components/BooksSoldCounter.vue'
 import Button from '@/components/Button.vue'
 import MouseIcon from '@/components/icons/Mouse.vue'
+import { writerMode } from '@/composables/writerMode'
 
 export default defineComponent({
   name: 'Presentation',
-  components: { Section, Profile, Button, MouseIcon },
+  components: { Section, ProfileSwitch, BooksSoldCounter, Button, MouseIcon },
+  setup() {
+    return { writerMode }
+  },
   methods: {
-    scrollToExperience() {
-      document
-        .getElementById('experience')
-        ?.scrollIntoView({ behavior: 'smooth' })
+    scrollTo(id: string) {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
     }
   }
 })
@@ -78,10 +105,6 @@ export default defineComponent({
 
   @media screen and ({ScreenCondition}: ScreenConditionValue)
     text-align center
-
-    .profile
-      width 171px
-      height auto
 
     .subtitle
       padding 10px 40px

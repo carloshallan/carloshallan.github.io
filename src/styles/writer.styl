@@ -1,0 +1,105 @@
+// Tema do modo escritor (C.H. Blacksmith): preto e vermelho, com as fontes
+// do mídia kit (carregadas no index.html). Ativado pela classe .writer no
+// <html> (ver writerMode.ts)
+writer-black = #0A0A0A
+writer-gray = #1A1A1A
+writer-red = #E74C3C
+
+// A transição circular é animada em writerMode.ts; aqui só desligamos o
+// crossfade padrão para o círculo aparecer com bordas nítidas
+::view-transition-old(root), ::view-transition-new(root)
+  animation none
+  mix-blend-mode normal
+
+html.writer
+  background-color writer-black
+
+  body, header, footer, .presentation, section.background-dark
+    background-color writer-black
+
+  section.background-dark:nth-of-type(odd)
+    background-color writer-gray
+
+  // body * empata com os estilos com escopo, que reimportam o default.styl
+  body *
+    font-family 'Atkinson Hyperlegible', sans-serif
+
+  body h1, h1 *, body h2, body h3, .subtitle, .subtitle *, header *, .button,
+  .button *, .stats strong, .booksSold strong
+    font-family 'Yanone Kaffeesatz', sans-serif
+    letter-spacing 0.02em
+
+  h1
+    font-weight 500
+    font-size 72px
+
+  .subtitle
+    font-size 26px
+    font-weight 400
+
+  .green
+    color writer-red
+
+  .separator
+    color writer-red
+
+  .stats li
+    border-color writer-red
+
+  .stats strong, .badge, .book .genre, .link
+    color writer-red
+
+  // Botões
+  .button
+    background-color writer-red
+    border-color writer-red
+    border-radius 2px
+    font-size 24px
+    letter-spacing 0.06em
+
+    &:hover
+      background-color white
+      border-color white
+      color writer-black
+
+    &.outlined
+      background-color transparent
+      color white
+      border-color white
+
+      &:hover
+        color writer-red
+        border-color writer-red
+
+  // Cabeçalho
+  header
+    .menu a.active
+      color writer-red
+      border-bottom-color writer-red
+
+    .menu a:hover, .right-span div:hover a, .right-span div:hover .v-icon,
+    .right-span .languages button:hover
+      color white
+      border-bottom-color white
+
+    .v-icon, .right-span .languages button.active
+      color writer-red
+
+    .logo a
+      display flex
+
+    .v-menu > .v-overlay__content > .v-list
+      background-color writer-gray
+
+      .v-list-item:hover
+        background-color writer-black
+
+  .scrollHint:focus-visible, .profileSwitch:focus-visible
+    outline-color writer-red
+
+  .scrollHint svg
+    filter grayscale(1) brightness(1.4)
+
+@media screen and ({ScreenCondition}: ScreenConditionValue)
+  html.writer h1
+    font-size 48px
