@@ -23,6 +23,7 @@
     "*.{js,jsx,vue,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
+    "@vimeo/player": "^2.30.4",
     "vue": "^3.5.43",
     "vue-i18n": "^11.4.13",
     "vue-router": "^5.4.0",

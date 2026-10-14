@@ -27,6 +27,8 @@ const ptBR: typeof en = {
     introRole: 'Engenheiro de Software Full Stack',
     introAfter:
       'com mais de 12 anos de experiência criando produtos completos, do design de UX/UI e do front-end até APIs, bancos de dados, infraestrutura e aplicativos desktop. Fundei a Creative Olympus, onde crio e vendo o Momo, um aplicativo desktop para escritores com usuários pagantes, e atendo estúdios de VFX, games e criação, transformando processos manuais em ferramentas do dia a dia.',
+    studying:
+      'Atualmente faço pós-graduação em Engenharia de Software em IA Aplicada.',
     highlightsTitle: 'Alguns destaques:',
     highlights: {
       momo: {
@@ -137,7 +139,29 @@ const ptBR: typeof en = {
   },
   timeline: {
     title: 'Por onde',
-    titleRest: 'já passei?'
+    titleRest: 'já passei?',
+    downloadResume: 'Baixar PDF institucional'
+  },
+  films: {
+    title: 'Filmes em que',
+    titleHighlight: 'trabalhei',
+    intro:
+      'Construí as pipelines e as ferramentas por trás destes filmes, como Pipeline TD na Roof Studio e desenvolvendo ferramentas para o Maya na Hype Animation.',
+    seeMore: 'Ver mais',
+    moreAwards: '+{count} prêmios',
+    stats: {
+      awards: 'prêmios em festivais',
+      films: 'filmes premiados',
+      festivals: 'entre eles'
+    },
+    more: 'Ver todos os trabalhos da Roof Studio',
+    details: 'Página do projeto na Roof Studio',
+    close: 'Fechar vídeo'
+  },
+  education: {
+    title: 'Minha',
+    titleHighlight: 'Formação',
+    progress: '{percent}% concluído'
   },
   about: {
     title: 'Sobre',
@@ -146,7 +170,8 @@ const ptBR: typeof en = {
       'Fora do trabalho, sou marido, pai de três filhos e escrevo romances com o pseudônimo C.H. Blacksmith. O Momo nasceu daí: eu precisava de uma ferramenta melhor para escrever meus próprios livros.',
     paragraph2:
       'Sou fascinado pela relação entre psicologia e design, e estou sempre aprendendo novas linguagens e ferramentas para melhorar os produtos que crio.',
-    cta: 'Leia mais no Medium'
+    cta: 'Leia mais no Medium',
+    writerSide: 'Veja o outro lado da força'
   },
   work: {
     title: 'Alguns trabalhos',

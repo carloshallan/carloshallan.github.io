@@ -1,5 +1,5 @@
 <template>
-  <Section class="AboutMe" color="dark">
+  <Section id="about" class="AboutMe" color="dark">
     <div class="row">
       <div class="column">
         <img src="../../assets/PixelProfileImg.png" />
@@ -13,9 +13,14 @@
         <p>{{ $t('about.paragraph2') }}</p>
         <br />
         <br />
-        <Button href="https://medium.com/@carloshallan">
-          {{ $t('about.cta') }}
-        </Button>
+        <div class="buttonGroup">
+          <Button href="https://medium.com/@carloshallan">
+            {{ $t('about.cta') }}
+          </Button>
+          <Button :outlined="true" :click="switchFromTop">
+            {{ $t('about.writerSide') }}
+          </Button>
+        </div>
       </div>
     </div>
   </Section>
@@ -25,10 +30,14 @@
 import { defineComponent } from 'vue'
 import Section from '@/layouts/SectionLayout.vue'
 import Button from '@/components/Button.vue'
+import { switchFromTop } from '@/composables/writerMode'
 
 export default defineComponent({
   name: 'AboutMe',
-  components: { Section, Button }
+  components: { Section, Button },
+  setup() {
+    return { switchFromTop }
+  }
 })
 </script>
 
@@ -56,6 +65,11 @@ h1::after
   left 0
   bottom 0
   z-index 6
+
+.buttonGroup
+  display flex
+  flex-wrap wrap
+  gap 20px
 
 img
   width 500px

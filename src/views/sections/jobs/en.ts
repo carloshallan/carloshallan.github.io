@@ -35,6 +35,15 @@ const jobs: Array<Job> = [
           ]
         },
         {
+          name: 'Hype Animation',
+          tag: 'feature film',
+          role: 'Software Engineer | Maya Tools Developer',
+          date: 'Nov 2025 - May 2026',
+          highlights: [
+            'Built Maya tools that sped up scene adjustments in the production of Galinha Pintadinha – O Filme, the franchise’s first feature film, released in theaters in October 2026.'
+          ]
+        },
+        {
           name: 'Assembly',
           tag: 'VFX studio',
           role: 'Software Engineer and Designer',

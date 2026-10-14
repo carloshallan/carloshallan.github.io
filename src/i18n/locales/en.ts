@@ -25,6 +25,8 @@ export default {
     introRole: 'Full Stack Software Engineer',
     introAfter:
       'with 12+ years of experience building products end to end, from UX/UI design and front end to APIs, databases, infrastructure, and desktop apps. I founded Creative Olympus, where I build and sell Momo, a desktop writing app with paying users, and work with VFX, games, and creative studios, turning slow, manual workflows into tools people rely on every day.',
+    studying:
+      "I'm currently pursuing a postgraduate degree in Applied AI Software Engineering.",
     highlightsTitle: 'Some highlights:',
     highlights: {
       momo: {
@@ -135,7 +137,29 @@ export default {
   },
   timeline: {
     title: 'Where',
-    titleRest: 'have I been?'
+    titleRest: 'have I been?',
+    downloadResume: 'Download PDF resume'
+  },
+  films: {
+    title: "Films I've",
+    titleHighlight: 'worked on',
+    intro:
+      'I built the pipelines and tools behind these films, as Pipeline TD at Roof Studio and as a Maya tools developer at Hype Animation.',
+    seeMore: 'See more',
+    moreAwards: '+{count} more',
+    stats: {
+      awards: 'festival awards',
+      films: 'award-winning films',
+      festivals: 'including'
+    },
+    more: 'See all of Roof Studio’s work',
+    details: 'Project page at Roof Studio',
+    close: 'Close video'
+  },
+  education: {
+    title: 'My',
+    titleHighlight: 'Education',
+    progress: '{percent}% complete'
   },
   about: {
     title: 'About',
@@ -144,7 +168,8 @@ export default {
       "Outside of work, I'm a father of three and a husband, and I write novels under the pen name C.H. Blacksmith — which is how Momo was born: I needed a better tool for my own books.",
     paragraph2:
       "I'm fascinated by the intersection of psychology and design, and I keep learning new languages and tools to make the products I build better.",
-    cta: 'Read More in Medium'
+    cta: 'Read More in Medium',
+    writerSide: 'See the other side of the Force'
   },
   work: {
     title: 'Some Works',

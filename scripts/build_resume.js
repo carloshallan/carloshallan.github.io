@@ -1,5 +1,5 @@
 // Gera os currículos em PDF (public/carloshallan-resume-*.pdf) a partir dos
-// mesmos dados da timeline do site, para que os dois nunca se desencontrem.
+// mesmos dados da timeline e da formação do site, para que os dois nunca se desencontrem.
 // Uso: npm run build:resume (precisa do Google Chrome ou Chromium instalado)
 import { execFileSync } from 'node:child_process'
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs'
@@ -20,7 +20,10 @@ const contact = {
       label: 'linkedin.com/in/carlos-hallan',
       href: 'https://www.linkedin.com/in/carlos-hallan/'
     },
-    { label: 'github.com/carloshallan', href: 'https://github.com/carloshallan' }
+    {
+      label: 'github.com/carloshallan',
+      href: 'https://github.com/carloshallan'
+    }
   ]
 }
 
@@ -34,10 +37,6 @@ const content = {
     education: 'Formação',
     skills: 'Competências técnicas',
     impactLabels: ['Impacto:', 'Stack:'],
-    educationItems: [
-      ['Bacharelado em Engenharia de Software', 'Estácio de Sá, 2025'],
-      ['Licenciatura em Letras (incompleta)', 'Faculdade Anhanguera, 2018']
-    ],
     skillItems: [
       [
         'Linguagens e frameworks',
@@ -67,13 +66,6 @@ const content = {
     education: 'Education',
     skills: 'Technical skills',
     impactLabels: ['Impact:', 'Stack:'],
-    educationItems: [
-      ['B.S. in Software Engineering', 'Estácio de Sá, 2025'],
-      [
-        'Teaching degree in Languages and Literature (incomplete)',
-        'Faculdade Anhanguera, 2018'
-      ]
-    ],
     skillItems: [
       [
         'Languages and frameworks',
@@ -96,7 +88,7 @@ const content = {
   }
 }
 
-const escape = (text) =>
+const escape = text =>
   String(text)
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
@@ -104,7 +96,7 @@ const escape = (text) =>
 
 // Destaca o rótulo "Impacto:" / "Stack:" no começo de um item
 function bullet(text, labels) {
-  const label = labels.find((l) => text.startsWith(l))
+  const label = labels.find(l => text.startsWith(l))
   const body = label
     ? `<strong>${label}</strong>${escape(text.slice(label.length))}`
     : escape(text)
@@ -115,16 +107,16 @@ function renderJob(job, labels) {
   const { description, clients = [], listOfStack = [] } = job.jobDescription
   const clientsHtml = clients
     .map(
-      (client) => `
+      client => `
       <div class="client">
         <h4>${escape(client.name)} <span class="role">· ${escape(client.role)}</span></h4>
         <span class="date">${escape(client.date)}</span>
-        <ul>${client.highlights.map((h) => bullet(h, labels)).join('')}</ul>
+        <ul>${client.highlights.map(h => bullet(h, labels)).join('')}</ul>
       </div>`
     )
     .join('')
   const stackHtml = listOfStack.length
-    ? `<ul>${listOfStack.map((item) => bullet(item.description, labels)).join('')}</ul>`
+    ? `<ul>${listOfStack.map(item => bullet(item.description, labels)).join('')}</ul>`
     : ''
 
   return `
@@ -137,7 +129,7 @@ function renderJob(job, labels) {
     </article>`
 }
 
-function renderResume(locale, jobs, messages) {
+function renderResume(locale, jobs, education, messages) {
   const c = content[locale]
   const journey = messages.journey
   const summary = `${journey.introBefore} ${journey.introRole} ${journey.introAfter}`
@@ -148,9 +140,9 @@ function renderResume(locale, jobs, messages) {
 <meta charset="utf-8">
 <title>${escape(contact.name)}</title>
 <style>
-  @page { size: A4; margin: 14mm 12mm; }
+  @page { size: A4; margin: 12mm 12mm; }
   * { box-sizing: border-box; }
-  body { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 9.2pt; line-height: 1.42; color: #111; margin: 0; }
+  body { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 9pt; line-height: 1.4; color: #111; margin: 0; }
   a { color: inherit; text-decoration: none; }
   .layout { display: grid; grid-template-columns: 31% 1fr; column-gap: 9mm; }
   /* A linha vertical se repete em todas as páginas impressas */
@@ -186,11 +178,11 @@ function renderResume(locale, jobs, messages) {
         <li>${escape(contact.phone)}</li>
         <li><a href="mailto:${contact.email}">${escape(contact.email)}</a></li>
         <li>${escape(c.location)}</li>
-        ${contact.links.map((l) => `<li><a href="${l.href}">${escape(l.label)}</a></li>`).join('')}
+        ${contact.links.map(l => `<li><a href="${l.href}">${escape(l.label)}</a></li>`).join('')}
       </ul>
       <hr>
       <h2>${c.education}</h2>
-      ${c.educationItems.map(([k, v]) => `<div class="item"><strong>${escape(k)}</strong>${escape(v)}</div>`).join('')}
+      ${education.map(e => `<div class="item"><strong>${escape(e.state === 'completed' ? e.title : `${e.title} (${e.status})`)}</strong>${escape(`${e.institution}, ${e.date}`)}</div>`).join('')}
       <h2>${c.skills}</h2>
       ${c.skillItems.map(([k, v]) => `<div class="item"><strong>${escape(k)}</strong>${escape(v)}</div>`).join('')}
     </aside>
@@ -199,7 +191,7 @@ function renderResume(locale, jobs, messages) {
       <p>${escape(summary)}</p>
       <hr>
       <h2>${c.experience}</h2>
-      ${jobs.map((job) => renderJob(job, c.impactLabels)).join('')}
+      ${jobs.map(job => renderJob(job, c.impactLabels)).join('')}
     </main>
   </div>
 </body>
@@ -236,12 +228,19 @@ const tmp = mkdtempSync(join(tmpdir(), 'resume-'))
 try {
   const chrome = findChrome()
   for (const locale of Object.keys(content)) {
-    const jobs = (await server.ssrLoadModule(`/src/views/sections/jobs/${locale}.ts`)).default
-    const messages = (await server.ssrLoadModule(`/src/i18n/locales/${locale}.ts`)).default
+    const jobs = (
+      await server.ssrLoadModule(`/src/views/sections/jobs/${locale}.ts`)
+    ).default
+    const education = (
+      await server.ssrLoadModule(`/src/views/sections/education/${locale}.ts`)
+    ).default
+    const messages = (
+      await server.ssrLoadModule(`/src/i18n/locales/${locale}.ts`)
+    ).default
     const htmlPath = join(tmp, `${locale}.html`)
     const pdfPath = join(root, 'public', content[locale].file)
 
-    writeFileSync(htmlPath, renderResume(locale, jobs, messages))
+    writeFileSync(htmlPath, renderResume(locale, jobs, education, messages))
     execFileSync(
       chrome,
       [

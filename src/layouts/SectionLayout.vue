@@ -29,6 +29,9 @@ section
   &.background-dark
     background-color dark
 
+  &.background-black
+    background-color black
+
   &.background-dark-purple
     background-color dark-purple
 

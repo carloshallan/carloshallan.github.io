@@ -62,6 +62,25 @@ export function toggleWriterMode(event?: MouseEvent) {
 
 const PHOTO_TRANSITION = 'profile-switch'
 
+// Volta ao topo e, ao chegar, clica na foto como o visitante faria, para a
+// troca de tema sair do mesmo ponto
+export function switchFromTop() {
+  const flip = () =>
+    document.querySelector<HTMLElement>('.profileSwitch')?.click()
+
+  window.scrollTo({
+    top: 0,
+    behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+  })
+
+  const start = performance.now()
+  const waitForTop = () => {
+    if (window.scrollY <= 0 || performance.now() - start > 2500) flip()
+    else requestAnimationFrame(waitForTop)
+  }
+  requestAnimationFrame(waitForTop)
+}
+
 // Centro da foto e tamanho da camada da animação, nas coordenadas dela
 function transitionOrigin(target?: HTMLElement) {
   const html = document.documentElement

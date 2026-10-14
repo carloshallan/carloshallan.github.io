@@ -18,6 +18,7 @@
           {{ $t('journey.introBefore') }}
           <strong>{{ $t('journey.introRole') }}</strong>
           {{ $t('journey.introAfter') }}
+          {{ $t('journey.studying') }}
         </p>
         <p>{{ $t('journey.highlightsTitle') }}</p>
         <ul>

@@ -36,6 +36,15 @@ const jobs: Array<Job> = [
           ]
         },
         {
+          name: 'Hype Animation',
+          tag: 'longa-metragem',
+          role: 'Software Engineer | Maya Tools Developer',
+          date: 'Nov 2025 - Mai 2026',
+          highlights: [
+            'Desenvolvi ferramentas para o Maya que aceleraram os ajustes de cenas na produção de Galinha Pintadinha – O Filme, o primeiro longa da franquia, lançado nos cinemas em outubro de 2026.'
+          ]
+        },
+        {
           name: 'Assembly',
           tag: 'estúdio de VFX',
           role: 'Software Engineer e Designer',

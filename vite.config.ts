@@ -52,6 +52,19 @@ export default defineConfig({
   css: {
     postcss: { plugins: [unlayerVuetify] }
   },
+  // O autoImport do Vuetify só revela os componentes quando a rota é aberta.
+  // Sem pré-otimizá-los, o primeiro clique para outra página no `npm run dev`
+  // recarrega o site e parece não fazer nada
+  optimizeDeps: {
+    include: [
+      'vuetify/components/VGrid',
+      'vuetify/components/VIcon',
+      'vuetify/components/VImg',
+      'vuetify/components/VList',
+      'vuetify/components/VMenu',
+      'vuetify/components/VResponsive'
+    ]
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

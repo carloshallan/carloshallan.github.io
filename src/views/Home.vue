@@ -6,10 +6,13 @@
       <writer-about />
       <writer-events />
       <writer-books />
+      <back-to-dev-button />
     </template>
     <template v-else>
       <my-works />
       <work-timeline />
+      <films-section />
+      <education-section />
       <about-me />
     </template>
   </div>
@@ -21,10 +24,13 @@ import Presentation from './sections/Presentation.vue'
 import AboutMe from './sections/AboutMe.vue'
 import MyWorks from './sections/MyWorks.vue'
 import WorkTimeline from './sections/WorkTimelineSection.vue'
+import EducationSection from './sections/EducationSection.vue'
+import FilmsSection from './sections/FilmsSection.vue'
 import WriterAbout from './sections/writer/WriterAbout.vue'
 import WriterBooksSold from './sections/writer/WriterBooksSold.vue'
 import WriterBooks from './sections/writer/WriterBooks.vue'
 import WriterEvents from './sections/writer/WriterEvents.vue'
+import BackToDevButton from '@/components/BackToDevButton.vue'
 import { writerMode } from '@/composables/writerMode'
 
 export default defineComponent({
@@ -34,10 +40,13 @@ export default defineComponent({
     AboutMe,
     MyWorks,
     WorkTimeline,
+    EducationSection,
+    FilmsSection,
     WriterAbout,
     WriterBooks,
     WriterBooksSold,
-    WriterEvents
+    WriterEvents,
+    BackToDevButton
   },
   setup() {
     return { writerMode }

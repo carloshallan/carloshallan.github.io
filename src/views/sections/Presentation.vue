@@ -40,7 +40,7 @@
         <router-link to="/work">
           <Button> {{ $t('hero.seeWorks') }} </Button>
         </router-link>
-        <Button :outlined="true" href="https://medium.com/@carloshallan">
+        <Button :outlined="true" :click="() => scrollTo('about')">
           {{ $t('hero.aboutMe') }}
         </Button>
       </div>
