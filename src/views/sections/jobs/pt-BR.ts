@@ -67,7 +67,7 @@ const jobs: Array<Job> = [
         {
           name: 'Streetwise',
           role: 'Software Engineer',
-          date: '4 meses',
+          date: '2023 (4 meses)',
           highlights: [
             'Desenvolvi uma extensão para o After Effects que automatiza a criação de versões de vídeos publicitários (React, TypeScript e ExtendScript).',
             'Impacto: os artistas deixaram de montar cada versão à mão, e as várias versões de um mesmo filme passaram a sair em bem menos tempo.'

@@ -66,7 +66,7 @@ const jobs: Array<Job> = [
         {
           name: 'Streetwise',
           role: 'Software Engineer',
-          date: '4 months',
+          date: '2023 (4 months)',
           highlights: [
             'Built an After Effects extension that automates versioning of advertising videos (React, TypeScript, ExtendScript).',
             'Impact: artists no longer build each version by hand, so multiple versions of the same spot ship in far less time.'
