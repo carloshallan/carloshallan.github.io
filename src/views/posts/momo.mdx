@@ -6,7 +6,7 @@ import Button from '@/components/Button'
   title="Creative Writing Desktop Application"
   snippet="A privacy-first, local-first writing app for novelists. Founded and built from scratch under Creative Olympus."
   projectName="Momo"
-  imageName="momo/momo-custom-background.png"
+  imageName="momo/estante.webp"
   date="2022 - Present"
   order="1"
   featured="true"
@@ -17,9 +17,9 @@ import Button from '@/components/Button'
 
 Momo is a **commercial desktop product** that I designed, built, and ship on my own: a local-first writing app for novelists, available for **Windows (Microsoft Store), macOS, and Linux**, with a paying user base.
 
-- **Role**: founder and sole engineer — product, UX/UI, desktop app, backend API, billing, website, and distribution.
-- **Scale of the work**: version 1.10, 800+ commits, three codebases (desktop app, API, website).
-- **Business model**: lifetime licenses per platform or for all platforms, plus a cloud-sync subscription, with a 30-day free trial.
+- **Role**: founder and sole engineer, covering product, UX/UI, the desktop app, the mobile app, the backend API, billing, the website, and distribution.
+- **Scale of the work**: version 1.14 and 1,000+ commits in the desktop app alone, across four codebases: the desktop app, <a href="#/work/momo-draft">Momo Draft</a> for phones and tablets, the API, and the website.
+- **Business model**: a free Momo for writing with no time limit, and the full Momo through a lifetime license or the Momo + Cloud subscription, with a 30-day trial of everything.
 
 <div class="blogGallery">
   <div class="buttonGroup">
@@ -31,61 +31,72 @@ Momo is a **commercial desktop product** that I designed, built, and ship on my 
 
 ## The problem
 
-I'm also a writer — I've been working on novels for years under the pen name **C.H. Blacksmith** (<a href="https://chblacksmith.com.br" target="_blank">chblacksmith.com.br</a>). Every writing tool I tried was either too generic, too bloated, or required me to hand over my manuscripts to a cloud service.
+I'm also a writer. I've been working on novels for years under the pen name **C.H. Blacksmith** (<a href="https://chblacksmith.com.br" target="_blank">chblacksmith.com.br</a>), and every writing tool I tried was too generic, too bloated, or required me to hand over my manuscripts to a cloud service.
 
-Novelists need planning, writing, revision, and book layout in one place — and they need to trust that their manuscript stays theirs. So I built Momo, and it turned out other writers had the same problem.
+Novelists need planning, writing, revision, and book layout in one place, and they need to trust that the manuscript stays theirs. So I built Momo, and it turned out other writers had the same problem.
 
 ## Origins
 
 Momo is the result of years of iterating on the same idea:
 
-- **2016** — Pena, my first experiments with writing tools
-- **2019** — Feather Text Editor, a simple text editor for writers
-- **2020–2021** — Feather and Apollo Writer
-- **2022** — desktop experiments, the architecture, and the name: Momo
-- **2023** — first implementation of Momo
-- **2025** — full reimplementation and public launch
+- **2016**: Pena, my first experiments with writing tools
+- **2019**: Feather Text Editor, a simple text editor for writers
+- **2020–2021**: Feather and Apollo Writer
+- **2022**: desktop experiments, the architecture, and the name: Momo
+- **2023**: first implementation of Momo
+- **2025**: full reimplementation and public launch
+- **2026**: the Momo Cloud, <a href="#/work/momo-draft">Momo Draft</a> on iOS and Android, and the free Momo
 
-Each attempt taught me something about what writers actually need — and about what it takes to ship a product, not just a prototype.
+Each attempt taught me something about what writers actually need, and about what it takes to ship a product, not just a prototype.
 
 ## The product
 
-Momo keeps the whole book in one project, from the first idea to the final EPUB. Everything is stored **locally, in an open file format**, works offline, and never feeds AI.
+Momo keeps the whole book in one project: the planning, every draft, the revision, and the files that go to the publisher. Everything is stored **locally, in an open file format**, works offline, and never feeds AI.
 
 <div class="blogGallery">
-  <Media src="/work/momo/momo-project-page.png" alt="Momo – Projects" />
-  {'Books organized as projects.'}
-  <Media src="/work/momo/momo-review-page.png" alt="Momo – Revision" />
-  {'Revision with comments, suggestions, and versions.'}
-  <Media src="/work/momo/momo-diagramacao.png" alt="Momo – Layout editor" />
-  {'Visual layout editor for EPUB publishing.'}
-  <Media src="/work/momo/momo-report-page.png" alt="Momo – Reports" />
-  {'Reports on sessions, streaks, and progress per chapter.'}
-  <Media src="/work/momo/momo-themes.png" alt="Momo – Themes" />
-  {'Dark, light, and transparent themes with custom wallpapers.'}
+  <Media src="/work/momo/estante.webp" alt="Momo: the bookshelf" />
+  {'The bookshelf, with each book as a project and its status, tasks, and deadline at a glance.'}
+  <Media src="/work/momo/escrever-escritorio.webp" alt="Momo: the editor" />
+  {'The editor, with the manuscript on one side and the task board on the other.'}
+  <Media src="/work/momo/revisao.webp" alt="Momo: revision" />
+  {'Revision with tracked changes, comments, and suggestions.'}
+  <Media src="/work/momo/versoes.webp" alt="Momo: restore points" />
+  {'Restore points, compared side by side with the current text.'}
+  <Media src="/work/momo/tarefas.webp" alt="Momo: task board" />
+  {'A task board for chapters, scenes, and revisions.'}
+  <Media src="/work/momo/diagramacao.webp" alt="Momo: layout editor" />
+  {'The layout editor, which turns the manuscript into an EPUB, a DOCX, or a PDF.'}
+  <Media src="/work/momo/roteiro.webp" alt="Momo: screenplay" />
+  {'Screenplays in Fountain, in the same project as the novel.'}
+  <Media src="/work/momo/temas.webp" alt="Momo: themes" />
+  {'Light, dark, and transparent themes, with custom wallpapers.'}
 </div>
 
 Main features:
 
-- **Projects, characters, and timeline** — organize the story world next to the manuscript
-- **Distraction-free editor** — focus mode, spell checker, keyboard shortcuts, and optional Vim mode
-- **Revision system** — comments, suggestions, and multiple manuscript versions
-- **Automatic backup** — versions saved every 5 minutes, restorable with one click
-- **Task board, goals, and achievements** — keep the book moving even with little writing time
-- **Narrative templates** — 3-Act, Hero's Journey, Save the Cat!, and custom project templates
-- **Fountain screenwriting** — screenplays inside the same creative universe
-- **Layout editor and export** — EPUB, DOCX, and PDF
+- **Projects, characters, and timeline**: the story world organized next to the manuscript, with narrative templates such as 3-Act, Hero's Journey, and Save the Cat!
+- **A distraction-free editor**: focus mode, a typewriter mode with sound, keyboard shortcuts, and an optional Vim mode
+- **Offline spell and grammar checkers**: rule-based, with no AI and no internet, built for Brazilian Portuguese
+- **Revision**: tracked changes, comments, suggestions, and online review, where readers comment in the browser and the notes come back into the book
+- **Google Docs**: send the book for review in Google Docs, and import a document or a whole book from Word
+- **Restore points and backups**: automatic versions of every file, project backups on a schedule, and an optional copy to Google Drive
+- **Tasks, goals, and a garden**: a task board, daily goals, Pomodoro, writing reports, and a garden that grows with the words written
+- **Fountain screenwriting**, exported to PDF and Final Draft
+- **Layout and export**: a visual layout editor for EPUB and Kindle, Google Fonts, DOCX to the ABNT academic standard, and PDF
+- **Momo Cloud**: the manuscript synced with <a href="#/work/momo-draft">Momo Draft</a> on phones and tablets, end-to-end encrypted
 - **Built-in documentation** in 3 languages
 
 ## Engineering
 
-Momo is an ecosystem of three codebases that I designed and maintain:
+Momo is an ecosystem of four codebases that I designed and maintain:
 
-**Desktop app** — **Tauri 2 (Rust)** for the native shell and **React + TypeScript + Vite** for the UI, styled with TailwindCSS. Tauri keeps the binary small and the app fast, while React handles the complex editor and project state. Distributed through the Microsoft Store and direct installers (macOS, AppImage, .deb, .rpm).
+**Desktop app**: **Tauri 2 (Rust)** for the native shell and **React + TypeScript + Vite** for the UI, styled with TailwindCSS. Tauri keeps the binary small and the app fast, while React handles the complex editor and project state. The heavy work runs in Rust: the EPUB, DOCX, PDF, and Final Draft exporters, the project backups, and the Google Drive uploads. It is distributed through the Microsoft Store and direct installers (macOS, AppImage, .deb, .rpm).
 
-**Poseidon API** — **Django 5 + Django REST Framework** on **PostgreSQL**, running in Docker. It handles accounts, licensing and feature access, the free trial, payments with **Stripe** and **Mercado Pago** (including Pix), a partner program for authors, and release distribution. It was built to serve multiple Creative Olympus products, not just Momo.
+**Momo Draft**: the phone and tablet app, also in Tauri 2, sharing Momo's export engines and crypto. <a href="#/work/momo-draft">It has its own page.</a>
 
-**Website** — **React + TypeScript + TailwindCSS + Framer Motion**, with checkout, a customer area, and full **i18n** in English, Portuguese, and Spanish.
+**Poseidon API**: **Django 5 + Django REST Framework** on **PostgreSQL**, running in Docker. It handles accounts, licensing and feature access, the free tier and the trial, payments with **Stripe** and **Mercado Pago** (including Pix), a partner program for authors, release distribution, and the Momo Cloud. The cloud stores drafts and manuscripts sealed on the writer's devices, so the server keeps the text without being able to read it.
+
+**Website**: **React + TypeScript + TailwindCSS + Framer Motion**, with checkout, a customer area, the online review that readers use in the browser, and full **i18n** in English, Portuguese, and Spanish.
 
 ## Impact
 

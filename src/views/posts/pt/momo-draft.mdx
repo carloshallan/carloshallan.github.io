@@ -1,0 +1,80 @@
+import PostHeader from '@/components/PostHeader'
+import Media from '@/components/Media'
+import Button from '@/components/Button'
+
+<PostHeader
+  title="Escrita sem distração no celular e no tablet"
+  snippet="O aplicativo do Momo para iOS e Android: rascunhos guardados no aparelho, com sincronização criptografada de ponta a ponta com o computador."
+  projectName="Momo Draft"
+  imageName="momo-draft/momo-draft-banner.png"
+  date="2026 - Atual"
+  order="1"
+  featured="true"
+  stack="(Tauri 2, Rust, React, TypeScript, CodeMirror, Django)"
+/>
+
+## Em resumo
+
+O Momo Draft é o aplicativo de celular e tablet do ecossistema do <a href="#/work/momo">Momo</a>, um app gratuito para escrever rascunhos em qualquer lugar, publicado na **App Store** e na **Google Play**.
+
+- **Papel**: fundador e único engenheiro, responsável por produto, design, aplicativo, protocolo de sincronização e publicação nas lojas.
+- **Tamanho do trabalho**: versão 1.0.7, com iOS e Android saindo da mesma base de código e lançados juntos.
+- **Modelo de negócio**: gratuito, sem anúncios e sem rastreamento. Funciona por inteiro sem conta e é a porta de entrada para o Momo pago no computador.
+
+<div class="blogGallery">
+  <div class="buttonGroup">
+    <Button href="https://apps.apple.com/app/momo-draft/id6833612774" target="_blank">
+      App Store
+    </Button>
+    <Button href="https://play.google.com/store/apps/details?id=com.creativeolympus.momodraft" target="_blank">
+      Google Play
+    </Button>
+  </div>
+</div>
+
+## O problema
+
+Quem usa o Momo pedia um jeito de escrever no celular, no ônibus, na sala de espera, onde quer que uma cena aparecesse. Levar o aplicativo inteiro para o celular traria o quadro de tarefas, a linha do tempo e a diagramação para uma tela onde eles não cabem.
+
+Por isso o Draft é pequeno de propósito. Ele cuida da escrita, com as mesmas ferramentas que o escritor já conhece no Momo, e deixa o planejamento e a publicação para o computador.
+
+## O produto
+
+<div class="blogGallery">
+  <Media src="/work/momo-draft/draft-tablet-1.webp" alt="Momo Draft: escrevendo no tablet" />
+  {'Um capítulo de um manuscrito do Momo, aberto no tablet ao lado da lista de rascunhos.'}
+  <Media src="/work/momo-draft/draft-tablet-maquina.webp" alt="Momo Draft: modo máquina de escrever" />
+  {'Modo máquina de escrever: a linha em que você escreve fica no meio da tela.'}
+  <Media src="/work/momo-draft/draft-tablet-2.webp" alt="Momo Draft: anotações à mão" />
+  {'Anotações presas ao rascunho, escritas ou desenhadas à mão.'}
+  <Media src="/work/momo-draft/draft-phone-1.webp" alt="Momo Draft: rascunhos no celular" />
+  {'O mesmo manuscrito no celular.'}
+  <Media src="/work/momo-draft/draft-roteiro-tablet.webp" alt="Momo Draft: roteiro" />
+  {'Roteiros em Fountain, formatados enquanto você digita.'}
+</div>
+
+Principais funcionalidades:
+
+- **Modo máquina de escrever e modo foco**: a linha atual fica no centro, com som de máquina de escrever se você quiser, e o resto do texto esmaece
+- **Meta diária, Pomodoro e um jardim de palavras** que cresce enquanto você escreve
+- **Projetos com pastas**: partes, capítulos e notas de pesquisa, com sinopses coloridas e um quadro com todas elas
+- **Anotações escritas ou desenhadas à mão, e notas de áudio**: ficam fora da contagem e da exportação, e o áudio nunca sai do aparelho
+- **Roteiros em Fountain**, exportados em PDF no padrão da indústria ou em Final Draft (FDX)
+- **Corretor ortográfico em português, inglês e espanhol, e revisão gramatical em português**, os dois sem internet
+- **Pontos de restauração**, com comparação palavra por palavra com o texto atual
+- **Exportação em PDF e Word (DOCX)**, com o mesmo motor do aplicativo do computador
+- **Teclado físico no tablet**, com atalhos e modo Vim opcional
+
+## Engenharia
+
+**Uma base de código, duas plataformas.** O Draft é feito em **Tauri 2** para iOS e Android, com interface em **React, TypeScript e Vite** e editor em **CodeMirror**. A parte em Rust é uma camada fina com os próprios motores de exportação do Momo, então um PDF ou um roteiro sai igual no celular e no computador.
+
+**O aparelho em primeiro lugar.** Cada workspace fica no aparelho, de onde nunca sai, ou na Nuvem do Momo. Os rascunhos são salvos primeiro no aparelho, e o app funciona sem internet.
+
+**Criptografia de ponta a ponta.** Os rascunhos da nuvem são selados no aparelho com uma chave que só os aparelhos do escritor têm, e a API em **Django** guarda tudo sem conseguir ler. Um aparelho novo recebe a chave lendo um QR code mostrado pelo Momo ou por outro aparelho, e o servidor só vê a chave selada.
+
+**Dois apps, um manuscrito.** Um projeto sincronizado no Momo aparece no Draft com pastas e arquivos, e as mudanças vão e voltam. Nada é aplicado sozinho: cada mudança que chega espera o escritor, e o texto que ela substitui vira antes um ponto de restauração. O Draft e o Momo compartilham cópias idênticas e pequenas da criptografia, da contagem de palavras e da estimativa de laudas, cada uma testada contra os mesmos vetores fixos, para os dois apps sempre lerem e contarem igual.
+
+## Impacto
+
+O Draft levou o Momo para os lugares onde o escritor tem alguns minutos para escrever. Ele saiu nas duas lojas ao mesmo tempo e transformou o Momo, um aplicativo de computador, num ecossistema: o mesmo livro passa do computador para o tablet e para o celular sem o escritor entregar o texto a ninguém.

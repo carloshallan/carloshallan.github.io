@@ -6,7 +6,7 @@ import Button from '@/components/Button'
   title="Aplicativo desktop para escrita criativa"
   snippet="Um aplicativo de escrita para romancistas que prioriza a privacidade e guarda tudo no computador do autor. Criado do zero pela Creative Olympus."
   projectName="Momo"
-  imageName="momo/momo-custom-background.png"
+  imageName="momo/estante.webp"
   date="2022 - Atual"
   order="1"
   featured="true"
@@ -17,9 +17,9 @@ import Button from '@/components/Button'
 
 O Momo é um **produto desktop comercial** que eu mesmo projetei, desenvolvi e publico: um aplicativo de escrita para romancistas que guarda tudo no computador do autor, disponível para **Windows (na Microsoft Store), macOS e Linux**, e que já tem usuários pagantes.
 
-- **Papel**: fundador e único engenheiro, responsável por produto, UX/UI, aplicativo desktop, API, cobrança, site e distribuição.
-- **Tamanho do trabalho**: versão 1.10, mais de 800 commits e três bases de código (aplicativo desktop, API e site).
-- **Modelo de negócio**: licença vitalícia para uma ou para todas as plataformas, ou assinatura com sincronização na nuvem, com 30 dias de teste grátis.
+- **Papel**: fundador e único engenheiro, responsável por produto, UX/UI, aplicativo desktop, aplicativo de celular, API, cobrança, site e distribuição.
+- **Tamanho do trabalho**: versão 1.14 e mais de 1.000 commits só no aplicativo desktop, em quatro bases de código: o aplicativo desktop, o <a href="#/work/momo-draft">Momo Draft</a> para celular e tablet, a API e o site.
+- **Modelo de negócio**: um Momo grátis para escrever sem limite de tempo, e o Momo completo com licença vitalícia ou com a assinatura Momo + Nuvem, com 30 dias de teste de tudo.
 
 <div class="blogGallery">
   <div class="buttonGroup">
@@ -45,47 +45,58 @@ O Momo é o resultado de anos trabalhando na mesma ideia:
 - **2022**: experimentos com aplicativos desktop, a arquitetura e o nome Momo
 - **2023**: primeira implementação do Momo
 - **2025**: reimplementação completa e lançamento público
+- **2026**: a Nuvem do Momo, o <a href="#/work/momo-draft">Momo Draft</a> para iOS e Android, e o Momo grátis
 
 Cada tentativa me ensinou algo sobre o que os escritores realmente precisam, e sobre o que é preciso para lançar um produto, e não só um protótipo.
 
 ## O produto
 
-O Momo reúne o livro inteiro em um único projeto, da primeira ideia ao EPUB final. Tudo fica salvo **no computador do autor, em um formato de arquivo aberto**, funciona offline e nunca é usado para treinar IA.
+O Momo reúne o livro inteiro em um único projeto: o planejamento, todos os rascunhos, a revisão e os arquivos que vão para a editora. Tudo fica salvo **no computador do autor, em um formato de arquivo aberto**, funciona offline e nunca é usado para treinar IA.
 
 <div class="blogGallery">
-  <Media src="/work/momo/momo-project-page.png" alt="Momo: projetos" />
-  {'Livros organizados em projetos.'}
-  <Media src="/work/momo/momo-review-page.png" alt="Momo: revisão" />
-  {'Revisão com comentários, sugestões e versões.'}
-  <Media src="/work/momo/momo-diagramacao.png" alt="Momo: diagramação" />
-  {'Editor visual de diagramação para publicar em EPUB.'}
-  <Media src="/work/momo/momo-report-page.png" alt="Momo: relatórios" />
-  {'Relatórios de sessões, sequências de dias e progresso por capítulo.'}
-  <Media src="/work/momo/momo-themes.png" alt="Momo: temas" />
-  {'Temas escuros, claros e transparentes, com papéis de parede personalizados.'}
+  <Media src="/work/momo/estante.webp" alt="Momo: a estante" />
+  {'A estante, com cada livro como um projeto e o estado, as tarefas e o prazo à vista.'}
+  <Media src="/work/momo/escrever-escritorio.webp" alt="Momo: o editor" />
+  {'O editor, com o manuscrito de um lado e o quadro de tarefas do outro.'}
+  <Media src="/work/momo/revisao.webp" alt="Momo: revisão" />
+  {'Revisão com alterações rastreadas, comentários e sugestões.'}
+  <Media src="/work/momo/versoes.webp" alt="Momo: pontos de restauração" />
+  {'Pontos de restauração, comparados lado a lado com o texto atual.'}
+  <Media src="/work/momo/tarefas.webp" alt="Momo: quadro de tarefas" />
+  {'Um quadro de tarefas para capítulos, cenas e revisões.'}
+  <Media src="/work/momo/diagramacao.webp" alt="Momo: diagramação" />
+  {'A diagramação, que transforma o manuscrito em EPUB, DOCX ou PDF.'}
+  <Media src="/work/momo/roteiro.webp" alt="Momo: roteiro" />
+  {'Roteiros em Fountain, no mesmo projeto do romance.'}
+  <Media src="/work/momo/temas.webp" alt="Momo: temas" />
+  {'Temas claros, escuros e transparentes, com papéis de parede personalizados.'}
 </div>
 
 Principais funcionalidades:
 
-- **Projetos, personagens e linha do tempo**: o universo da história organizado ao lado do manuscrito
-- **Editor sem distrações**: modo foco, corretor ortográfico, atalhos de teclado e modo Vim opcional
-- **Sistema de revisão**: comentários, sugestões e várias versões do manuscrito
-- **Backup automático**: versões salvas a cada 5 minutos, que podem ser restauradas com um clique
-- **Quadro de tarefas, metas e conquistas**: para o livro avançar mesmo com pouco tempo para escrever
-- **Modelos narrativos**: Estrutura em 3 Atos, Jornada do Herói, Save the Cat! e modelos de projeto personalizados
-- **Roteiros em Fountain**: roteiros dentro do mesmo universo criativo
-- **Diagramação e exportação**: EPUB, DOCX e PDF
+- **Projetos, personagens e linha do tempo**: o universo da história organizado ao lado do manuscrito, com modelos narrativos como Estrutura em 3 Atos, Jornada do Herói e Save the Cat!
+- **Editor sem distrações**: modo foco, modo máquina de escrever com som, atalhos de teclado e modo Vim opcional
+- **Corretor ortográfico e gramatical sem internet**: feito com regras, sem IA, pensado para o português do Brasil
+- **Revisão**: alterações rastreadas, comentários, sugestões e revisão online, em que os leitores comentam no navegador e as notas voltam para o livro
+- **Google Docs**: envio do livro para revisão no Google Docs, e importação de um documento ou de um livro inteiro do Word
+- **Pontos de restauração e backup**: versões automáticas de cada arquivo, backup do projeto com a frequência escolhida e cópia opcional no Google Drive
+- **Tarefas, metas e um jardim**: quadro de tarefas, metas diárias, Pomodoro, relatórios de escrita e um jardim que cresce com as palavras escritas
+- **Roteiros em Fountain**, exportados em PDF e Final Draft
+- **Diagramação e exportação**: editor visual de diagramação para EPUB e Kindle, Google Fonts, DOCX nas normas da ABNT e PDF
+- **Nuvem do Momo**: o manuscrito sincronizado com o <a href="#/work/momo-draft">Momo Draft</a> no celular e no tablet, com criptografia de ponta a ponta
 - **Documentação no próprio app**, em 3 idiomas
 
 ## Engenharia
 
-O Momo é um ecossistema de três bases de código que eu projetei e mantenho:
+O Momo é um ecossistema de quatro bases de código que eu projetei e mantenho:
 
-**Aplicativo desktop**: **Tauri 2 (Rust)** na camada nativa e **React, TypeScript e Vite** na interface, com TailwindCSS. O Tauri deixa o aplicativo leve e rápido, enquanto o React cuida do editor e do estado dos projetos, que são complexos. A distribuição é feita pela Microsoft Store e por instaladores próprios (macOS, AppImage, .deb e .rpm).
+**Aplicativo desktop**: **Tauri 2 (Rust)** na camada nativa e **React, TypeScript e Vite** na interface, com TailwindCSS. O Tauri deixa o aplicativo leve e rápido, enquanto o React cuida do editor e do estado dos projetos, que são complexos. O trabalho pesado roda em Rust: os exportadores de EPUB, DOCX, PDF e Final Draft, o backup dos projetos e o envio ao Google Drive. A distribuição é feita pela Microsoft Store e por instaladores próprios (macOS, AppImage, .deb e .rpm).
 
-**API Poseidon**: **Django 5 e Django REST Framework** com **PostgreSQL**, rodando em Docker. Cuida das contas, das licenças e do acesso às funcionalidades, do período de teste, dos pagamentos com **Stripe** e **Mercado Pago** (inclusive Pix), do programa de parceria com autores e da distribuição das versões. Foi pensada para atender vários produtos da Creative Olympus, não só o Momo.
+**Momo Draft**: o aplicativo de celular e tablet, também em Tauri 2, que usa os mesmos motores de exportação e a mesma criptografia do Momo. <a href="#/work/momo-draft">Ele tem uma página própria.</a>
 
-**Site**: **React, TypeScript, TailwindCSS e Framer Motion**, com checkout, área do cliente e tradução completa para inglês, português e espanhol.
+**API Poseidon**: **Django 5 e Django REST Framework** com **PostgreSQL**, rodando em Docker. Cuida das contas, das licenças e do acesso às funcionalidades, do Momo grátis e do período de teste, dos pagamentos com **Stripe** e **Mercado Pago** (inclusive Pix), do programa de parceria com autores, da distribuição das versões e da Nuvem do Momo. A nuvem guarda rascunhos e manuscritos selados nos aparelhos do escritor, então o servidor guarda o texto sem conseguir ler.
+
+**Site**: **React, TypeScript, TailwindCSS e Framer Motion**, com checkout, área do cliente, a revisão online que os leitores usam no navegador e tradução completa para inglês, português e espanhol.
 
 ## Impacto
 

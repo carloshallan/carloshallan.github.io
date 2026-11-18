@@ -18,6 +18,7 @@ const jobs: Array<Job> = [
           highlights: [
             'Took a local-first desktop app for novelists from zero to a commercial product with paying users.',
             'Tauri 2 (Rust) + React + TypeScript app for Windows (Microsoft Store), macOS, and Linux.',
+            'Momo Draft, the companion app for iOS and Android (Tauri 2), with end-to-end encrypted sync to the desktop.',
             'Django 5 + DRF + PostgreSQL API for accounts, licensing, payments (Stripe and Mercado Pago), and releases.',
             'Marketing website with checkout and i18n in 3 languages (React, TailwindCSS, Framer Motion).'
           ]

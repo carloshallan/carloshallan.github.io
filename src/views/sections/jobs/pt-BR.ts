@@ -19,6 +19,7 @@ const jobs: Array<Job> = [
           highlights: [
             'Criei do zero um aplicativo desktop para escritores, que guarda os textos no próprio computador, e o transformei em um produto comercial com usuários pagantes.',
             'Aplicativo em Tauri 2 (Rust), React e TypeScript, disponível para Windows (na Microsoft Store), macOS e Linux.',
+            'Momo Draft, o aplicativo para iOS e Android (Tauri 2), com sincronização criptografada de ponta a ponta com o computador.',
             'API em Django 5, DRF e PostgreSQL, responsável por contas, licenças, pagamentos (Stripe e Mercado Pago) e distribuição de versões.',
             'Site de vendas com checkout e tradução para 3 idiomas (React, TailwindCSS e Framer Motion).'
           ]

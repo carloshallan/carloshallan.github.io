@@ -1,0 +1,80 @@
+import PostHeader from '@/components/PostHeader'
+import Media from '@/components/Media'
+import Button from '@/components/Button'
+
+<PostHeader
+  title="Distraction-free Writing on Phones and Tablets"
+  snippet="Momo's companion app for iOS and Android: drafts that live on the device, with end-to-end encrypted sync to the desktop."
+  projectName="Momo Draft"
+  imageName="momo-draft/momo-draft-banner.png"
+  date="2026 - Present"
+  order="1"
+  featured="true"
+  stack="(Tauri 2, Rust, React, TypeScript, CodeMirror, Django)"
+/>
+
+## In short
+
+Momo Draft is the phone and tablet app of the <a href="#/work/momo">Momo</a> ecosystem, a free app for writing drafts anywhere, published on the **App Store** and **Google Play**.
+
+- **Role**: founder and sole engineer, covering product, design, the mobile app, the sync protocol, and store publishing.
+- **Scale of the work**: version 1.0.7, with iOS and Android shipped from the same codebase and released together.
+- **Business model**: free, with no ads and no tracking. It works fully without an account, and it is the way into the paid Momo on the desktop.
+
+<div class="blogGallery">
+  <div class="buttonGroup">
+    <Button href="https://apps.apple.com/app/momo-draft/id6833612774" target="_blank">
+      App Store
+    </Button>
+    <Button href="https://play.google.com/store/apps/details?id=com.creativeolympus.momodraft" target="_blank">
+      Google Play
+    </Button>
+  </div>
+</div>
+
+## The problem
+
+Momo users kept asking for a way to write on the phone, on the bus, in a waiting room, wherever a scene shows up. Putting the whole desktop app on a phone would bring the board, the timeline, and the layout editor to a screen where they don't fit.
+
+So Draft is deliberately small. It does one job, writing, with the same tools a writer already trusts in Momo, and leaves planning and publishing to the desktop.
+
+## The product
+
+<div class="blogGallery">
+  <Media src="/work/momo-draft/draft-tablet-1.webp" alt="Momo Draft: writing on a tablet" />
+  {'A chapter of a Momo manuscript, open on the tablet next to the list of drafts.'}
+  <Media src="/work/momo-draft/draft-tablet-maquina.webp" alt="Momo Draft: typewriter mode" />
+  {'Typewriter mode: the line being written stays in the middle of the screen.'}
+  <Media src="/work/momo-draft/draft-tablet-2.webp" alt="Momo Draft: handwritten notes" />
+  {'Notes attached to a draft, typed or drawn by hand.'}
+  <Media src="/work/momo-draft/draft-phone-1.webp" alt="Momo Draft: drafts on the phone" />
+  {'The same manuscript on the phone.'}
+  <Media src="/work/momo-draft/draft-roteiro-tablet.webp" alt="Momo Draft: screenplay" />
+  {'Screenplays in Fountain, formatted while typing.'}
+</div>
+
+Main features:
+
+- **Typewriter and focus modes**: the current line stays centered, with an optional typewriter sound, and the rest of the text fades
+- **Daily goal, Pomodoro, and a word garden** that grows while the writer writes
+- **Projects with folders**: parts, chapters, and research notes, with color-coded synopses and a board of all of them
+- **Notes typed or drawn by hand, and audio notes**: they stay out of the word count and the export, and the audio never leaves the device
+- **Fountain screenplays**, exported as industry-standard PDF or Final Draft (FDX)
+- **Spell checker in Portuguese, English, and Spanish, and a Portuguese grammar checker**, both offline
+- **Restore points** with a word-by-word comparison against the current text
+- **Export to PDF and Word (DOCX)** with the same engine as the desktop app
+- **Physical keyboard support** on tablets, with shortcuts and an optional Vim mode
+
+## Engineering
+
+**One codebase, two platforms.** Draft is **Tauri 2** on iOS and Android, with a **React + TypeScript + Vite** frontend and a **CodeMirror** editor. The Rust side is a thin shell plus Momo's own export engines, so a PDF or a screenplay comes out the same on the phone and on the computer.
+
+**Local first.** Every workspace is either on the device, where it never leaves the phone, or in the Momo Cloud. Drafts are saved on the device first and the app works offline.
+
+**End-to-end encryption.** Cloud drafts are sealed on the device with a key that only the writer's devices hold, and the **Django** API stores them without being able to read them. A new device gets the key by scanning a QR code shown by Momo or by another device, and the server only ever sees the key wrapped.
+
+**Two apps, one manuscript.** A project synced in Momo shows up in Draft with its folders and files, and changes travel both ways. Nothing is applied by itself: each incoming change waits for the writer, and the text it replaces becomes a restore point first. Draft and Momo share small, verbatim copies of the crypto, the word count, and the page estimate, each one tested against fixed vectors, so the two apps always agree on what they read and count.
+
+## Impact
+
+Draft brought Momo to the places where writers actually have a few minutes to write. It shipped on both stores at once, and it turned Momo from a desktop app into an ecosystem: the same book moves between computer, tablet, and phone without the writer handing the text to anyone.
