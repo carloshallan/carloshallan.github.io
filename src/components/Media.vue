@@ -34,7 +34,7 @@ export default defineComponent({
   },
   computed: {
     isImage() {
-      return /\.(jpeg|jpg|gif|png)$/i.test(this.src)
+      return /\.(jpeg|jpg|gif|png|webp|avif|svg)$/i.test(this.src)
     },
     isUrl() {
       return /^(https?:\/\/|www\.)/.test(this.src)
